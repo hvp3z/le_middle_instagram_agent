@@ -26,10 +26,10 @@ class PhraseGenerator(BaseGenerator):
         self.tagline_color = hex_to_rgb(COLORS["white"])
         
         # Dimensions de la carte (ajustées pour correspondre à l'exemple)
-        self.card_padding_h = 45  # Padding horizontal
-        self.card_padding_v = 35  # Padding vertical
-        self.card_width = int(self.width * 0.82)
-        self.card_radius = 24
+        self.card_padding_h = 40  # Padding horizontal
+        self.card_padding_v = 30  # Padding vertical
+        self.card_width = int(self.width * 0.80)  # Légèrement plus étroite
+        self.card_radius = 20  # Coins légèrement moins arrondis
 
     def create_gradient_background(self) -> Image.Image:
         """Crée le fond dégradé corail vers rose (diagonal du coin supérieur gauche)."""
@@ -139,14 +139,16 @@ class PhraseGenerator(BaseGenerator):
         )
         
         # Calculer la hauteur de la carte (s'adapte au contenu)
-        header_height = 95  # Espace pour logo + lemiddle.app
-        text_area_padding = 50  # Padding autour du texte
+        header_height = 80  # Espace pour logo + lemiddle.app (réduit)
+        text_area_padding = 40  # Padding autour du texte
         card_height = header_height + text_total_height + text_area_padding + self.card_padding_v
         
-        # Position de la carte (centrée horizontalement, positionnée verticalement)
+        # Position de la carte (centrée horizontalement et verticalement)
         card_x = (self.width - self.card_width) // 2
-        # Position verticale : centrée avec un léger décalage vers le haut
-        card_y = int((self.height - card_height) / 2) - 80
+        # Position verticale : centrée dans l'espace au-dessus de la tagline
+        # Laisser de l'espace pour la tagline en bas (environ 150px)
+        available_height = self.height - 150  # Espace au-dessus de la tagline
+        card_y = (available_height - card_height) // 2
         
         # Dessiner la carte blanche
         self.draw_white_card(img, card_x, card_y, self.card_width, card_height)
@@ -154,46 +156,47 @@ class PhraseGenerator(BaseGenerator):
         # Redessiner le draw après modification de l'image
         draw = ImageDraw.Draw(img)
         
-        # Header de la carte (retourne la hauteur)
-        self.draw_card_header(draw, card_x, card_y, self.card_width)
-        
         # Ajouter le logo sur la carte
         logo_path = LOGO_DIR / "logo_black.png"
-        logo_size = 38
+        logo_size = 34  # Légèrement plus petit
+        header_top_padding = 25
         if logo_path.exists():
             logo = Image.open(logo_path).convert("RGBA")
             logo = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
             logo_x = card_x + self.card_padding_h
-            logo_y = card_y + 28
+            logo_y = card_y + header_top_padding
             img.paste(logo, (logo_x, logo_y), logo)
+        else:
+            logo_x = card_x + self.card_padding_h
+            logo_y = card_y + header_top_padding
         
         # Texte "lemiddle.app" à côté du logo (Satoshi Bold)
         font_header = self.load_font("Satoshi-Bold.otf", FONT_SIZES["phrase"]["header"])
-        text_header_x = logo_x + logo_size + 12
-        text_header_y = card_y + 35
+        text_header_x = logo_x + logo_size + 10
+        text_header_y = card_y + header_top_padding + 6  # Centré verticalement avec le logo
         draw = ImageDraw.Draw(img)
         draw.text((text_header_x, text_header_y), "lemiddle.app", font=font_header, fill=self.text_color)
         
-        # Les trois points horizontaux (espacés comme dans l'exemple)
+        # Les trois points horizontaux (espacés comme dans l'exemple de référence)
         dot_size = 5
-        dot_spacing = 10
-        dots_total_width = 3 * dot_size + 2 * (dot_spacing - dot_size)
+        dot_spacing = 8  # Espacement entre les centres des points
+        dots_total_width = dot_size * 3 + dot_spacing * 2
         dots_x = card_x + self.card_width - self.card_padding_h - dots_total_width
-        dot_y = text_header_y + 10
+        dot_y = card_y + header_top_padding + 12  # Aligné avec le texte header
         for i in range(3):
-            x = dots_x + i * dot_spacing
+            x = dots_x + i * (dot_size + dot_spacing)
             draw.ellipse(
                 [(x, dot_y), (x + dot_size, dot_y + dot_size)],
                 fill=self.text_color
             )
         
-        # Zone de texte dans la carte - CENTRÉ verticalement
+        # Zone de texte dans la carte
         text_area_top = card_y + header_height
         text_area_bottom = card_y + card_height - self.card_padding_v
         text_area_height = text_area_bottom - text_area_top
         
-        # Centrer le texte verticalement dans la zone disponible
-        text_start_y = text_area_top + (text_area_height - text_total_height) // 2
+        # Le texte est aligné en haut de la zone de texte (pas centré)
+        text_start_y = text_area_top
         text_x = card_x + self.card_padding_h
         
         # Dessiner le texte sur plusieurs lignes (aligné à gauche)

@@ -117,12 +117,18 @@ class ChiffreGenerator(BaseGenerator):
         number = content.get("number", "0")
         unit_text = content.get("unit_text", "")
         
+        # === LAYOUT BASÉ SUR L'IMAGE DE RÉFÉRENCE ===
+        # L'image de référence a une structure très précise :
+        # - Texte contextuel commence à environ 12% du haut
+        # - Le chiffre est centré verticalement dans l'espace principal
+        # - L'unité est juste en dessous du chiffre
+        # - La tagline est à environ 100px du bas
+        
         # === TEXTE CONTEXTUEL EN HAUT (centré) ===
         context_y = int(self.height * 0.12)
-        # Largeur plus grande pour éviter les coupures de mots isolés
         context_end_y = self._draw_centered_multiline(
             draw, context_text, font_context, self.text_color, 
-            context_y, max_width=int(self.width * 0.88)
+            context_y, max_width=int(self.width * 0.85)
         )
         
         # === CHIFFRE AVEC DÉGRADÉ AU CENTRE ===
@@ -133,14 +139,30 @@ class ChiffreGenerator(BaseGenerator):
             self.gradient_colors[1],
         )
         
-        # Centrer le chiffre horizontalement et verticalement entre le contexte et l'unité
+        # Calculer les zones pour bien centrer le chiffre
+        # Zone disponible : entre la fin du texte contextuel et le début de la zone tagline
+        tagline_y = self.height - 100  # Position de la tagline
+        unit_font_bbox = draw.textbbox((0, 0), unit_text, font=font_unit)
+        unit_height = unit_font_bbox[3] - unit_font_bbox[1]
+        
+        # Zone pour le chiffre + unité (centrée entre context et tagline)
+        available_top = context_end_y + 20
+        available_bottom = tagline_y - 80  # Marge avant tagline
+        available_height = available_bottom - available_top
+        
+        # Hauteur totale du bloc chiffre + unité
+        number_unit_total_height = gradient_text_img.height + 20 + unit_height
+        
+        # Centrer le bloc dans l'espace disponible
+        block_start_y = available_top + (available_height - number_unit_total_height) // 2
+        
+        # Centrer le chiffre horizontalement
         number_x = (self.width - gradient_text_img.width) // 2
-        # Position Y : après le texte contextuel, centré dans l'espace disponible
-        number_y = context_end_y + 30
+        number_y = block_start_y
         img.paste(gradient_text_img, (number_x, number_y), gradient_text_img)
         
         # === TEXTE UNITÉ EN BAS DU CHIFFRE ===
-        unit_y = number_y + gradient_text_img.height + 15
+        unit_y = number_y + gradient_text_img.height + 20
         self.center_text(draw, unit_text, font_unit, unit_y, self.text_color)
         
         # === TAGLINE EN BAS ===
