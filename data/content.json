@@ -1,0 +1,916 @@
+{
+  "posts": [
+    {
+      "id": "chiffre_001",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps de trajet pour un café de 20 minutes.",
+        "number": "42",
+        "unit_text": "minutes. Ça ne va plus."
+      },
+      "caption": {
+        "main": "42 minutes de trajet pour un café de 20 minutes. Ça ne va plus.\n\nLe ratio est cassé. On mérite mieux.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "trajet",
+          "cafe",
+          "ratp"
+        ],
+        "cta": "Lien en bio pour équilibrer tes trajets."
+      }
+    },
+    {
+      "id": "chiffre_002",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps d'attente sur le quai.",
+        "number": "12",
+        "unit_text": "minutes. Et non, le prochain n'est pas \"à l'approche\"."
+      },
+      "caption": {
+        "main": "12 minutes d'attente sur le quai. Et non, le prochain n'est pas \"à l'approche\".\n\nOn connaît tous ce mensonge.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "paris",
+          "ratp",
+          "attente"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_003",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps de transport pour voir tes potes.",
+        "number": "54",
+        "unit_text": "minutes. À ce stade, c'est un voyage longue distance."
+      },
+      "caption": {
+        "main": "54 minutes de transport. À ce stade, c'est un voyage longue distance.\n\nTu mérites un billet d'avion, pas un ticket t+.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transport",
+          "amis",
+          "trajet"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_004",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps passé à marcher dans les couloirs de Châtelet.",
+        "number": "08",
+        "unit_text": "minutes. L'équivalent d'un trail."
+      },
+      "caption": {
+        "main": "08 minutes à marcher dans les couloirs de Châtelet. L'équivalent d'un trail.\n\nLe cardio version RATP.",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "paris",
+          "metro",
+          "correspondance"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_005",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps passé à attendre celui qui a \"raté son réveil\".",
+        "number": "26",
+        "unit_text": "minutes. On sait tous de qui on parle."
+      },
+      "caption": {
+        "main": "26 minutes à attendre celui qui a \"raté son réveil\".\n\nTague ton pote toujours en retard. On sait que tu l'as en tête.",
+        "hashtags": [
+          "lemiddle",
+          "retard",
+          "paris",
+          "amis",
+          "rdv"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_006",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps passé dans le bus sous la pluie.",
+        "number": "35",
+        "unit_text": "minutes. Le glamour à la parisienne."
+      },
+      "caption": {
+        "main": "35 minutes de bus sous la pluie. Le glamour à la parisienne.\n\nEt tu arrives trempé(e) quand même.",
+        "hashtags": [
+          "lemiddle",
+          "bus",
+          "paris",
+          "pluie",
+          "glamour"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_007",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps passé à chercher tes potes dans le bar.",
+        "number": "14",
+        "unit_text": "minutes. Parce que personne n'est au même endroit."
+      },
+      "caption": {
+        "main": "14 minutes à chercher tes potes dans le bar parce que personne n'est au même endroit.\n\n\"Je suis au fond\" \"Moi aussi\" \"On se voit pas\"",
+        "hashtags": [
+          "lemiddle",
+          "bar",
+          "paris",
+          "amis",
+          "soiree"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_008",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Comme la ligne qu'on évite à tout prix à 18h30.",
+        "number": "13",
+        "unit_text": "La ligne maudite."
+      },
+      "caption": {
+        "main": "13 comme la ligne qu'on évite à tout prix à 18h30.\n\nSi tu la prends tous les jours, tu mérites une médaille.",
+        "hashtags": [
+          "lemiddle",
+          "ligne13",
+          "metro",
+          "paris",
+          "ratp"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_009",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de changements de ligne.",
+        "number": "03",
+        "unit_text": "changements. Soit 3 occasions de se perdre."
+      },
+      "caption": {
+        "main": "03 changements de ligne. Soit 3 occasions de se perdre ou de désespérer.\n\nEt à chaque fois, tu te demandes si ça vaut le coup.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "paris",
+          "correspondance",
+          "ratp"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_010",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le moment où tu réalises que tu es dans le mauvais sens.",
+        "number": "05",
+        "unit_text": "stations de trop. Demi-tour obligatoire."
+      },
+      "caption": {
+        "main": "05 stations de trop. Le moment où tu réalises que tu es dans le mauvais sens.\n\nÇa arrive aux meilleurs d'entre nous.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "paris",
+          "fail",
+          "ratp"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_011",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Ton signe pour rester chez toi ou utiliser Le Middle.",
+        "number": "04",
+        "unit_text": "RER supprimés. L'univers t'envoie un message."
+      },
+      "caption": {
+        "main": "04 RER supprimés. Ton signe pour rester chez toi ou utiliser Le Middle.\n\nQuand le destin s'en mêle...",
+        "hashtags": [
+          "lemiddle",
+          "rer",
+          "paris",
+          "sncf",
+          "transport"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_012",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Les rames bondées qu'on laisse passer en espérant que la 3ème soit vide.",
+        "number": "02",
+        "unit_text": "rames. Spoiler : elle ne l'est pas."
+      },
+      "caption": {
+        "main": "02 rames bondées qu'on laisse passer en espérant que la 3ème soit vide. (Elle ne l'est pas).\n\nL'espoir fait vivre.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "paris",
+          "ratp",
+          "heuredepointe"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_013",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Une seule station de métro de différence.",
+        "number": "01",
+        "unit_text": "station. Mais 20 minutes de marche. Pourquoi ?"
+      },
+      "caption": {
+        "main": "01 seule station de métro de différence, mais 20 minutes de marche. Pourquoi ?\n\nLa logique parisienne est incompréhensible.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "paris",
+          "marche",
+          "wtf"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_014",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "cout_eloignement",
+      "content": {
+        "context_text": "Le prix du VTC parce que le dernier métro était parti.",
+        "number": "45",
+        "unit_text": "euros. La note salée de l'amitié."
+      },
+      "caption": {
+        "main": "45 euros de VTC parce que le dernier métro était déjà parti.\n\nL'amitié n'a pas de prix. Enfin si, apparemment.",
+        "hashtags": [
+          "lemiddle",
+          "vtc",
+          "uber",
+          "paris",
+          "nuit"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_015",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "cout_eloignement",
+      "content": {
+        "context_text": "La frontière invisible de l'amitié.",
+        "number": "02",
+        "unit_text": "zones de différence. Le mur de Berlin version Navigo."
+      },
+      "caption": {
+        "main": "02 zones de différence. La frontière invisible de l'amitié.\n\nQuand ton forfait devient un critère de sélection.",
+        "hashtags": [
+          "lemiddle",
+          "navigo",
+          "zones",
+          "paris",
+          "banlieue"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_016",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "cout_eloignement",
+      "content": {
+        "context_text": "Le prix du café, juste parce que c'est \"à côté de chez lui\".",
+        "number": "05",
+        "unit_text": "euros. Le café le plus cher de ta vie."
+      },
+      "caption": {
+        "main": "05 euros le café, juste parce que c'est \"à côté de chez lui\".\n\nEt en plus, c'est toi qui as fait 40 min de trajet.",
+        "hashtags": [
+          "lemiddle",
+          "cafe",
+          "paris",
+          "prix",
+          "arnaque"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_017",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "cout_eloignement",
+      "content": {
+        "context_text": "L'effort fourni par celui qui propose toujours le bar en bas de chez lui.",
+        "number": "00",
+        "unit_text": "euro d'effort. Le roi de la flemme."
+      },
+      "caption": {
+        "main": "00 euro d'effort fourni par celui qui propose toujours le bar en bas de chez lui.\n\nOn a tous cet ami. Tague-le.",
+        "hashtags": [
+          "lemiddle",
+          "flemme",
+          "paris",
+          "bar",
+          "amis"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_018",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Les \"J'arrive\" envoyés alors que tu n'as pas encore tes chaussures.",
+        "number": "10",
+        "unit_text": "messages. La mythomanie parisienne."
+      },
+      "caption": {
+        "main": "10 \"J'arrive\" envoyés alors que tu n'as pas encore tes chaussures.\n\nLa mythomanie parisienne dans toute sa splendeur.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "paris",
+          "mensonge"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_019",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de groupes WhatsApp pour organiser UNE SEULE soirée.",
+        "number": "04",
+        "unit_text": "groupes différents. Le chaos organisationnel."
+      },
+      "caption": {
+        "main": "04 groupes WhatsApp différents pour organiser UNE SEULE soirée.\n\nEt personne ne sait dans lequel on a décidé du lieu.",
+        "hashtags": [
+          "lemiddle",
+          "whatsapp",
+          "groupe",
+          "paris",
+          "soiree"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_020",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Les notifications \"Où t'es ?\" ignorées.",
+        "number": "15",
+        "unit_text": "messages. Parce que tu es en zone blanche."
+      },
+      "caption": {
+        "main": "15 notifications \"Où t'es ?\" ignorées parce que tu es en zone blanche.\n\nLe tunnel, ce grand pourvoyeur d'excuses.",
+        "hashtags": [
+          "lemiddle",
+          "outest",
+          "metro",
+          "paris",
+          "zoneblanche"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_021",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "6 amis, 6 avis différents.",
+        "number": "06",
+        "unit_text": "avis. 0 décision prise."
+      },
+      "caption": {
+        "main": "06 amis, 6 avis différents, 0 décision prise.\n\nLa démocratie a ses limites.",
+        "hashtags": [
+          "lemiddle",
+          "amis",
+          "decision",
+          "paris",
+          "groupe"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_022",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le temps passé à expliquer ton itinéraire au téléphone.",
+        "number": "07",
+        "unit_text": "minutes. \"Mais non, prends la 4 !\""
+      },
+      "caption": {
+        "main": "07 minutes à expliquer ton itinéraire au téléphone. \"Mais non, prends la 4 !\"\n\nGoogle Maps a été inventé, mais bon.",
+        "hashtags": [
+          "lemiddle",
+          "itineraire",
+          "telephone",
+          "paris",
+          "metro"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_023",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "La chance que le point de rdv actuel arrange seulement une personne.",
+        "number": "99",
+        "unit_text": "% de probabilité. Et c'est jamais toi."
+      },
+      "caption": {
+        "main": "99% de chance que le point de rendez-vous actuel arrange seulement une personne.\n\nEt bizarrement, c'est jamais toi.",
+        "hashtags": [
+          "lemiddle",
+          "rdv",
+          "injustice",
+          "paris",
+          "amis"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_024",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "La batterie perdue après avoir cherché le meilleur trajet.",
+        "number": "78",
+        "unit_text": "% en moins. Maps a tout pris."
+      },
+      "caption": {
+        "main": "78% de batterie en moins après avoir cherché le meilleur trajet sur Maps.\n\nTon téléphone est mort, mais au moins tu sais par où passer.",
+        "hashtags": [
+          "lemiddle",
+          "batterie",
+          "maps",
+          "paris",
+          "trajet"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_025",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "Le nombre de raisons de traverser Paris alors qu'on peut se voir au milieu.",
+        "number": "00",
+        "unit_text": "raison. Zéro. Nada. Aucune."
+      },
+      "caption": {
+        "main": "00 raison de traverser Paris alors qu'on peut se voir au milieu.\n\nC'est dit.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "traverser",
+          "milieu",
+          "logique"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_026",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "Le pourcentage de tes amis qui valideront un itinéraire équitable.",
+        "number": "100",
+        "unit_text": "% d'approbation. Unanimité garantie."
+      },
+      "caption": {
+        "main": "100% de vos amis valideront l'itinéraire s'il est équitable.\n\nLa paix sociale existe, elle s'appelle Le Middle.",
+        "hashtags": [
+          "lemiddle",
+          "equitable",
+          "amis",
+          "paris",
+          "rdv"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_027",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "Les débats évités grâce à un seul calcul du \"Middle\".",
+        "number": "22",
+        "unit_text": "débats. Et autant d'amitiés sauvées."
+      },
+      "caption": {
+        "main": "22 débats évités grâce à un seul calcul du \"Middle\".\n\nLes maths au service de l'amitié.",
+        "hashtags": [
+          "lemiddle",
+          "debat",
+          "amis",
+          "paris",
+          "paix"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_028",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "Les restaurants testés. Aucun ne plaisait à tout le monde.",
+        "number": "11",
+        "unit_text": "restaurants. 0 consensus."
+      },
+      "caption": {
+        "main": "11 restaurants testés, aucun ne plaisait à tout le monde.\n\nLe problème c'est pas le resto, c'est le lieu.",
+        "hashtags": [
+          "lemiddle",
+          "restaurant",
+          "paris",
+          "choix",
+          "amis"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "chiffre_029",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "La probabilité que celui qui habite le plus près arrive en dernier.",
+        "number": "09",
+        "unit_text": "fois sur 10. La loi de Murphy."
+      },
+      "caption": {
+        "main": "09 fois sur 10, c'est celui qui habite le plus près qui arrive en dernier.\n\nCoïncidence ? Je ne crois pas.",
+        "hashtags": [
+          "lemiddle",
+          "retard",
+          "paris",
+          "murphy",
+          "amis"
+        ],
+        "cta": "On se capte au Middle."
+      }
+    },
+    {
+      "id": "chiffre_030",
+      "type": "chiffre",
+      "status": "draft",
+      "category": "statistiques",
+      "content": {
+        "context_text": "Le ratio parfait d'un rendez-vous réussi.",
+        "number": "50",
+        "unit_text": "/ 50. L'équilibre parfait."
+      },
+      "caption": {
+        "main": "50 / 50. Le ratio parfait d'un rendez-vous réussi.\n\nQuand tout le monde fait la moitié du chemin.",
+        "hashtags": [
+          "lemiddle",
+          "equilibre",
+          "rdv",
+          "paris",
+          "amis"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      }
+    },
+    {
+      "id": "phrase_001",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 1,
+      "content": {
+        "text": "Habiter à la fin de la ligne 13 et recevoir un \"On se capte à Alésia ?\" C'est plus un rendez-vous, c'est une expédition."
+      },
+      "caption": {
+        "main": "On a tous cet ami qui vit au bout du monde (ou en zone 3). Identifie-le pour lui demander pardon. 👇",
+        "hashtags": [
+          "lemiddle",
+          "ligne13",
+          "paris",
+          "rdv",
+          "expedition"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_001.png"
+    },
+    {
+      "id": "phrase_002",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 2,
+      "content": {
+        "text": "Le pote qui dit \"C'est à côté\" alors qu'il y a 3 changements et 45 min de trajet."
+      },
+      "caption": {
+        "main": "Spoiler : On n'a pas la même notion du temps. 🚩",
+        "hashtags": [
+          "lemiddle",
+          "acote",
+          "paris",
+          "trajet",
+          "mensonge"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_002.png"
+    },
+    {
+      "id": "phrase_003",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 3,
+      "content": {
+        "text": "Traverser tout Paris pour un verre d'une heure : Le ratio temps de trajet / temps de kiff est en PLS."
+      },
+      "caption": {
+        "main": "Fini les trajets plus longs que la soirée. On règle ça avec Le Middle.",
+        "hashtags": [
+          "lemiddle",
+          "ratio",
+          "paris",
+          "trajet",
+          "verre"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_003.png"
+    },
+    {
+      "id": "phrase_004",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 4,
+      "content": {
+        "text": "Le groupe WhatsApp qui met 4 jours à décider du lieu parce que personne ne veut bouger de son quartier."
+      },
+      "caption": {
+        "main": "L'enfer de la négo commence ici. Heureusement, l'arbitre arrive. ⚖️",
+        "hashtags": [
+          "lemiddle",
+          "whatsapp",
+          "groupe",
+          "paris",
+          "nego"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_004.png"
+    },
+    {
+      "id": "phrase_005",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 5,
+      "content": {
+        "text": "\"Je suis dans le métro\" = Je viens de fermer ma porte d'entrée."
+      },
+      "caption": {
+        "main": "La mythomanie parisienne dans toute sa splendeur. Tague ton pote toujours en retard. 🏃‍♂️",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "retard",
+          "paris",
+          "mensonge"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_005.png"
+    },
+    {
+      "id": "phrase_006",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 6,
+      "content": {
+        "text": "La traversée de Châtelet-Les Halles pour faire une correspondance : Le seul sport que je pratique."
+      },
+      "caption": {
+        "main": "12km de marche sous terre plus tard... Tu mérites ce verre. 🍺",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "sport",
+          "paris",
+          "correspondance"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_006.png"
+    },
+    {
+      "id": "phrase_007",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 7,
+      "content": {
+        "text": "Quand tu arrives le premier parce que tu habites à côté et que tu dois garder une table pour 6 pendant 40 min."
+      },
+      "caption": {
+        "main": "Le moment le plus long de l'histoire de l'humanité.",
+        "hashtags": [
+          "lemiddle",
+          "attente",
+          "table",
+          "paris",
+          "premier"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_007.png"
+    },
+    {
+      "id": "phrase_008",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 8,
+      "content": {
+        "text": "L'ami qui propose \"un bar sympa\" juste en bas de chez lui pour la 4ème fois consécutive."
+      },
+      "caption": {
+        "main": "L'audace est totale. Partage ça à ton ami le plus flemmard. 🛋️",
+        "hashtags": [
+          "lemiddle",
+          "bar",
+          "flemme",
+          "paris",
+          "audace"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_008.png"
+    },
+    {
+      "id": "phrase_009",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 9,
+      "content": {
+        "text": "POV : Tu as enfin trouvé un point de rencontre à 15 min de tout le monde. C'est ça, la paix sociale."
+      },
+      "caption": {
+        "main": "Le sentiment de puissance est indescriptible. ✨",
+        "hashtags": [
+          "lemiddle",
+          "pov",
+          "rdv",
+          "paris",
+          "paixsociale"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_009.png"
+    },
+    {
+      "id": "phrase_010",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 10,
+      "content": {
+        "text": "Ne plus avoir à choisir entre son meilleur ami et son dernier métro."
+      },
+      "caption": {
+        "main": "Parce que l'amitié ne devrait pas dépendre de l'heure du dernier RER.",
+        "hashtags": [
+          "lemiddle",
+          "derniermetro",
+          "amitie",
+          "paris",
+          "choix"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_010.png"
+    },
+    {
+      "id": "phrase_011",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 11,
+      "content": {
+        "text": "Diviser le temps de trajet par deux, multiplier le temps de bonheur par deux."
+      },
+      "caption": {
+        "main": "Les maths sont simples, le trajet aussi. Merci Le Middle. 📍",
+        "hashtags": [
+          "lemiddle",
+          "maths",
+          "trajet",
+          "paris",
+          "bonheur"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_011.png"
+    },
+    {
+      "id": "phrase_012",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 12,
+      "content": {
+        "text": "Le Middle : Parce que personne n'est le centre du monde, mais tout le monde peut être au centre du rendez-vous."
+      },
+      "caption": {
+        "main": "Finis les débats. On se capte au Middle ?",
+        "hashtags": [
+          "lemiddle",
+          "centre",
+          "rdv",
+          "paris",
+          "equilibre"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_012.png"
+    }
+  ]
+}

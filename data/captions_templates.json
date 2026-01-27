@@ -1,0 +1,18 @@
+{
+  "templates": {
+    "chiffre": {
+      "format": "{main}\n\n{cta}\n\n{hashtags_formatted}",
+      "hashtag_prefix": "#"
+    },
+    "phrase": {
+      "format": "{main}\n\n{hashtags_formatted}",
+      "hashtag_prefix": "#"
+    },
+    "photo": {
+      "format": "{main}\n\n{hashtags_formatted}",
+      "hashtag_prefix": "#"
+    }
+  },
+  "default_hashtags": ["lemiddle", "retrouvezvous", "paris", "app"],
+  "brand_hashtag": "#lemiddle"
+}
