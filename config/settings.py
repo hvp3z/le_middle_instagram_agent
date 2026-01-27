@@ -52,9 +52,9 @@ FONTS = {
 FONT_SIZES = {
     "chiffre": {
         "number": 350,        # Libre Baskerville Bold - le grand chiffre
-        "context": 38,        # Satoshi Regular - texte en haut
-        "unit": 36,           # Satoshi Regular - "minutes d'attente"
-        "tagline": 32,        # Libre Baskerville Italic - slogan
+        "context": 57,        # Satoshi Regular - texte en haut (1.5x plus gros, était 38)
+        "unit": 54,           # Satoshi Regular - "minutes d'attente" (1.5x plus gros, était 36)
+        "tagline": 45,        # Libre Baskerville Italic - slogan
     },
     "phrase": {
         "header": 24,         # Satoshi Bold - "lemiddle.app"

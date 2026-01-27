@@ -26,6 +26,75 @@ class ChiffreGenerator(BaseGenerator):
         self.tagline_color = hex_to_rgb(COLORS["coral_dark"])
         self.gradient_colors = [hex_to_rgb(c) for c in CHIFFRE_GRADIENT]
 
+    def _find_optimal_font_size(
+        self,
+        text: str,
+        font_name: str,
+        target_height_ratio: float = 0.30,
+        target_width_ratio: float = 0.28,
+    ) -> ImageFont.FreeTypeFont:
+        """
+        Trouve la taille de police optimale pour que le texte occupe
+        environ target_height_ratio de la hauteur et target_width_ratio de la largeur.
+        
+        Retourne la police avec la taille optimale.
+        """
+        target_height = int(self.height * target_height_ratio)
+        target_width = int(self.width * target_width_ratio)
+        
+        # Créer une image temporaire pour mesurer
+        temp_img = Image.new("RGBA", (1, 1), (0, 0, 0, 0))
+        temp_draw = ImageDraw.Draw(temp_img)
+        
+        # Recherche binaire pour trouver la taille optimale
+        min_size = 50
+        max_size = 1000
+        best_font = None
+        best_score = float('inf')
+        
+        # On cherche la taille qui minimise l'écart par rapport aux deux cibles
+        for size in range(min_size, max_size + 1, 5):
+            font = self.load_font(font_name, size)
+            bbox = temp_draw.textbbox((0, 0), text, font=font)
+            text_height = bbox[3] - bbox[1]
+            text_width = bbox[2] - bbox[0]
+            
+            # Calculer l'écart relatif par rapport aux cibles
+            height_diff = abs(text_height - target_height) / target_height
+            width_diff = abs(text_width - target_width) / target_width
+            
+            # Score combiné (on peut pondérer différemment si besoin)
+            score = height_diff + width_diff
+            
+            # On garde la taille qui minimise l'écart total
+            # Mais on s'arrête si on dépasse trop les limites (plus de 5% d'écart)
+            if height_diff > 0.05 or width_diff > 0.05:
+                if best_font is None:
+                    # Si on n'a pas encore trouvé de bonne taille, on continue
+                    continue
+                else:
+                    # Sinon, on s'arrête car on a dépassé les limites
+                    break
+            
+            if score < best_score:
+                best_score = score
+                best_font = font
+        
+        # Si on n'a pas trouvé de taille parfaite, on prend la plus grande qui respecte les limites
+        if best_font is None:
+            for size in range(min_size, max_size + 1, 10):
+                font = self.load_font(font_name, size)
+                bbox = temp_draw.textbbox((0, 0), text, font=font)
+                text_height = bbox[3] - bbox[1]
+                text_width = bbox[2] - bbox[0]
+                
+                if text_height <= target_height and text_width <= target_width:
+                    best_font = font
+                else:
+                    break
+        
+        return best_font if best_font is not None else self.load_font(font_name, 350)
+
     def create_gradient_text(
         self,
         text: str,
@@ -106,23 +175,32 @@ class ChiffreGenerator(BaseGenerator):
         img = Image.new("RGB", (self.width, self.height), self.bg_color)
         draw = ImageDraw.Draw(img)
         
-        # Charger les fonts - Satoshi (sans-serif) + Libre Baskerville (serif)
-        font_context = self.load_font("Satoshi-Regular.otf", FONT_SIZES["chiffre"]["context"])  # Texte haut
-        font_number = self.load_font("LibreBaskerville-Regular.ttf", FONT_SIZES["chiffre"]["number"])  # Grand chiffre
-        font_unit = self.load_font("Satoshi-Regular.otf", FONT_SIZES["chiffre"]["unit"])  # "minutes d'attente"
-        font_tagline = self.load_font("LibreBaskerville-Italic.ttf", FONT_SIZES["chiffre"]["tagline"])  # Slogan
-        
-        # Extraire le contenu
+        # Extraire le contenu d'abord
         context_text = content.get("context_text", "")
         number = content.get("number", "0")
         unit_text = content.get("unit_text", "")
+        
+        # Charger les fonts - Satoshi (sans-serif) + Libre Baskerville (serif)
+        font_context = self.load_font("Satoshi-Regular.otf", FONT_SIZES["chiffre"]["context"])  # Texte haut
+        
+        # Calculer dynamiquement la taille de police du nombre pour respecter les proportions
+        # 60% de la hauteur et 56% de la largeur (2x plus gros)
+        font_number = self._find_optimal_font_size(
+            number,
+            "LibreBaskerville-Regular.ttf",
+            target_height_ratio=0.60,
+            target_width_ratio=0.56,
+        )
+        
+        font_unit = self.load_font("Satoshi-Regular.otf", FONT_SIZES["chiffre"]["unit"])  # "minutes d'attente"
+        font_tagline = self.load_font("LibreBaskerville-Regular.ttf", FONT_SIZES["chiffre"]["tagline"])  # Slogan
         
         # === LAYOUT BASÉ SUR L'IMAGE DE RÉFÉRENCE ===
         # L'image de référence a une structure très précise :
         # - Texte contextuel commence à environ 12% du haut
         # - Le chiffre est centré verticalement dans l'espace principal
         # - L'unité est juste en dessous du chiffre
-        # - La tagline est à environ 100px du bas
+        # - La tagline est à environ 165px du bas
         
         # === TEXTE CONTEXTUEL EN HAUT (centré) ===
         context_y = int(self.height * 0.12)
@@ -139,34 +217,25 @@ class ChiffreGenerator(BaseGenerator):
             self.gradient_colors[1],
         )
         
-        # Calculer les zones pour bien centrer le chiffre
-        # Zone disponible : entre la fin du texte contextuel et le début de la zone tagline
-        tagline_y = self.height - 100  # Position de la tagline
-        unit_font_bbox = draw.textbbox((0, 0), unit_text, font=font_unit)
-        unit_height = unit_font_bbox[3] - unit_font_bbox[1]
+        # Utiliser un espace fixe pour équilibrer les marges autour du chiffre
+        spacing = 50  # Espace égal au-dessus et en-dessous du chiffre
         
-        # Zone pour le chiffre + unité (centrée entre context et tagline)
-        available_top = context_end_y + 20
-        available_bottom = tagline_y - 80  # Marge avant tagline
-        available_height = available_bottom - available_top
-        
-        # Hauteur totale du bloc chiffre + unité
-        number_unit_total_height = gradient_text_img.height + 20 + unit_height
-        
-        # Centrer le bloc dans l'espace disponible
-        block_start_y = available_top + (available_height - number_unit_total_height) // 2
+        # Positionner le chiffre avec l'espace calculé
+        number_y = context_end_y + spacing
         
         # Centrer le chiffre horizontalement
         number_x = (self.width - gradient_text_img.width) // 2
-        number_y = block_start_y
         img.paste(gradient_text_img, (number_x, number_y), gradient_text_img)
         
-        # === TEXTE UNITÉ EN BAS DU CHIFFRE ===
-        unit_y = number_y + gradient_text_img.height + 20
-        self.center_text(draw, unit_text, font_unit, unit_y, self.text_color)
+        # === TEXTE UNITÉ EN BAS DU CHIFFRE (retour à la ligne si trop long) ===
+        unit_y = number_y + gradient_text_img.height + spacing
+        self._draw_centered_multiline(
+            draw, unit_text, font_unit, self.text_color,
+            unit_y, max_width=int(self.width * 0.85)
+        )
         
         # === TAGLINE EN BAS ===
-        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=100)
+        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=165)
         
         return img
 
