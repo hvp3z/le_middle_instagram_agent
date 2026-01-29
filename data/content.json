@@ -3,7 +3,7 @@
     {
       "id": "chiffre_001",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps de trajet pour un café de 20 minutes.",
@@ -20,12 +20,13 @@
           "ratp"
         ],
         "cta": "Lien en bio pour équilibrer tes trajets."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_001.png"
     },
     {
       "id": "chiffre_002",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps d'attente sur le quai.",
@@ -42,12 +43,13 @@
           "attente"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_002.png"
     },
     {
       "id": "chiffre_003",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps de transport pour voir tes potes.",
@@ -64,12 +66,13 @@
           "trajet"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_003.png"
     },
     {
       "id": "chiffre_004",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps passé à marcher dans les couloirs de Châtelet.",
@@ -86,12 +89,13 @@
           "correspondance"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_004.png"
     },
     {
       "id": "chiffre_005",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps passé à attendre celui qui a \"raté son réveil\".",
@@ -108,12 +112,13 @@
           "rdv"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_005.png"
     },
     {
       "id": "chiffre_006",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps passé dans le bus sous la pluie.",
@@ -130,12 +135,13 @@
           "glamour"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_006.png"
     },
     {
       "id": "chiffre_007",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps passé à chercher tes potes dans le bar.",
@@ -152,12 +158,13 @@
           "soiree"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_007.png"
     },
     {
       "id": "chiffre_008",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Comme la ligne qu'on évite à tout prix à 18h30.",
@@ -174,12 +181,13 @@
           "ratp"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_008.png"
     },
     {
       "id": "chiffre_009",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Le nombre de changements de ligne.",
@@ -196,12 +204,13 @@
           "ratp"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_009.png"
     },
     {
       "id": "chiffre_010",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Le moment où tu réalises que tu es dans le mauvais sens.",
@@ -218,12 +227,13 @@
           "ratp"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_010.png"
     },
     {
       "id": "chiffre_011",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Ton signe pour rester chez toi ou utiliser Le Middle.",
@@ -240,12 +250,13 @@
           "transport"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_011.png"
     },
     {
       "id": "chiffre_012",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Les rames bondées qu'on laisse passer en espérant que la 3ème soit vide.",
@@ -262,12 +273,13 @@
           "heuredepointe"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_012.png"
     },
     {
       "id": "chiffre_013",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "metro_rer",
       "content": {
         "context_text": "Une seule station de métro de différence.",
@@ -284,12 +296,13 @@
           "wtf"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_013.png"
     },
     {
       "id": "chiffre_014",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "cout_eloignement",
       "content": {
         "context_text": "Le prix du VTC parce que le dernier métro était parti.",
@@ -306,12 +319,13 @@
           "nuit"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_014.png"
     },
     {
       "id": "chiffre_015",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "cout_eloignement",
       "content": {
         "context_text": "La frontière invisible de l'amitié.",
@@ -328,12 +342,13 @@
           "banlieue"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_015.png"
     },
     {
       "id": "chiffre_016",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "cout_eloignement",
       "content": {
         "context_text": "Le prix du café, juste parce que c'est \"à côté de chez lui\".",
@@ -350,12 +365,13 @@
           "arnaque"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_016.png"
     },
     {
       "id": "chiffre_017",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "cout_eloignement",
       "content": {
         "context_text": "L'effort fourni par celui qui propose toujours le bar en bas de chez lui.",
@@ -372,12 +388,13 @@
           "amis"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_017.png"
     },
     {
       "id": "chiffre_018",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Les \"J'arrive\" envoyés alors que tu n'as pas encore tes chaussures.",
@@ -394,12 +411,13 @@
           "mensonge"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_018.png"
     },
     {
       "id": "chiffre_019",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre de groupes WhatsApp pour organiser UNE SEULE soirée.",
@@ -416,12 +434,13 @@
           "soiree"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_019.png"
     },
     {
       "id": "chiffre_020",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Les notifications \"Où t'es ?\" ignorées.",
@@ -438,12 +457,13 @@
           "zoneblanche"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_020.png"
     },
     {
       "id": "chiffre_021",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "interactions_sociales",
       "content": {
         "context_text": "6 amis, 6 avis différents.",
@@ -460,12 +480,13 @@
           "groupe"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_021.png"
     },
     {
       "id": "chiffre_022",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le temps passé à expliquer ton itinéraire au téléphone.",
@@ -482,12 +503,13 @@
           "metro"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_022.png"
     },
     {
       "id": "chiffre_023",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "La chance que le point de rdv actuel arrange seulement une personne.",
@@ -504,12 +526,13 @@
           "amis"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_023.png"
     },
     {
       "id": "chiffre_024",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "La batterie perdue après avoir cherché le meilleur trajet.",
@@ -526,12 +549,13 @@
           "trajet"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_024.png"
     },
     {
       "id": "chiffre_025",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "Le nombre de raisons de traverser Paris alors qu'on peut se voir au milieu.",
@@ -548,12 +572,13 @@
           "logique"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_025.png"
     },
     {
       "id": "chiffre_026",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "Le pourcentage de tes amis qui valideront un itinéraire équitable.",
@@ -570,12 +595,13 @@
           "rdv"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_026.png"
     },
     {
       "id": "chiffre_027",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "Les débats évités grâce à un seul calcul du \"Middle\".",
@@ -592,12 +618,13 @@
           "paix"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_027.png"
     },
     {
       "id": "chiffre_028",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "Les restaurants testés. Aucun ne plaisait à tout le monde.",
@@ -614,12 +641,13 @@
           "amis"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_028.png"
     },
     {
       "id": "chiffre_029",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "La probabilité que celui qui habite le plus près arrive en dernier.",
@@ -636,12 +664,13 @@
           "amis"
         ],
         "cta": "On se capte au Middle."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_029.png"
     },
     {
       "id": "chiffre_030",
       "type": "chiffre",
-      "status": "draft",
+      "status": "ready",
       "category": "statistiques",
       "content": {
         "context_text": "Le ratio parfait d'un rendez-vous réussi.",
@@ -658,7 +687,8 @@
           "amis"
         ],
         "cta": "Retrouvez-vous simplement."
-      }
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_030.png"
     },
     {
       "id": "phrase_001",

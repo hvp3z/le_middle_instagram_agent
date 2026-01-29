@@ -57,9 +57,9 @@ FONT_SIZES = {
         "tagline": 45,        # Libre Baskerville Italic - slogan
     },
     "phrase": {
-        "header": 24,         # Satoshi Bold - "lemiddle.app"
-        "text": 32,           # Satoshi Regular - texte dans le carré
-        "tagline": 30,        # Libre Baskerville Italic - slogan
+        "header": 50,         # Satoshi Bold - "lemiddle.app"
+        "text": 48,           # Satoshi Regular - texte dans le carré
+        "tagline": 42,        # Libre Baskerville Italic - slogan
     },
 }
 

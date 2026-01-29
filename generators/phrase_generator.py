@@ -106,7 +106,7 @@ class PhraseGenerator(BaseGenerator):
         logo_size = 38
         
         # Texte "lemiddle.app" (Satoshi Bold)
-        font_header = self.load_font("Satoshi-Bold.otf", FONT_SIZES["phrase"]["header"])
+        font_header = self.load_font("Satoshi-Regular.otf", FONT_SIZES["phrase"]["header"])
         
         # Les trois points horizontaux (menu)
         dots_x = card_x + card_width - self.card_padding_h - 25
@@ -139,7 +139,7 @@ class PhraseGenerator(BaseGenerator):
         )
         
         # Calculer la hauteur de la carte (s'adapte au contenu)
-        header_height = 80  # Espace pour logo + lemiddle.app (réduit)
+        header_height = 200  # Espace pour logo + lemiddle.app (réduit)
         text_area_padding = 40  # Padding autour du texte
         card_height = header_height + text_total_height + text_area_padding + self.card_padding_v
         
@@ -158,37 +158,73 @@ class PhraseGenerator(BaseGenerator):
         
         # Ajouter le logo sur la carte
         logo_path = LOGO_DIR / "logo_black.png"
-        logo_size = 34  # Légèrement plus petit
-        header_top_padding = 25
+        # Ajouter le logo sur la carte
+        logo_path = LOGO_DIR / "logo_black.png"
+        logo_size = 115  # Taille du logo
+        header_top_padding = 45
+        
+        # Charger la font pour mesurer le texte
+        font_header = self.load_font("Satoshi-Bold.otf", FONT_SIZES["phrase"]["header"])
+        
+        # Calculer la hauteur du texte "lemiddle.app"
+        text_bbox = draw.textbbox((0, 0), "lemiddle.app", font=font_header)
+        text_height = text_bbox[3] - text_bbox[1]
+        
+        # Trouver la hauteur max entre logo et texte pour centrer les deux
+        max_height = max(logo_size, text_height)
+        
+        # Position Y de référence (le centre commun)
+        center_y = card_y + header_top_padding + max_height // 2
+        
+        # Centrer le logo verticalement
+        logo_y = center_y - logo_size // 2
+        logo_x = card_x + self.card_padding_h
+        
         if logo_path.exists():
             logo = Image.open(logo_path).convert("RGBA")
             logo = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
-            logo_x = card_x + self.card_padding_h
-            logo_y = card_y + header_top_padding
             img.paste(logo, (logo_x, logo_y), logo)
-        else:
-            logo_x = card_x + self.card_padding_h
-            logo_y = card_y + header_top_padding
         
-        # Texte "lemiddle.app" à côté du logo (Satoshi Bold)
-        font_header = self.load_font("Satoshi-Bold.otf", FONT_SIZES["phrase"]["header"])
+        # Centrer le texte verticalement
         text_header_x = logo_x + logo_size + 10
-        text_header_y = card_y + header_top_padding + 6  # Centré verticalement avec le logo
+        text_header_y = center_y - text_height // 2
+        
         draw = ImageDraw.Draw(img)
         draw.text((text_header_x, text_header_y), "lemiddle.app", font=font_header, fill=self.text_color)
         
-        # Les trois points horizontaux (espacés comme dans l'exemple de référence)
-        dot_size = 5
+        # Les trois points horizontaux avec supersampling pour antialiasing
+        dot_size = 8
         dot_spacing = 8  # Espacement entre les centres des points
-        dots_total_width = dot_size * 3 + dot_spacing * 2
-        dots_x = card_x + self.card_width - self.card_padding_h - dots_total_width
-        dot_y = card_y + header_top_padding + 12  # Aligné avec le texte header
+        scale = 4  # facteur de supersampling
+
+        # Dimensions haute résolution
+        dot_size_hr = dot_size * scale
+        dot_spacing_hr = dot_spacing * scale
+        dots_total_width_hr = dot_size_hr * 3 + dot_spacing_hr * 2
+        dots_height_hr = dot_size_hr
+
+        # Image temporaire haute résolution (RGBA pour transparence)
+        dots_img = Image.new("RGBA", (dots_total_width_hr, dots_height_hr), (0, 0, 0, 0))
+        dots_draw = ImageDraw.Draw(dots_img)
+
         for i in range(3):
-            x = dots_x + i * (dot_size + dot_spacing)
-            draw.ellipse(
-                [(x, dot_y), (x + dot_size, dot_y + dot_size)],
-                fill=self.text_color
+            x = i * (dot_size_hr + dot_spacing_hr)
+            dots_draw.ellipse(
+                [(x, 0), (x + dot_size_hr, dot_size_hr)],
+                fill=(*self.text_color, 255)
             )
+
+        # Réduction avec antialiasing
+        dots_total_width = dot_size * 3 + dot_spacing * 2
+        dots_img = dots_img.resize(
+            (dots_total_width, dot_size),
+            Image.Resampling.LANCZOS
+        )
+
+        # Positionnement et collage
+        dots_x = card_x + self.card_width - self.card_padding_h - dots_total_width
+        dot_y = center_y - dot_size // 2  # Centré verticalement avec logo et texte
+        img.paste(dots_img, (dots_x, dot_y), dots_img)
         
         # Zone de texte dans la carte
         text_area_top = card_y + header_height
@@ -206,7 +242,7 @@ class PhraseGenerator(BaseGenerator):
             current_y += line_height
         
         # Tagline en bas (Libre Baskerville Italic - signature élégante)
-        font_tagline = self.load_font("LibreBaskerville-Italic.ttf", FONT_SIZES["phrase"]["tagline"])
+        font_tagline = self.load_font("LibreBaskerville-Regular.ttf", FONT_SIZES["phrase"]["tagline"])
         self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=100)
         
         return img.convert("RGB")
