@@ -693,7 +693,7 @@
     {
       "id": "phrase_001",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "week": 1,
       "content": {
@@ -709,7 +709,10 @@
           "expedition"
         ]
       },
-      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_001.png"
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_001.png",
+      "published_at": "2026-01-30T12:16:37.895820Z",
+      "instagram_media_id": "18083334725517890",
+      "publish_order": 1
     },
     {
       "id": "phrase_002",
