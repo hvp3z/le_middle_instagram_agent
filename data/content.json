@@ -970,6 +970,80 @@
         ]
       },
       "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\ambiance_001.png"
+    },
+    {
+      "id": "phrase_013",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Quand ton ami propose \"On se voit à Châtelet\" et que tu réalises qu'il habite Château Rouge."
+      },
+      "caption": {
+        "main": "L'audace de certains n'a vraiment pas de limites. 😤 Heureusement, Le Middle calcule pour tout le monde.",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "paris",
+          "transports",
+          "amis"
+        ]
+      },
+      "created_at": "2026-01-30T10:49:24.087862Z",
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_013.png"
+    },
+    {
+      "id": "chiffre_031",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de minutes passées à expliquer ton trajet dans le groupe WhatsApp.",
+        "number": "23",
+        "unit_text": "minutes de pure logistique. Le temps qu'il faut pour organiser 1h ensemble."
+      },
+      "caption": {
+        "main": "23 minutes à expliquer ton trajet dans le groupe WhatsApp. Le temps qu'il faut pour organiser 1h ensemble. Entre les captures d'écran Citymapper, les \"Moi je peux pas Châtelet\", et les calculs de zone, on passe plus de temps à planifier qu'à se voir.",
+        "hashtags": [
+          "lemiddle",
+          "whatsappgalere",
+          "transportsparisiens",
+          "amitie",
+          "paris"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-01-30T10:49:30.100352Z",
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\chiffre_031.png"
+    },
+    {
+      "id": "ambiance_002",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "N8JOR75WosU",
+        "unsplash_user": "Createasea (@createasea)",
+        "unsplash_query_used": "happy_hour",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le groupe arrive à l'heure ET que l'apéro est parfait ✨ C'est ça, les vraies victoires parisiennes.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "apero",
+          "happyhour",
+          "entreamisparisiens"
+        ]
+      },
+      "created_at": "2026-01-30T10:49:34.113674Z",
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\ambiance_002.png"
     }
   ]
 }

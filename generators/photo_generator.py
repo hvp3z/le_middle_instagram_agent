@@ -11,7 +11,6 @@ from config.settings import (
     LOGO_DIR,
     hex_to_rgb,
     COLORS,
-    FONT_SIZES,
 )
 
 
@@ -24,9 +23,6 @@ class PhotoGenerator(BaseGenerator):
         
         # Couleur de filtre optionnel (teinte chaude)
         self.warm_filter_color = hex_to_rgb(COLORS["peach"])
-        
-        # Couleur de la tagline (blanc pour contraster avec les photos)
-        self.tagline_color = hex_to_rgb(COLORS["white"])
 
     def load_image_from_url(self, url: str) -> Image.Image:
         """Charge une image depuis une URL."""
@@ -199,12 +195,6 @@ class PhotoGenerator(BaseGenerator):
             logo_color = content.get("logo_color", "black")
             img = self.add_logo_overlay(img, logo_color)
         
-        # Ajouter la tagline en bas (en REGULAR)
-        img = img.convert("RGBA")
-        draw = ImageDraw.Draw(img)
-        font_tagline = self.load_font("LibreBaskerville-Regular.ttf", FONT_SIZES["phrase"]["tagline"])
-        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=250)
-        
         return img.convert("RGB")
 
     def generate_with_placeholder(self, content: dict) -> Image.Image:
@@ -246,12 +236,6 @@ class PhotoGenerator(BaseGenerator):
         if content.get("overlay_logo", True):
             logo_color = content.get("logo_color", "black")
             img = self.add_logo_overlay(img.convert("RGBA"), logo_color)
-        
-        # Ajouter la tagline en bas (en italique)
-        img = img.convert("RGBA")
-        draw = ImageDraw.Draw(img)
-        font_tagline = self.load_font("LibreBaskerville-Italic.ttf", FONT_SIZES["phrase"]["tagline"])
-        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=100)
         
         return img.convert("RGB")
 

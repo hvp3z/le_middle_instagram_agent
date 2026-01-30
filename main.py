@@ -690,9 +690,10 @@ def grid_preview(rows: int):
         def format_cell(post):
             if not post:
                 return " " * 18
-            post_id = post["id"][:16]
+            post_id = post["id"][:14]
             status = post.get("status", "?")
-            type_indicator = post.get("type", "?")[0].upper()
+            type_map = {"phrase": "P", "chiffre": "C", "photo": "Ph"}
+            type_indicator = type_map.get(post.get("type", "?"), "?")
             if status == "ready":
                 return f"[{type_indicator}] {post_id}"
             else:
@@ -713,13 +714,13 @@ def grid_preview(rows: int):
     
     # Alertes
     if len(ready) < 6:
-        click.echo(f"\n⚠️  ALERTE: Moins de 6 posts prêts! Générez du contenu.")
+        click.echo(f"\n[!] ALERTE: Moins de 6 posts prets! Generez du contenu.")
     
     # Vérifier l'équilibre des types
     for type_name in PUBLISH_ORDER:
         type_ready = len([p for p in ready if p.get("type") == type_name])
         if type_ready < 2:
-            click.echo(f"⚠️  ALERTE: Seulement {type_ready} post(s) '{type_name}' ready!")
+            click.echo(f"[!] ALERTE: Seulement {type_ready} post(s) '{type_name}' ready!")
 
 
 if __name__ == "__main__":

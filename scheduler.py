@@ -376,7 +376,9 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
     
     # Formater la caption
     caption = format_caption(post_to_publish)
-    click.echo(f"\nCaption:\n{caption[:200]}...")
+    # Afficher un apercu de la caption (sans emojis pour eviter les erreurs Windows)
+    caption_preview = caption[:200].encode('ascii', 'replace').decode('ascii')
+    click.echo(f"\nCaption preview:\n{caption_preview}...")
     
     if dry_run:
         click.echo("\n[DRY RUN] Publication simulée.")
@@ -465,9 +467,10 @@ def grid_preview(rows: int):
         def format_cell(post):
             if not post:
                 return " " * 18
-            post_id = post["id"][:16]
+            post_id = post["id"][:14]
             status = post.get("status", "?")
-            type_indicator = post.get("type", "?")[0].upper()
+            type_map = {"phrase": "P", "chiffre": "C", "photo": "Ph"}
+            type_indicator = type_map.get(post.get("type", "?"), "?")
             if status == "ready":
                 return f"[{type_indicator}] {post_id}"
             else:
@@ -488,13 +491,13 @@ def grid_preview(rows: int):
     
     # Alertes
     if len(ready) < 6:
-        click.echo(f"\n⚠️  ALERTE: Moins de 6 posts prêts! Générez du contenu.")
+        click.echo(f"\n[!] ALERTE: Moins de 6 posts prets! Generez du contenu.")
     
     # Vérifier l'équilibre des types
     for type_name in PUBLISH_ORDER:
         type_ready = len([p for p in ready if p.get("type") == type_name])
         if type_ready < 2:
-            click.echo(f"⚠️  ALERTE: Seulement {type_ready} post(s) '{type_name}' ready!")
+            click.echo(f"[!] ALERTE: Seulement {type_ready} post(s) '{type_name}' ready!")
 
 
 @cli.command()
@@ -543,10 +546,10 @@ def queue_status():
         
         if ready_posts:
             next_post = ready_posts[0]
-            indicator = "→" if post_type == next_type else " "
+            indicator = ">" if post_type == next_type else " "
             click.echo(f"{indicator} {post_type.upper()}: {next_post['id']}")
         else:
-            indicator = "→" if post_type == next_type else " "
+            indicator = ">" if post_type == next_type else " "
             click.echo(f"{indicator} {post_type.upper()}: [AUCUN POST READY]")
     
     # Services status
