@@ -23,6 +23,7 @@ from config.settings import DATA_DIR, GENERATED_DIR
 from generators import ChiffreGenerator, PhraseGenerator, PhotoGenerator
 from services.instagram_service import InstagramService, check_instagram_availability
 from services.replicate_service import ReplicateService, check_replicate_availability
+from services.unsplash_service import UnsplashService, check_unsplash_availability
 
 
 def load_content() -> dict:
@@ -315,6 +316,11 @@ def status():
     click.echo(f"  - Package: {'OK' if rep_status['package_installed'] else 'MANQUANT'}")
     click.echo(f"  - API Token: {'OK' if rep_status['api_token_configured'] else 'MANQUANT'}")
     
+    # Vérifier Unsplash
+    unsplash_status = check_unsplash_availability()
+    click.echo("\nUnsplash (photos libres de droit):")
+    click.echo(f"  - API Key: {'OK' if unsplash_status['api_key_configured'] else 'MANQUANT'}")
+    
     # Vérifier les assets
     from config.settings import FONTS_DIR, LOGO_DIR
     
@@ -395,6 +401,325 @@ def generate_ai_photo(post_id: str, style: str):
         
     except Exception as e:
         click.echo(f"\nErreur: {e}", err=True)
+
+
+@cli.command()
+@click.option("--id", "post_id", help="ID du post à lier à la photo")
+@click.option("--query", default="cafe_terrace", help="Recherche ou preset (cafe_terrace, wine_bar, friends_drinking, rooftop_bar, brunch, aperitif)")
+@click.option("--count", default=5, help="Nombre de résultats à afficher")
+def fetch_unsplash(post_id: Optional[str], query: str, count: int):
+    """Recherche et sélectionne une photo Unsplash pour un post ambiance."""
+    unsplash_status = check_unsplash_availability()
+    if not unsplash_status["ready"]:
+        click.echo("Unsplash non configuré. Ajoutez UNSPLASH_ACCESS_KEY à .env", err=True)
+        return
+    
+    click.echo(f"\nRecherche Unsplash: '{query}'...")
+    
+    try:
+        service = UnsplashService()
+        results = service.search_photos(query, orientation="portrait", per_page=count)
+        
+        if not results:
+            click.echo("Aucun résultat trouvé.", err=True)
+            return
+        
+        click.echo(f"\n{len(results)} photos trouvées:\n")
+        click.echo("-" * 60)
+        
+        for i, photo in enumerate(results, 1):
+            desc = photo['description'][:50] + "..." if photo['description'] and len(photo['description']) > 50 else (photo['description'] or "Sans description")
+            click.echo(f"{i}. {desc}")
+            click.echo(f"   ID: {photo['id']}")
+            click.echo(f"   Preview: {photo['urls']['small']}")
+            click.echo(f"   Par: {photo['user']['name']} (@{photo['user']['username']})")
+            click.echo("")
+        
+        click.echo("-" * 60)
+        click.echo("\nOuvre les URLs de preview dans ton navigateur pour voir les images.")
+        click.echo("IMPORTANT: Vérifie qu'il n'y a pas de marque/trademark visible!")
+        
+        if post_id:
+            # Vérifier que le post existe
+            post = get_post_by_id(post_id)
+            if not post:
+                click.echo(f"\nPost non trouvé: {post_id}", err=True)
+                return
+            
+            if post.get("type") != "photo":
+                click.echo(f"\nCe n'est pas un post de type 'photo'", err=True)
+                return
+            
+            # Demander quelle photo choisir
+            choice = click.prompt(
+                "\nNuméro de la photo à utiliser (ou 'q' pour quitter)",
+                type=str,
+                default="q"
+            )
+            
+            if choice.lower() == 'q':
+                click.echo("Annulé.")
+                return
+            
+            try:
+                idx = int(choice) - 1
+                if idx < 0 or idx >= len(results):
+                    click.echo("Numéro invalide.", err=True)
+                    return
+                
+                selected_photo = results[idx]
+                photo_id = selected_photo['id']
+                
+                # Mettre à jour le post
+                data = load_content()
+                for p in data["posts"]:
+                    if p["id"] == post_id:
+                        p["content"]["unsplash_photo_id"] = photo_id
+                        p["content"]["unsplash_user"] = f"{selected_photo['user']['name']} (@{selected_photo['user']['username']})"
+                        p["content"]["light_overlay"] = True
+                        p["content"]["light_overlay_intensity"] = 0.35
+                        p["content"]["apply_filter"] = False
+                        # Ne pas définir trademark_verified, l'utilisateur doit le faire manuellement
+                        break
+                save_content(data)
+                
+                click.echo(f"\nPhoto sélectionnée: {photo_id}")
+                click.echo(f"Crédit: {selected_photo['user']['name']}")
+                click.echo("\nMis à jour dans content.json avec light_overlay activé.")
+                click.echo("\nProchaines étapes:")
+                click.echo(f"  1. Vérifie l'image pour les trademarks")
+                click.echo(f"  2. Dans content.json, ajoute: \"trademark_verified\": true")
+                click.echo(f"  3. Génère l'image finale: python main.py generate --id {post_id}")
+                
+            except ValueError:
+                click.echo("Entrée invalide.", err=True)
+                return
+        else:
+            click.echo("\nPour lier une photo à un post, utilisez:")
+            click.echo(f"  python main.py fetch-unsplash --id <post_id> --query \"{query}\"")
+        
+    except Exception as e:
+        click.echo(f"\nErreur: {e}", err=True)
+
+
+@cli.command()
+@click.option("--query", default="cafe_terrace", help="Recherche ou preset")
+def unsplash_random(query: str):
+    """Récupère une photo aléatoire depuis Unsplash (pour inspiration)."""
+    unsplash_status = check_unsplash_availability()
+    if not unsplash_status["ready"]:
+        click.echo("Unsplash non configuré. Ajoutez UNSPLASH_ACCESS_KEY à .env", err=True)
+        return
+    
+    click.echo(f"\nRecherche aléatoire: '{query}'...")
+    
+    try:
+        service = UnsplashService()
+        photo = service.get_random_photo(query, orientation="portrait")
+        
+        if not photo:
+            click.echo("Aucun résultat trouvé.", err=True)
+            return
+        
+        desc = photo['description'] or "Sans description"
+        click.echo(f"\nPhoto trouvée:")
+        click.echo(f"  Description: {desc}")
+        click.echo(f"  ID: {photo['id']}")
+        click.echo(f"  Preview: {photo['urls']['regular']}")
+        click.echo(f"  Par: {photo['user']['name']} (@{photo['user']['username']})")
+        
+    except Exception as e:
+        click.echo(f"\nErreur: {e}", err=True)
+
+
+@cli.command()
+@click.option("--id", "post_id", required=True, help="ID du post photo")
+def auto_photo(post_id: str):
+    """Génère automatiquement une photo ambiance (recherche aléatoire + génération)."""
+    # Vérifier Unsplash
+    unsplash_status = check_unsplash_availability()
+    if not unsplash_status["ready"]:
+        click.echo("Unsplash non configuré. Ajoutez UNSPLASH_ACCESS_KEY à .env", err=True)
+        return
+    
+    # Vérifier que le post existe et est de type photo
+    data = load_content()
+    post = None
+    post_index = None
+    for i, p in enumerate(data.get("posts", [])):
+        if p.get("id") == post_id:
+            post = p
+            post_index = i
+            break
+    
+    if not post:
+        click.echo(f"Post non trouvé: {post_id}", err=True)
+        return
+    
+    if post.get("type") != "photo":
+        click.echo(f"Ce n'est pas un post de type 'photo' (type actuel: {post.get('type')})", err=True)
+        return
+    
+    try:
+        service = UnsplashService()
+        
+        # Obtenir un preset aléatoire
+        preset_key, preset_query = service.get_random_preset()
+        click.echo(f"\nPreset aléatoire: {preset_key}")
+        click.echo(f"Recherche: '{preset_query}'")
+        
+        # Récupérer une photo aléatoire
+        photo = service.get_random_photo(preset_key, orientation="portrait")
+        
+        if not photo:
+            click.echo("Aucune photo trouvée. Réessayez.", err=True)
+            return
+        
+        photo_id = photo['id']
+        user_name = photo['user']['name']
+        user_username = photo['user']['username']
+        desc = photo['description'] or "Sans description"
+        
+        click.echo(f"\nPhoto trouvée: {photo_id}")
+        click.echo(f"  Description: {desc[:60]}..." if len(desc) > 60 else f"  Description: {desc}")
+        click.echo(f"  Par: {user_name} (@{user_username})")
+        click.echo(f"  Preview: {photo['urls']['small']}")
+        
+        # Mettre à jour content.json avec les infos de la photo
+        post["content"]["unsplash_photo_id"] = photo_id
+        post["content"]["unsplash_user"] = f"{user_name} (@{user_username})"
+        post["content"]["unsplash_query_used"] = preset_key
+        post["content"]["light_overlay"] = True
+        post["content"]["light_overlay_intensity"] = 0.35
+        post["content"]["apply_filter"] = False
+        post["content"]["overlay_logo"] = True
+        post["content"]["logo_color"] = "black"
+        
+        # Sauvegarder les changements
+        data["posts"][post_index] = post
+        save_content(data)
+        click.echo("\nContent.json mis à jour.")
+        
+        # Générer l'image finale
+        click.echo("\nGénération de l'image finale...")
+        
+        generator = PhotoGenerator()
+        GENERATED_DIR.mkdir(exist_ok=True)
+        
+        image = generator.generate(post["content"])
+        filename = f"{post_id}.png"
+        output_path = generator.save(image, filename)
+        
+        # Mettre à jour le statut du post
+        data = load_content()
+        for p in data["posts"]:
+            if p["id"] == post_id:
+                p["status"] = "ready"
+                p["generated_image"] = str(output_path)
+                break
+        save_content(data)
+        
+        click.echo(f"\nSauvegardé: {output_path}")
+        click.echo(f"Crédit photo: {user_name} (@{user_username}) via Unsplash")
+        click.echo("\nTerminé! L'image est prête.")
+        
+    except Exception as e:
+        click.echo(f"\nErreur: {e}", err=True)
+
+
+# Ordre strict de publication : Phrase -> Chiffre -> Photo (cyclique)
+PUBLISH_ORDER = ["phrase", "chiffre", "photo"]
+
+
+@cli.command("grid-preview")
+@click.option("--rows", default=4, help="Nombre de lignes à afficher")
+def grid_preview(rows: int):
+    """Affiche un aperçu de la grille Instagram (colonnes de 3)."""
+    
+    data = load_content()
+    posts = data.get("posts", [])
+    
+    # Séparer les posts publiés et à publier
+    posted = [p for p in posts if p.get("status") == "posted"]
+    ready = [p for p in posts if p.get("status") == "ready"]
+    draft = [p for p in posts if p.get("status") == "draft"]
+    
+    # Trier les posts publiés par publish_order
+    posted.sort(key=lambda x: x.get("publish_order", 0), reverse=True)
+    
+    click.echo("\n" + "=" * 60)
+    click.echo("           GRILLE INSTAGRAM - LE MIDDLE")
+    click.echo("=" * 60)
+    
+    # Calculer le prochain type
+    posted_count = len(posted)
+    next_type = PUBLISH_ORDER[posted_count % 3]
+    
+    click.echo(f"\nProchain type à publier: {next_type.upper()}")
+    click.echo(f"Position dans le cycle: {(posted_count % 3) + 1}/3 (P-C-Ph)")
+    click.echo(f"Total publiés: {posted_count}")
+    
+    # Afficher la file d'attente
+    click.echo("\n--- File d'attente (prochains posts) ---")
+    click.echo(f"{'Col 1':<20} {'Col 2':<20} {'Col 3':<20}")
+    click.echo("-" * 60)
+    
+    # Construire la grille des prochains posts selon l'ordre
+    queue = []
+    type_queues = {
+        "phrase": [p for p in ready if p.get("type") == "phrase"],
+        "chiffre": [p for p in ready if p.get("type") == "chiffre"],
+        "photo": [p for p in ready if p.get("type") == "photo"]
+    }
+    
+    # Simuler les prochains posts
+    for i in range(rows * 3):
+        type_needed = PUBLISH_ORDER[(posted_count + i) % 3]
+        if type_queues[type_needed]:
+            post = type_queues[type_needed].pop(0)
+            queue.append(post)
+        else:
+            queue.append({"id": f"[MANQUANT:{type_needed}]", "status": "missing", "type": type_needed})
+    
+    # Afficher en lignes de 3
+    for row in range(rows):
+        col1 = queue[row * 3] if row * 3 < len(queue) else None
+        col2 = queue[row * 3 + 1] if row * 3 + 1 < len(queue) else None
+        col3 = queue[row * 3 + 2] if row * 3 + 2 < len(queue) else None
+        
+        def format_cell(post):
+            if not post:
+                return " " * 18
+            post_id = post["id"][:16]
+            status = post.get("status", "?")
+            type_indicator = post.get("type", "?")[0].upper()
+            if status == "ready":
+                return f"[{type_indicator}] {post_id}"
+            else:
+                return f"[!] {post_id}"
+        
+        click.echo(f"{format_cell(col1):<20} {format_cell(col2):<20} {format_cell(col3):<20}")
+    
+    click.echo("-" * 60)
+    click.echo("Légende: [P]=Phrase, [C]=Chiffre, [Ph]=Photo, [!]=Manquant")
+    
+    # Stats
+    click.echo(f"\n--- Statistiques ---")
+    click.echo(f"Posts 'ready':  {len(ready)} (P:{len([p for p in ready if p['type']=='phrase'])}, "
+               f"C:{len([p for p in ready if p['type']=='chiffre'])}, "
+               f"Ph:{len([p for p in ready if p['type']=='photo'])})")
+    click.echo(f"Posts 'draft':  {len(draft)}")
+    click.echo(f"Posts 'posted': {len(posted)}")
+    
+    # Alertes
+    if len(ready) < 6:
+        click.echo(f"\n⚠️  ALERTE: Moins de 6 posts prêts! Générez du contenu.")
+    
+    # Vérifier l'équilibre des types
+    for type_name in PUBLISH_ORDER:
+        type_ready = len([p for p in ready if p.get("type") == type_name])
+        if type_ready < 2:
+            click.echo(f"⚠️  ALERTE: Seulement {type_ready} post(s) '{type_name}' ready!")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,71 @@
+name: Publish to Instagram
+
+on:
+  schedule:
+    # Lundi, Mercredi, Vendredi à 12h UTC (13h Paris en hiver, 14h en été)
+    - cron: '0 12 * * 1,3,5'
+  workflow_dispatch:
+    inputs:
+      force_type:
+        description: 'Forcer un type spécifique (optionnel, ignore l ordre normal)'
+        required: false
+        type: choice
+        options:
+          - ''
+          - phrase
+          - chiffre
+          - photo
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Check queue status
+        run: |
+          python scheduler.py queue-status
+      
+      - name: Publish next post
+        env:
+          INSTAGRAM_BUSINESS_ACCOUNT_ID: ${{ secrets.INSTAGRAM_BUSINESS_ACCOUNT_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: |
+          FORCE_TYPE="${{ github.event.inputs.force_type }}"
+          if [ -n "$FORCE_TYPE" ]; then
+            python scheduler.py publish-next --force-type "$FORCE_TYPE"
+          else
+            python scheduler.py publish-next
+          fi
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-publish post to Instagram [skip ci]"
+          file_pattern: "data/*.json"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"

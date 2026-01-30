@@ -31,6 +31,9 @@ CLOUDINARY_API_SECRET=votre_secret
 
 # Replicate (photos AI - optionnel)
 REPLICATE_API_TOKEN=votre_token
+
+# Unsplash (photos libres de droit - optionnel)
+UNSPLASH_ACCESS_KEY=votre_clé
 ```
 
 3. Remplacer les logos placeholder par les vrais logos Le Middle dans `assets/logo/`
@@ -82,6 +85,21 @@ python main.py publish --id chiffre_001
 python main.py generate-ai-photo --id photo_001 --style cafe_terrace
 ```
 
+### Rechercher une photo Unsplash (nécessite Unsplash)
+
+```bash
+# Rechercher des photos avec un preset
+python main.py fetch-unsplash --query cafe_terrace
+
+# Rechercher et lier à un post existant
+python main.py fetch-unsplash --id ambiance_001 --query "friends drinking wine"
+
+# Photo aléatoire pour inspiration
+python main.py unsplash-random --query rooftop_bar
+```
+
+Presets disponibles: `cafe_terrace`, `wine_bar`, `friends_drinking`, `rooftop_bar`, `brunch`, `aperitif`
+
 ## Structure des Posts
 
 Les posts sont définis dans `data/content.json`. Trois types sont supportés :
@@ -112,7 +130,7 @@ Citation/phrase punchy sur fond dégradé avec carte blanche.
 }
 ```
 
-### Type "Photo"
+### Type "Photo" (AI)
 Photo générée par IA avec overlay du logo.
 
 ```json
@@ -121,6 +139,24 @@ Photo générée par IA avec overlay du logo.
   "content": {
     "ai_prompt": "Description de la scène à générer",
     "overlay_logo": true
+  }
+}
+```
+
+### Type "Photo" (Unsplash - Ambiance)
+Photo libre de droit depuis Unsplash avec overlay clair et logo centré.
+
+```json
+{
+  "type": "photo",
+  "content": {
+    "unsplash_query": "friends cafe terrace paris",
+    "unsplash_photo_id": "abc123",
+    "light_overlay": true,
+    "light_overlay_intensity": 0.35,
+    "overlay_logo": true,
+    "logo_color": "black",
+    "trademark_verified": true
   }
 }
 ```

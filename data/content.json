@@ -941,6 +941,35 @@
         ]
       },
       "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\phrase_012.png"
+    },
+    {
+      "id": "ambiance_001",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_query": "friends cafe terrace paris",
+        "unsplash_photo_id": "zFI-bYxL7rY",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false,
+        "unsplash_user": "Lesli Whitecotton (@lnicolern)",
+        "unsplash_query_used": "brunch"
+      },
+      "caption": {
+        "main": "Ces moments simples qu'on cherche tous.\n\nRetrouvez-vous au Middle.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "terrasse",
+          "amis",
+          "cafe"
+        ]
+      },
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\ambiance_001.png"
     }
   ]
 }

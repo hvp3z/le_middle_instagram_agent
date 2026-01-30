@@ -18,6 +18,9 @@ CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "")
 # Replicate (pour génération AI de photos)
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN", "")
 
+# Unsplash (pour photos libres de droit)
+UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY", "")
+
 # Instagram API URLs
 INSTAGRAM_API_BASE = "https://graph.facebook.com/v18.0"
 
@@ -38,4 +41,5 @@ def validate_config() -> dict[str, bool]:
         "instagram": bool(INSTAGRAM_BUSINESS_ACCOUNT_ID and FACEBOOK_PAGE_ACCESS_TOKEN),
         "cloudinary": bool(CLOUDINARY_CLOUD_NAME and CLOUDINARY_API_KEY and CLOUDINARY_API_SECRET),
         "replicate": bool(REPLICATE_API_TOKEN),
+        "unsplash": bool(UNSPLASH_ACCESS_KEY),
     }

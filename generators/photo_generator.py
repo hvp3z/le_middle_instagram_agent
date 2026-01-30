@@ -20,7 +20,7 @@ class PhotoGenerator(BaseGenerator):
 
     def __init__(self):
         super().__init__()
-        self.logo_size = 280  # Taille du logo au centre
+        self.logo_size = 800  # Taille du logo au centre
         
         # Couleur de filtre optionnel (teinte chaude)
         self.warm_filter_color = hex_to_rgb(COLORS["peach"])
@@ -57,6 +57,28 @@ class PhotoGenerator(BaseGenerator):
         # Légère augmentation de la saturation
         enhancer = ImageEnhance.Color(result)
         result = enhancer.enhance(1.1)
+        
+        return result
+
+    def apply_light_overlay(
+        self, img: Image.Image, intensity: float = 0.35
+    ) -> Image.Image:
+        """
+        Applique un voile clair/lumineux sur toute l'image.
+        Donne un effet "faded" élégant parfait pour les posts ambiance.
+        
+        Args:
+            img: Image source
+            intensity: Intensité du voile (0.0 à 1.0), 0.35 par défaut
+        """
+        # Convertir en RGBA si nécessaire
+        img_rgba = img.convert("RGBA")
+        
+        # Créer une couche blanche semi-transparente
+        light_layer = Image.new("RGBA", img.size, (255, 255, 255, int(255 * intensity)))
+        
+        # Fusionner avec l'image
+        result = Image.alpha_composite(img_rgba, light_layer)
         
         return result
 
@@ -127,15 +149,30 @@ class PhotoGenerator(BaseGenerator):
         
         Args:
             content: Dictionnaire avec les clés:
-                - image_url: URL de l'image générée par AI (optionnel)
-                - image_path: Chemin local vers une image (optionnel)
-                - overlay_logo: bool, ajouter le logo au centre
-                - apply_filter: bool, appliquer le filtre chaud
+                - image_url: URL de l'image (AI générée ou autre)
+                - image_path: Chemin local vers une image
+                - unsplash_photo_id: ID d'une photo Unsplash
+                - overlay_logo: bool, ajouter le logo au centre (défaut: True)
+                - apply_filter: bool, appliquer le filtre chaud (défaut: True pour AI, False pour Unsplash)
+                - light_overlay: bool, appliquer le voile clair (défaut: False)
+                - light_overlay_intensity: float, intensité du voile (défaut: 0.35)
                 - logo_color: "black" ou "white" (défaut: "black")
         """
         # Charger l'image source
         image_url = content.get("image_url")
         image_path = content.get("image_path")
+        unsplash_photo_id = content.get("unsplash_photo_id")
+        
+        # Si on a un ID Unsplash, récupérer l'URL
+        if unsplash_photo_id and not image_url:
+            try:
+                from services.unsplash_service import UnsplashService, check_unsplash_availability
+                if check_unsplash_availability()["ready"]:
+                    service = UnsplashService()
+                    # Déclencher le download (requis par Unsplash) et récupérer l'URL
+                    image_url = service.trigger_download(unsplash_photo_id)
+            except Exception as e:
+                print(f"Warning: Could not fetch Unsplash photo: {e}")
         
         if image_url:
             img = self.load_image_from_url(image_url)
@@ -149,8 +186,12 @@ class PhotoGenerator(BaseGenerator):
         # Redimensionner et recadrer
         img = self.resize_and_crop_to_fit(img)
         
-        # Appliquer le filtre chaud si demandé
-        if content.get("apply_filter", True):
+        # Appliquer le voile clair si demandé (pour les posts ambiance Unsplash)
+        if content.get("light_overlay", False):
+            intensity = content.get("light_overlay_intensity", 0.35)
+            img = self.apply_light_overlay(img, intensity=intensity)
+        # Sinon, appliquer le filtre chaud si demandé (pour les photos AI)
+        elif content.get("apply_filter", True):
             img = self.apply_warm_filter(img, intensity=0.12)
         
         # Ajouter le logo si demandé
@@ -158,11 +199,11 @@ class PhotoGenerator(BaseGenerator):
             logo_color = content.get("logo_color", "black")
             img = self.add_logo_overlay(img, logo_color)
         
-        # Ajouter la tagline en bas (en italique)
+        # Ajouter la tagline en bas (en REGULAR)
         img = img.convert("RGBA")
         draw = ImageDraw.Draw(img)
-        font_tagline = self.load_font("LibreBaskerville-Italic.ttf", FONT_SIZES["phrase"]["tagline"])
-        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=100)
+        font_tagline = self.load_font("LibreBaskerville-Regular.ttf", FONT_SIZES["phrase"]["tagline"])
+        self.add_tagline(draw, font_tagline, self.tagline_color, y_offset=250)
         
         return img.convert("RGB")
 
