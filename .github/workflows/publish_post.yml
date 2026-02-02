@@ -2,8 +2,12 @@ name: Publish to Instagram
 
 on:
   schedule:
-    # Lundi, Mercredi, Vendredi à 12h UTC (13h Paris en hiver, 14h en été)
-    - cron: '0 12 * * 1,3,5'
+    # Lundi à 18h30 heure de Paris (17h30 UTC en hiver, 16h30 UTC en été)
+    - cron: '30 17 * * 1'
+    # Mercredi à 12h00 heure de Paris (11h00 UTC en hiver, 10h00 UTC en été)
+    - cron: '0 11 * * 3'
+    # Vendredi à 16h30 heure de Paris (15h30 UTC en hiver, 14h30 UTC en été)
+    - cron: '30 15 * * 5'
   workflow_dispatch:
     inputs:
       force_type:
