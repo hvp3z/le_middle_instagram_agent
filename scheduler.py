@@ -305,10 +305,11 @@ def generate_content(count: int, dry_run: bool):
             filename = f"{post['id']}.png"
             output_path = generator.save(image, filename)
             
-            # Mettre à jour le post avec le chemin de l'image
+            # Mettre à jour le post avec le chemin de l'image (relatif pour cross-platform)
+            relative_path = f"generated/{filename}"
             for p in data["posts"]:
                 if p["id"] == post["id"]:
-                    p["generated_image"] = str(output_path)
+                    p["generated_image"] = relative_path
                     p["status"] = "ready"
                     break
             
