@@ -1,5 +1,6 @@
 name: Generate Content
 
+# Génère un batch de contenu chaque lundi matin
 on:
   schedule:
     # Chaque lundi à 8h UTC (9h Paris en hiver, 10h en été)
