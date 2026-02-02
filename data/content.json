@@ -1047,6 +1047,80 @@
       },
       "created_at": "2026-01-30T10:49:34.113674Z",
       "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations_Tests\\Automatisation Posts Le Middle\\generated\\ambiance_002.png"
+    },
+    {
+      "id": "phrase_014",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Ton pote de Vincennes qui dit \"c'est pas loin\" pour un lieu à République alors que tu habites Boulogne."
+      },
+      "caption": {
+        "main": "45 minutes de RER pour lui, 1h15 pour toi. Mais c'est pas loin, hein. 🙃",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "amitie",
+          "galere",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-02-02T08:47:30.632319Z",
+      "generated_image": "/home/runner/work/le_middle_instagram_agent/le_middle_instagram_agent/generated/phrase_014.png"
+    },
+    {
+      "id": "chiffre_032",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le temps moyen d'attente avant que ton pote admette qu'il n'a pas encore quitté son appart.",
+        "number": "23",
+        "unit_text": "minutes. \"J'arrive, je sors du métro !\""
+      },
+      "caption": {
+        "main": "23 minutes d'attente avant que ton pote avoue qu'il n'a pas encore quitté son appart. Entre le \"j'arrive\" et le vrai départ, il y a un monde. Un monde fait de Netflix qui traîne, de chaussettes introuvables et de \"juste une dernière story Insta\".",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "paris",
+          "amitie"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-02-02T08:47:36.630180Z",
+      "generated_image": "/home/runner/work/le_middle_instagram_agent/le_middle_instagram_agent/generated/chiffre_032.png"
+    },
+    {
+      "id": "ambiance_003",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "qmlReYfZJww",
+        "unsplash_user": "Zero (@z3ro)",
+        "unsplash_query_used": "aperitif",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à 19h30 au lieu de 21h15. Le miracle du point de rendez-vous équitable. 🥂",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "apero",
+          "amis",
+          "rdvequitable"
+        ]
+      },
+      "created_at": "2026-02-02T08:47:40.059595Z",
+      "generated_image": "/home/runner/work/le_middle_instagram_agent/le_middle_instagram_agent/generated/ambiance_003.png"
     }
   ]
 }
