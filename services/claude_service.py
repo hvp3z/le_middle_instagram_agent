@@ -54,6 +54,49 @@ RÈGLES IMPORTANTES:
 - Le contenu doit inciter au partage ("C'est trop nous !")
 - Toujours garder une pointe d'humour, même dans la plainte
 - Ne jamais mentionner de marques concurrentes
+- Vérifier l'exactitude des faits (ex: prix du pass Navigo ~86€/mois, pas 5€)
+"""
+
+# Guide de style détaillé pour la génération de phrases
+PHRASE_STYLE_GUIDE = """
+GUIDE DE STYLE POUR LES PHRASES:
+
+=== STRUCTURES GAGNANTES (à privilégier) ===
+1. PUNCHLINE IRONIQUE : Une observation mordante qui retourne la situation.
+   Ex: "Dire 'C'est plus simple chez moi', c'est juste déclarer officiellement la guerre à ceux qui n'habitent pas la même ligne."
+
+2. TRADUCTION / REFORMULATION ABSURDE : Décoder le langage parisien.
+   Ex: "Traduction de 'Je suis dans le métro' : Je suis sur le quai, il y a un colis suspect et je serai là dans 40 minutes."
+   Ex: "'Je suis dans le métro' = Je viens de fermer ma porte d'entrée."
+
+3. DÉTOURNEMENT RHÉTORIQUE : Prendre un concept noble et l'appliquer au quotidien transport.
+   Ex: "Parce que l'amitié, c'est aussi diviser le temps de trajet par deux."
+   Ex: "Le Middle : Parce que personne n'est le centre du monde, mais tout le monde peut être au centre du rendez-vous."
+
+4. STATISTIQUE INVENTÉE / HYPERBOLE : Chiffres absurdes mais relatables.
+   Ex: "Statistiquement, 80 % des 'j'arrive' sont envoyés depuis une salle de bain."
+   Ex: "Le record du monde de vitesse : penser qu'on peut se doucher, se sécher et traverser Paris en 300 secondes."
+
+5. OBSERVATION DU QUOTIDIEN avec chute : Décrire une situation que tout le monde connaît, puis twist final.
+   Ex: "L'ami qui propose 'un bar sympa' juste en bas de chez lui pour la 4ème fois consécutive."
+   Ex: "'J'habite à 15 minutes' mais oublie de préciser que c'est 15 minutes + 2 correspondances + une marche de 10 minutes."
+
+=== CE QU'IL FAUT ABSOLUMENT ÉVITER ===
+1. NARRATION PLATE DE TEMPS/STATIONS : "Ton pote fait X min depuis Station A, toi Y min depuis Station B" → trop robotique, pas d'humour
+2. CHIFFRES BRUTS SANS PUNCHLINE : "1h30 de trajet pour rester 2h" → ennuyeux sans twist
+3. FRAMING NÉGATIF DE LE MIDDLE : Ne JAMAIS présenter Le Middle comme une source de galère partagée. Le Middle est une SOLUTION, une récompense.
+   MAUVAIS: "tout le monde galère autant"
+   BON: "on partage l'effort (et la pinte)"
+4. FAITS INCORRECTS : Vérifier les prix (Navigo ~86€/mois), les réalités du réseau
+5. RÉFÉRENCES TROP SPÉCIFIQUES sans humour : "depuis République jusqu'à Opéra" → pas drôle en soi
+6. PHRASES TROP DESCRIPTIVES : Préférer les phrases qui font RESSENTIR plutôt que celles qui DÉCRIVENT
+
+=== REGISTRE DE LANGUE ===
+- Parler AVEC le public, pas AU public
+- Tutoiement naturel, comme entre potes
+- Ironie et second degré constants
+- Formulations qui donnent envie de taguer un ami
+- Le lecteur doit se dire "C'est EXACTEMENT ça" ou rire en reconnaissant la situation
 """
 
 
@@ -74,6 +117,7 @@ class ClaudeService:
     def _load_examples(self, post_type: str, count: int = 5) -> list[dict]:
         """
         Charge des exemples de posts existants pour le few-shot learning.
+        Privilégie les posts bien notés (rating 3), puis 2, et exclut les rating 1.
         
         Args:
             post_type: Type de post ('phrase' ou 'chiffre')
@@ -92,11 +136,31 @@ class ClaudeService:
         
         posts = [p for p in data.get("posts", []) if p.get("type") == post_type]
         
-        # Sélectionner des exemples aléatoires
-        if len(posts) > count:
-            posts = random.sample(posts, count)
+        # Séparer par rating : exclure les posts notés 1 (mauvais)
+        rated_3 = [p for p in posts if p.get("rating") == 3]
+        rated_2 = [p for p in posts if p.get("rating") == 2]
+        unrated = [p for p in posts if p.get("rating") is None]
+        # rating == 1 : exclus des exemples
         
-        return posts
+        # Construire la liste de candidats en priorisant les meilleurs
+        candidates = []
+        
+        # D'abord les phrases notées 3
+        if rated_3:
+            random.shuffle(rated_3)
+            candidates.extend(rated_3)
+        
+        # Puis les phrases notées 2
+        if rated_2:
+            random.shuffle(rated_2)
+            candidates.extend(rated_2)
+        
+        # Puis les phrases non notées (anciennes, probablement OK)
+        if unrated:
+            random.shuffle(unrated)
+            candidates.extend(unrated)
+        
+        return candidates[:count]
 
     def _format_phrase_examples(self, examples: list[dict]) -> str:
         """Formate les exemples de phrases pour le prompt."""
@@ -108,6 +172,59 @@ class ClaudeService:
             text = ex.get("content", {}).get("text", "")
             caption = ex.get("caption", {}).get("main", "")
             formatted.append(f"PHRASE: {text}\nCAPTION: {caption}")
+        
+        return "\n\n".join(formatted)
+
+    def _load_bad_examples(self, post_type: str, count: int = 3) -> list[dict]:
+        """
+        Charge des paires BAD->GOOD depuis les posts corrigés (original_text + text actuel).
+        Sélectionne des posts qui ont un original_text et un original_rating de 1 (les pires).
+        
+        Args:
+            post_type: Type de post ('phrase' ou 'chiffre')
+            count: Nombre de paires à charger
+            
+        Returns:
+            Liste de posts ayant un original_text (paire bad->good)
+        """
+        content_path = Path(__file__).parent.parent / "data" / "content.json"
+        
+        if not content_path.exists():
+            return []
+        
+        with open(content_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        # Chercher les posts corrigés (ceux qui ont un original_text)
+        corrected = [
+            p for p in data.get("posts", [])
+            if p.get("type") == post_type and p.get("original_text")
+        ]
+        
+        # Prioriser les pires originaux (rating 1)
+        worst_first = sorted(corrected, key=lambda p: p.get("original_rating", 2))
+        
+        if len(worst_first) > count:
+            # Prendre les count pires, avec un peu d'aléatoire parmi les ex-aequo
+            rating_1 = [p for p in worst_first if p.get("original_rating") == 1]
+            rating_2 = [p for p in worst_first if p.get("original_rating") == 2]
+            random.shuffle(rating_1)
+            random.shuffle(rating_2)
+            pool = rating_1 + rating_2
+            return pool[:count]
+        
+        return worst_first[:count]
+
+    def _format_bad_examples(self, bad_examples: list[dict]) -> str:
+        """Formate les paires BAD->GOOD pour le prompt."""
+        if not bad_examples:
+            return ""
+        
+        formatted = []
+        for ex in bad_examples:
+            bad_text = ex.get("original_text", "")
+            good_text = ex.get("content", {}).get("text", "")
+            formatted.append(f"MAUVAIS: \"{bad_text}\"\nCORRIGÉ: \"{good_text}\"")
         
         return "\n\n".join(formatted)
 
@@ -141,25 +258,52 @@ class ClaudeService:
         """
         examples = self._load_examples("phrase", count=5)
         examples_text = self._format_phrase_examples(examples)
+        bad_examples = self._load_bad_examples("phrase", count=3)
+        bad_examples_text = self._format_bad_examples(bad_examples)
         
         category_guidance = ""
         if category == "mois1_injustices":
-            category_guidance = "Catégorie: Injustices du quotidien - Focus sur les situations injustes dans les transports parisiens."
+            category_guidance = """Catégorie: INJUSTICES DU QUOTIDIEN
+- Observation ironique d'une situation injuste dans les transports parisiens
+- Utilise le détournement rhétorique, la question rhétorique, ou la reformulation sarcastique
+- Le lecteur doit ressentir l'injustice ET en rire
+- Structures efficaces: "Dire X, c'est en fait Y", "'Citation' : La phrase préférée de celui qui...", "Drôle de conception de X quand..."
+- Exemples de ton: "Dire 'C'est plus simple chez moi', c'est juste déclarer officiellement la guerre à ceux qui n'habitent pas la même ligne."
+"""
         elif category == "mois2_mythes":
-            category_guidance = "Catégorie: Mythes et légendes urbaines - Focus sur les mensonges classiques et comportements typiques."
+            category_guidance = """Catégorie: MYTHES ET LÉGENDES URBAINES
+- Décoder les mensonges classiques et comportements typiques des parisiens dans les transports
+- Utilise la "Traduction de...", la reformulation absurde, les statistiques inventées hilarantes
+- Structures efficaces: "Traduction de 'X' : Y", "'X' = Y (la vraie version)", "Le record du monde de..."
+- Exemples de ton: "Traduction de 'Je suis dans le métro' : Je suis sur le quai, il y a un colis suspect et je serai là dans 40 minutes."
+- Prendre en compte les vrais problèmes récurrents (colis suspects, retards, pannes) pour ancrer dans la réalité
+"""
         elif category == "mois3_redemption":
-            category_guidance = "Catégorie: Rédemption - Focus sur les solutions et moments positifs grâce à Le Middle."
+            category_guidance = """Catégorie: RÉDEMPTION (Le Middle comme solution)
+- Le Middle est présenté comme une SOLUTION POSITIVE, une récompense, jamais comme une galère partagée
+- L'effort est partagé équitablement ET mène à un moment agréable (la pinte, la soirée, retrouver ses amis)
+- INTERDIT: framing négatif ("tout le monde galère autant"), Le Middle ne doit JAMAIS être associé à la douleur
+- Structures efficaces: "Le Middle : Parce que...", "Pour une fois, c'est toi qui...", "La fin de X. Le début de Y."
+- Exemples de ton: "Le Middle : La fin du favoritisme géographique. Ici, on partage l'effort (et la pinte)."
+"""
         
         prompt = f"""Génère UNE SEULE nouvelle phrase pour la série "La Galère" de Le Middle.
 
+{PHRASE_STYLE_GUIDE}
+
 FORMAT ATTENDU:
-- Une phrase punchy de 2-3 lignes maximum
-- Sur les réalités des trajets parisiens
-- Doit générer de l'identification ("C'est trop nous !")
+- Une phrase PUNCHLINE de 1-2 lignes, 3 max si nécessaire
+- Ironique, mordante, ou qui retourne une situation absurde
+- Le lecteur doit immédiatement se reconnaître ET sourire/rire
+- Privilégier les reformulations, traductions, détournements plutôt que les descriptions plates
+- JAMAIS de narration robotique type "X fait Y min, toi Z min"
 
 {category_guidance}
 
-EXEMPLES DE PHRASES EXISTANTES (à utiliser comme inspiration, NE PAS COPIER):
+EXEMPLES À NE PAS REPRODUIRE (et leur version corrigée):
+{bad_examples_text if bad_examples_text else "Pas de mauvais exemples disponibles."}
+
+EXEMPLES DE PHRASES BIEN NOTÉES (à utiliser comme inspiration stylistique, NE PAS COPIER):
 {examples_text}
 
 Réponds UNIQUEMENT avec un JSON valide au format suivant (sans markdown, sans backticks):

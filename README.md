@@ -40,6 +40,22 @@ UNSPLASH_ACCESS_KEY=votre_clé
 
 ## Utilisation
 
+### Référence des commandes
+
+| Commande | Description |
+|----------|-------------|
+| `python main.py status` | Vérifier la configuration |
+| `python main.py list [--status] [--type]` | Lister les posts |
+| `python main.py generate [--id] [--status] [--type]` | Générer les images |
+| `python main.py preview --id <post_id>` | Aperçu d'un post |
+| `python main.py publish --id <post_id>` | Publier sur Instagram |
+| `python main.py generate-ai-photo --id <post_id> [--style]` | Générer une photo IA (Replicate) |
+| `python main.py batch-ambiance --id <post_id> [--count] [--query]` | Générer plusieurs images ambiance et choisir |
+| `python main.py auto-photo --id <post_id>` | Générer une image ambiance (une seule, aléatoire) |
+| `python main.py fetch-unsplash [--id] [--query] [--count]` | Rechercher des photos Unsplash |
+| `python main.py unsplash-random [--query]` | Photo Unsplash aléatoire (inspiration) |
+| `python main.py grid-preview [--rows]` | Aperçu de la grille Instagram |
+
 ### Vérifier la configuration
 
 ```bash
@@ -85,9 +101,16 @@ python main.py publish --id chiffre_001
 python main.py generate-ai-photo --id photo_001 --style cafe_terrace
 ```
 
-### Rechercher une photo Unsplash (nécessite Unsplash)
+### Photos ambiance (Unsplash)
 
 ```bash
+# Générer plusieurs images et choisir la meilleure (recommandé)
+python main.py batch-ambiance --id ambiance_004
+python main.py batch-ambiance --id ambiance_004 --count 8 --query "cafe terrace paris"
+
+# Générer une seule image ambiance (photo aléatoire)
+python main.py auto-photo --id ambiance_004
+
 # Rechercher des photos avec un preset
 python main.py fetch-unsplash --query cafe_terrace
 

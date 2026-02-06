@@ -3,7 +3,7 @@
     {
       "id": "chiffre_001",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps de trajet pour un café de 20 minutes.",
@@ -21,7 +21,10 @@
         ],
         "cta": "Lien en bio pour équilibrer tes trajets."
       },
-      "generated_image": "generated/old/chiffre_001.png"
+      "generated_image": "generated/old/chiffre_001.png",
+      "published_at": "2026-02-02T17:44:41.569090Z",
+      "instagram_media_id": "18092353964317505",
+      "publish_order": 2
     },
     {
       "id": "chiffre_002",
@@ -720,8 +723,11 @@
       "status": "ready",
       "category": "mois1_injustices",
       "week": 2,
+      "rating": 3,
+      "original_text": "Le pote qui dit \"C'est à côté\" alors qu'il y a 3 changements et 45 min de trajet.",
+      "original_rating": 1,
       "content": {
-        "text": "Le pote qui dit \"C'est à côté\" alors qu'il y a 3 changements et 45 min de trajet."
+        "text": "Le culot de l'ami qui appelle \"proximité\" un itinéraire qui inclut 3 correspondances, 2 sprints sur escalator en panne et un câlin forcé à un touriste et sa valise."
       },
       "caption": {
         "main": "Spoiler : On n'a pas la même notion du temps. 🚩",
@@ -741,8 +747,11 @@
       "status": "ready",
       "category": "mois1_injustices",
       "week": 3,
+      "rating": 3,
+      "original_text": "Traverser tout Paris pour un verre d'une heure : Le ratio temps de trajet / temps de kiff est en PLS.",
+      "original_rating": 2,
       "content": {
-        "text": "Traverser tout Paris pour un verre d'une heure : Le ratio temps de trajet / temps de kiff est en PLS."
+        "text": "Le Middle : Parce que le ratio \"Temps de trajet / Temps de pinte\" devrait toujours pencher du bon côté."
       },
       "caption": {
         "main": "Fini les trajets plus longs que la soirée. On règle ça avec Le Middle.",
@@ -762,8 +771,11 @@
       "status": "ready",
       "category": "mois1_injustices",
       "week": 4,
+      "rating": 3,
+      "original_text": "Le groupe WhatsApp qui met 4 jours à décider du lieu parce que personne ne veut bouger de son quartier.",
+      "original_rating": 2,
       "content": {
-        "text": "Le groupe WhatsApp qui met 4 jours à décider du lieu parce que personne ne veut bouger de son quartier."
+        "text": "Le groupe WhatsApp transformé en champ de bataille : quand personne ne veut lâcher son quartier, même pour ses meilleurs potes."
       },
       "caption": {
         "main": "L'enfer de la négo commence ici. Heureusement, l'arbitre arrive. ⚖️",
@@ -783,6 +795,7 @@
       "status": "ready",
       "category": "mois2_mythes",
       "week": 5,
+      "rating": 3,
       "content": {
         "text": "\"Je suis dans le métro\" = Je viens de fermer ma porte d'entrée."
       },
@@ -804,6 +817,7 @@
       "status": "ready",
       "category": "mois2_mythes",
       "week": 6,
+      "rating": 3,
       "content": {
         "text": "La traversée de Châtelet-Les Halles pour faire une correspondance : Le seul sport que je pratique."
       },
@@ -825,8 +839,11 @@
       "status": "ready",
       "category": "mois2_mythes",
       "week": 7,
+      "rating": 3,
+      "original_text": "Quand tu arrives le premier parce que tu habites à côté et que tu dois garder une table pour 6 pendant 40 min.",
+      "original_rating": 2,
       "content": {
-        "text": "Quand tu arrives le premier parce que tu habites à côté et que tu dois garder une table pour 6 pendant 40 min."
+        "text": "Le Middle : Parce que personne ne devrait avoir à simuler une conversation au téléphone pendant 40 minutes pour ne pas perdre une table de 6."
       },
       "caption": {
         "main": "Le moment le plus long de l'histoire de l'humanité.",
@@ -846,8 +863,11 @@
       "status": "ready",
       "category": "mois2_mythes",
       "week": 8,
+      "rating": 3,
+      "original_text": "L'ami qui propose \"un bar sympa\" juste en bas de chez lui pour la 4ème fois consécutive.",
+      "original_rating": 1,
       "content": {
-        "text": "L'ami qui propose \"un bar sympa\" juste en bas de chez lui pour la 4ème fois consécutive."
+        "text": "Le \"bar sympa juste en bas\" : le seul endroit de Paris où tu connais déjà la gueule du serveur alors que tu habites à l'autre bout de la ville."
       },
       "caption": {
         "main": "L'audace est totale. Partage ça à ton ami le plus flemmard. 🛋️",
@@ -867,6 +887,7 @@
       "status": "ready",
       "category": "mois3_redemption",
       "week": 9,
+      "rating": 3,
       "content": {
         "text": "POV : Tu as enfin trouvé un point de rencontre à 15 min de tout le monde. C'est ça, la paix sociale."
       },
@@ -888,6 +909,7 @@
       "status": "ready",
       "category": "mois3_redemption",
       "week": 10,
+      "rating": 3,
       "content": {
         "text": "Ne plus avoir à choisir entre son meilleur ami et son dernier métro."
       },
@@ -909,8 +931,11 @@
       "status": "ready",
       "category": "mois3_redemption",
       "week": 11,
+      "rating": 3,
+      "original_text": "Diviser le temps de trajet par deux, multiplier le temps de bonheur par deux.",
+      "original_rating": 2,
       "content": {
-        "text": "Diviser le temps de trajet par deux, multiplier le temps de bonheur par deux."
+        "text": "Moins de métro, plus de temps avec tes potes : l'équation toute bête que personne n'arrivait à résoudre avant Le Middle."
       },
       "caption": {
         "main": "Les maths sont simples, le trajet aussi. Merci Le Middle. 📍",
@@ -930,6 +955,7 @@
       "status": "ready",
       "category": "mois3_redemption",
       "week": 12,
+      "rating": 3,
       "content": {
         "text": "Le Middle : Parce que personne n'est le centre du monde, mais tout le monde peut être au centre du rendez-vous."
       },
@@ -948,19 +974,19 @@
     {
       "id": "ambiance_001",
       "type": "photo",
-      "status": "ready",
+      "status": "posted",
       "category": "ambiance",
       "content": {
         "unsplash_query": "friends cafe terrace paris",
-        "unsplash_photo_id": "zFI-bYxL7rY",
+        "unsplash_photo_id": "wZrzALFMbYk",
         "light_overlay": true,
         "light_overlay_intensity": 0.35,
         "overlay_logo": true,
         "logo_color": "black",
         "apply_filter": false,
         "trademark_verified": false,
-        "unsplash_user": "Lesli Whitecotton (@lnicolern)",
-        "unsplash_query_used": "brunch"
+        "unsplash_user": "Ben Moreland (@relentlessjpg)",
+        "unsplash_query_used": "coffee_shop"
       },
       "caption": {
         "main": "Ces moments simples qu'on cherche tous.\n\nRetrouvez-vous au Middle.",
@@ -972,15 +998,21 @@
           "cafe"
         ]
       },
-      "generated_image": "generated/ambiance_001.png"
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations\\LeMiddleInstagram\\generated\\ambiance_001.png",
+      "published_at": "2026-02-04T12:08:25.236489Z",
+      "instagram_media_id": "18087825572165632",
+      "publish_order": 3
     },
     {
       "id": "phrase_013",
       "type": "phrase",
       "status": "ready",
       "category": "mois1_injustices",
+      "rating": 3,
+      "original_text": "Quand ton ami propose \"On se voit à Châtelet\" et que tu réalises qu'il habite Château Rouge.",
+      "original_rating": 1,
       "content": {
-        "text": "Quand ton ami propose \"On se voit à Châtelet\" et que tu réalises qu'il habite Château Rouge."
+        "text": "Le génie qui propose un \"point médian\" qui se trouve exactement à 400 mètres de son bureau. On n'est plus sur un verre, on est sur une convocation."
       },
       "caption": {
         "main": "L'audace de certains n'a vraiment pas de limites. 😤 Heureusement, Le Middle calcule pour tout le monde.",
@@ -1053,8 +1085,11 @@
       "type": "phrase",
       "status": "ready",
       "category": "mois1_injustices",
+      "rating": 3,
+      "original_text": "Ton pote de Vincennes qui dit \"c'est pas loin\" pour un lieu à République alors que tu habites Boulogne.",
+      "original_rating": 1,
       "content": {
-        "text": "Ton pote de Vincennes qui dit \"c'est pas loin\" pour un lieu à République alors que tu habites Boulogne."
+        "text": "Le Middle : Parce qu'on est tous plus sympas quand on n'a pas passé 1h la tête sous l'aisselle d'un étranger pour rejoindre le bar."
       },
       "caption": {
         "main": "45 minutes de RER pour lui, 1h15 pour toi. Mais c'est pas loin, hein. 🙃",
@@ -1121,6 +1156,374 @@
       },
       "created_at": "2026-02-02T08:47:40.059595Z",
       "generated_image": "generated/ambiance_003.png"
+    },
+    {
+      "id": "phrase_015",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 15,
+      "rating": 3,
+      "content": {
+        "text": "Finalement trouver un lieu où personne ne râle et tout le monde arrive à l'heure."
+      },
+      "caption": {
+        "main": "Le miracle parisien existe. Il s'appelle l'équité des trajets. ✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "equilibre"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:36.650118Z",
+      "generated_image": "generated/phrase_015.png"
+    },
+    {
+      "id": "phrase_016",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 16,
+      "rating": 3,
+      "content": {
+        "text": "Ton ami de zone 1 qui trouve que \"c'est abusé\" de prendre deux métros alors que tu viens de zone 5."
+      },
+      "caption": {
+        "main": "La définition du trajet \"compliqué\" varie drastiquement selon ton code postal. 🗺️ Heureusement, Le Middle rétablit la justice sociale.",
+        "hashtags": [
+          "lemiddle",
+          "zone5",
+          "injustice",
+          "navigo",
+          "galereparisienne"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:40.869269Z",
+      "generated_image": "generated/phrase_016.png"
+    },
+    {
+      "id": "phrase_017",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 17,
+      "rating": 1,
+      "content": {
+        "text": "Le célèbre \"J'arrive\" parisien : une unité de mesure temporelle qui inclut généralement le shampoing et le séchage."
+      },
+      "caption": {
+        "main": "Le classique des classiques. On connaît tous ce pote qui a une notion très personnelle du temps. ⏰",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "amitie",
+          "paris"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:44.028581Z",
+      "generated_image": "generated/phrase_017.png"
+    },
+    {
+      "id": "phrase_018",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 18,
+      "rating": 1,
+      "content": {
+        "text": "Parce que l'amitié, c'est aussi diviser le temps de trajet par deux."
+      },
+      "caption": {
+        "main": "L'égalité parfaite existe. Elle s'appelle l'équidistance. ⚖️✨",
+        "hashtags": [
+          "lemiddle",
+          "equidistance",
+          "amitie",
+          "paris",
+          "transports"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:47.896099Z",
+      "generated_image": "generated/phrase_018.png"
+    },
+    {
+      "id": "phrase_019",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 19,
+      "rating": 1,
+      "content": {
+        "text": "Dire \"C'est plus simple chez moi\", c'est juste déclarer officiellement la guerre à ceux qui n'habitent pas la même ligne."
+      },
+      "caption": {
+        "main": "\"Plus simple\"... pour qui exactement ? 🤔 1h30 de trajet contre 0 seconde de marche, effectivement c'est très équitable.",
+        "hashtags": [
+          "lemiddle",
+          "zone5",
+          "injustice",
+          "amitie",
+          "paris"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:52.277263Z",
+      "generated_image": "generated/phrase_019.png"
+    },
+    {
+      "id": "phrase_020",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 20,
+      "rating": 1,
+      "content": {
+        "text": "Annoncer 5 minutes depuis sa station de départ : l'art de transformer un trajet en voyage temporel."
+      },
+      "caption": {
+        "main": "Le mensonge le plus répandu du métro parisien. Tag ton ami champion du faux timing. ⏰",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "paris",
+          "amis",
+          "retard"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:56.192272Z",
+      "generated_image": "generated/phrase_020.png"
+    },
+    {
+      "id": "phrase_021",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 21,
+      "rating": 1,
+      "content": {
+        "text": "Le Middle : La fin du favoritisme géographique. Ici, on partage l'effort (et la pinte)."
+      },
+      "caption": {
+        "main": "L'égalité des chances version transport parisien. Justice is served! ⚖️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-02-06T11:45:59.410812Z",
+      "generated_image": "generated/phrase_021.png"
+    },
+    {
+      "id": "phrase_022",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 22,
+      "rating": 1,
+      "content": {
+        "text": "Drôle de conception de l'équité : 15 min de balade pour lui, 1h de survie dans les transports pour toi."
+      },
+      "caption": {
+        "main": "L'injustice géographique parisienne résumée en une phrase. Tague ton pote privilégié des transports. 🚇",
+        "hashtags": [
+          "lemiddle",
+          "injustice",
+          "paristransports",
+          "metro",
+          "amitie"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:03.599461Z",
+      "generated_image": "generated/phrase_022.png"
+    },
+    {
+      "id": "phrase_023",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 23,
+      "rating": 2,
+      "content": {
+        "text": "\"J'arrive dans 5 minutes\" = Je viens de voir ton message et je dois encore me laver les cheveux."
+      },
+      "caption": {
+        "main": "Le niveau de mensonge atteint des sommets. On connaît tous ce pote. 🙄",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "retard",
+          "mensonge",
+          "transports"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:06.979897Z",
+      "generated_image": "generated/phrase_023.png"
+    },
+    {
+      "id": "phrase_024",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 24,
+      "rating": 1,
+      "content": {
+        "text": "Pour une fois, c'est toi qui les attends avec une pinte déjà servie. Merci l'algo, merci Le Middle."
+      },
+      "caption": {
+        "main": "Plot twist : être ponctuel devient enfin possible. Merci l'algorithme ! ⏰",
+        "hashtags": [
+          "lemiddle",
+          "ponctuel",
+          "paris",
+          "transports",
+          "optimisation"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:10.884632Z",
+      "generated_image": "generated/phrase_024.png"
+    },
+    {
+      "id": "phrase_025",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 25,
+      "rating": 1,
+      "content": {
+        "text": "Le Middle : Parce qu'à 86 € le pass, on mérite tous un point de chute qui ne nous oblige pas à traverser trois départements."
+      },
+      "caption": {
+        "main": "La solidarité des zones Navigo, ça existe pas. Heureusement Le Middle calcule l'équité géographique pour vous. 💸",
+        "hashtags": [
+          "lemiddle",
+          "navigo",
+          "zone5",
+          "parislife",
+          "transports"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:16.605953Z",
+      "generated_image": "generated/phrase_025.png"
+    },
+    {
+      "id": "phrase_026",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 26,
+      "rating": 3,
+      "content": {
+        "text": "\"J'habite à 15 minutes\" mais oublie de préciser que c'est 15 minutes + 2 correspondances + une marche de 10 minutes."
+      },
+      "caption": {
+        "main": "L'art de présenter son quartier comme accessible quand on sait pertinemment qu'il faut une demi-journée pour y aller. Tague ce pote géographiquement optimiste. 📍",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "paris",
+          "mensonges",
+          "correspondances"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:21.097904Z",
+      "generated_image": "generated/phrase_026.png"
+    },
+    {
+      "id": "phrase_027",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 27,
+      "rating": 3,
+      "content": {
+        "text": "Avoir enfin des soirées où personne ne dit \"Désolé, c'est trop loin de chez moi\" au moment de choisir le lieu."
+      },
+      "caption": {
+        "main": "Plot twist : tout le monde peut venir ET personne ne traverse Paris. La révolution est en marche. ✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "soiree",
+          "transports"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:24.992302Z",
+      "generated_image": "generated/phrase_027.png"
+    },
+    {
+      "id": "phrase_028",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 28,
+      "rating": 1,
+      "content": {
+        "text": "\"C'est dans Paris !\" : La phrase préférée de celui qui ne se rend pas compte que son \"petit resto sympa\" demande un visa et trois changements."
+      },
+      "caption": {
+        "main": "12€ de supplément et 40 minutes de RER plus tard... Oui, techniquement c'est Paris. 💸",
+        "hashtags": [
+          "lemiddle",
+          "zone1",
+          "navigo",
+          "galereparisienne",
+          "transportsparisiens"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:28.772381Z",
+      "generated_image": "generated/phrase_028.png"
+    },
+    {
+      "id": "phrase_029",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 29,
+      "rating": 1,
+      "content": {
+        "text": "Traduction de \"Je suis dans le métro\" : Je suis sur le quai, il y a un colis suspect et je serai là dans 40 minutes."
+      },
+      "caption": {
+        "main": "Mathématiquement impossible, mais on y croit à chaque fois. Le GPS ne ment pas, contrairement à tes potes. 📍",
+        "hashtags": [
+          "lemiddle",
+          "jarrivedans5min",
+          "menteur",
+          "gps",
+          "transportsparisiens"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:33.250863Z",
+      "generated_image": "generated/phrase_029.png"
+    },
+    {
+      "id": "phrase_030",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 30,
+      "rating": 1,
+      "content": {
+        "text": "Le Middle : Parce que l'amitié ne devrait pas demander autant d'efforts qu'un départ en vacances."
+      },
+      "caption": {
+        "main": "Le ratio temps de trajet / temps passé ensemble enfin équilibré. C'est ça, la vraie victoire. 🏆",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "amitie",
+          "transportsparis",
+          "equilibre"
+        ]
+      },
+      "created_at": "2026-02-06T11:46:36.979546Z",
+      "generated_image": "generated/phrase_030.png"
     }
   ]
 }

@@ -2,14 +2,17 @@
 Script d'orchestration pour l'automatisation Instagram Le Middle.
 
 Commandes:
-    python scheduler.py generate-content --count 6   # Générer un batch de contenu
-    python scheduler.py publish-next                  # Publier le prochain post
-    python scheduler.py grid-preview                  # Aperçu de la grille Instagram
-    python scheduler.py queue-status                  # État de la file d'attente
+    python scheduler.py generate-content --count 6        # Générer un batch de contenu
+    python scheduler.py generate-phrases --from 15 --to 30  # Générer des phrases (ex: 15 à 30)
+    python scheduler.py publish-next                       # Publier le prochain post
+    python scheduler.py grid-preview                       # Aperçu de la grille Instagram
+    python scheduler.py queue-status                       # État de la file d'attente
+    python scheduler.py rate-phrase phrase_015 3            # Noter un post (1-3)
+    python scheduler.py regenerate-images                  # Régénérer les images des drafts
 """
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -129,7 +132,15 @@ def format_caption(post: dict) -> str:
         parts.append("")  # Ligne vide
         parts.append(" ".join([f"#{tag}" for tag in hashtags]))
     
-    return "\n".join(parts)
+    result = "\n".join(parts)
+    
+    # #region agent log
+    import json as _json
+    _log_path = r"c:\Users\matdi\Documents\myApps\Automatisations\LeMiddleInstagram\.cursor\debug.log"
+    with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "A", "location": "scheduler.py:format_caption", "message": "Caption formatted", "data": {"caption_length": len(result), "caption_full": result, "caption_bytes": result.encode('utf-8').hex()[:200], "has_special_chars": any(ord(c) > 127 for c in result)}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
+    # #endregion
+    
+    return result
 
 
 @click.group()
@@ -323,6 +334,91 @@ def generate_content(count: int, dry_run: bool):
     
     click.echo(f"\n=== Génération terminée ===")
     click.echo(f"Posts créés: {len(generated_posts)}")
+
+
+# Catégories pour les phrases (cycle mois1 -> mois2 -> mois3)
+PHRASE_CATEGORIES = ["mois1_injustices", "mois2_mythes", "mois3_redemption"]
+
+
+@cli.command()
+@click.option("--from-id", "from_num", default=15, help="Numéro de départ (ex: 15 pour phrase_015)")
+@click.option("--to-id", "to_num", default=30, help="Numéro de fin inclus (ex: 30 pour phrase_030)")
+@click.option("--dry-run", is_flag=True, help="Afficher sans générer")
+def generate_phrases(from_num: int, to_num: int, dry_run: bool):
+    """Génère une série de posts phrase (ex: phrase_015 à phrase_030)."""
+    if from_num > to_num:
+        click.echo("--from-id doit être <= --to-id", err=True)
+        return
+
+    claude_status = check_claude_availability()
+    if not claude_status["ready"]:
+        click.echo("Claude non configuré. Ajoutez ANTHROPIC_API_KEY à .env", err=True)
+        return
+
+    if dry_run:
+        click.echo(f"[DRY RUN] Génération phrases {from_num} à {to_num} (aucune action).")
+        return
+
+    data = load_content()
+    existing_ids = {p["id"] for p in data.get("posts", [])}
+    claude_service = ClaudeService()
+    generated_posts = []
+
+    click.echo(f"\n=== Génération des phrases {from_num} à {to_num} ===\n")
+
+    for num in range(from_num, to_num + 1):
+        post_id = f"phrase_{num:03d}"
+        if post_id in existing_ids:
+            click.echo(f"  {post_id} existe déjà, ignoré.")
+            continue
+        try:
+            click.echo(f"  Génération {post_id}...")
+            category = PHRASE_CATEGORIES[(num - 1) % 3]
+            result = claude_service.generate_phrase(category=category)
+            new_post = {
+                "id": post_id,
+                "type": "phrase",
+                "status": "draft",
+                "category": result.get("category", category),
+                "week": num,
+                "content": {"text": result.get("text", "")},
+                "caption": result.get("caption", {}),
+                "created_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            }
+            data["posts"].append(new_post)
+            generated_posts.append(new_post)
+            existing_ids.add(post_id)
+            click.echo(f"    Créé: {post_id}")
+        except Exception as e:
+            click.echo(f"    Erreur: {e}", err=True)
+
+    if not generated_posts:
+        click.echo("\nAucune nouvelle phrase à générer (toutes existent déjà).")
+        return
+
+    save_content(data)
+    click.echo(f"\n--- Génération des images ({len(generated_posts)} phrases) ---")
+    GENERATED_DIR.mkdir(exist_ok=True)
+    generator = PhraseGenerator()
+
+    for post in generated_posts:
+        try:
+            click.echo(f"  Image pour {post['id']}...")
+            image = generator.generate(post["content"])
+            filename = f"{post['id']}.png"
+            output_path = generator.save(image, filename)
+            relative_path = f"generated/{filename}"
+            for p in data["posts"]:
+                if p["id"] == post["id"]:
+                    p["generated_image"] = relative_path
+                    p["status"] = "ready"
+                    break
+            click.echo(f"    Sauvegardé: {output_path}")
+        except Exception as e:
+            click.echo(f"    Erreur image: {e}", err=True)
+
+    save_content(data)
+    click.echo(f"\n=== Terminé: {len(generated_posts)} phrases créées (phrase_{from_num:03d} à phrase_{to_num:03d}) ===")
 
 
 @cli.command()
@@ -593,6 +689,108 @@ def list_posts(filter_status: Optional[str], filter_type: Optional[str]):
         )
     
     click.echo(f"\nTotal: {len(posts)} posts")
+
+
+@cli.command()
+@click.argument("post_id")
+@click.argument("rating", type=int)
+def rate_phrase(post_id: str, rating: int):
+    """Note un post de 1 à 3 (3 = excellent, 2 = correct, 1 = mauvais).
+
+    Exemples:
+        python scheduler.py rate-phrase phrase_015 3
+        python scheduler.py rate-phrase phrase_017 1
+    """
+    if rating not in (1, 2, 3):
+        click.echo("Le rating doit être 1, 2 ou 3.", err=True)
+        return
+
+    data = load_content()
+    found = False
+
+    for post in data.get("posts", []):
+        if post["id"] == post_id:
+            post["rating"] = rating
+            found = True
+            break
+
+    if not found:
+        click.echo(f"Post '{post_id}' non trouvé.", err=True)
+        return
+
+    save_content(data)
+    labels = {1: "mauvais", 2: "correct", 3: "excellent"}
+    click.echo(f"  {post_id} noté {rating}/3 ({labels[rating]})")
+
+
+@cli.command()
+@click.option("--post-id", "single_id", default=None, help="Régénérer l'image d'un seul post (ex: phrase_017)")
+@click.option("--drafts-only", is_flag=True, default=True, help="Régénérer uniquement les posts en 'draft' (par défaut)")
+@click.option("--all-phrases", is_flag=True, default=False, help="Régénérer TOUTES les images de phrases")
+def regenerate_images(single_id: Optional[str], drafts_only: bool, all_phrases: bool):
+    """Régénère les images pour les posts dont le texte a changé (status=draft).
+
+    Exemples:
+        python scheduler.py regenerate-images                    # tous les drafts
+        python scheduler.py regenerate-images --post-id phrase_017
+        python scheduler.py regenerate-images --all-phrases
+    """
+    data = load_content()
+    posts_to_regen = []
+
+    if single_id:
+        posts_to_regen = [p for p in data["posts"] if p["id"] == single_id]
+        if not posts_to_regen:
+            click.echo(f"Post '{single_id}' non trouvé.", err=True)
+            return
+    elif all_phrases:
+        posts_to_regen = [p for p in data["posts"] if p.get("type") == "phrase"]
+    else:
+        # Par défaut : uniquement les drafts (posts dont le texte a été modifié)
+        posts_to_regen = [p for p in data["posts"] if p.get("status") == "draft"]
+
+    if not posts_to_regen:
+        click.echo("Aucun post à régénérer.")
+        return
+
+    click.echo(f"\n=== Régénération des images ({len(posts_to_regen)} posts) ===\n")
+    GENERATED_DIR.mkdir(exist_ok=True)
+
+    generators = {
+        "phrase": PhraseGenerator(),
+        "chiffre": ChiffreGenerator(),
+        "photo": PhotoGenerator(),
+    }
+
+    success_count = 0
+    for post in posts_to_regen:
+        post_type = post.get("type", "phrase")
+        generator = generators.get(post_type)
+        if not generator:
+            click.echo(f"  {post['id']}: type '{post_type}' non supporté, ignoré.")
+            continue
+
+        try:
+            click.echo(f"  Image pour {post['id']}...")
+            image = generator.generate(post["content"])
+            filename = f"{post['id']}.png"
+            output_path = generator.save(image, filename)
+            relative_path = f"generated/{filename}"
+
+            # Mettre à jour le post
+            for p in data["posts"]:
+                if p["id"] == post["id"]:
+                    p["generated_image"] = relative_path
+                    p["status"] = "ready"
+                    break
+
+            click.echo(f"    Sauvegardé: {output_path}")
+            success_count += 1
+        except Exception as e:
+            click.echo(f"    Erreur image: {e}", err=True)
+
+    save_content(data)
+    click.echo(f"\n=== Terminé: {success_count}/{len(posts_to_regen)} images régénérées ===")
 
 
 if __name__ == "__main__":
