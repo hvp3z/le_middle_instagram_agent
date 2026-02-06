@@ -730,7 +730,7 @@
         "text": "Le culot de l'ami qui appelle \"proximité\" un itinéraire qui inclut 3 correspondances, 2 sprints sur escalator en panne et un câlin forcé à un touriste et sa valise."
       },
       "caption": {
-        "main": "Spoiler : On n'a pas la même notion du temps. 🚩",
+        "main": "Identifie ce pote « géographiquement optimiste » pour lui rappeler qu'on a inventé Le Middle pour sauver votre amitié. 🚩",
         "hashtags": [
           "lemiddle",
           "acote",
@@ -1524,6 +1524,72 @@
       },
       "created_at": "2026-02-06T11:46:36.979546Z",
       "generated_image": "generated/phrase_030.png"
+    },
+    {
+      "id": "phrase_031",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "week": 31,
+      "content": {
+        "text": "Le pote qui râle sur \"l'effort\" de prendre le métro alors qu'il habite littéralement sur la ligne directe depuis 5 ans."
+      },
+      "caption": {
+        "main": "Certains confondent \"trajet\" et \"épreuve olympique\". 🏅 Spoiler : descendre 3 stations, ce n'est pas de l'héroïsme.",
+        "hashtags": [
+          "lemiddle",
+          "transportsparis",
+          "amitie",
+          "metro",
+          "paris"
+        ]
+      },
+      "created_at": "2026-02-06T13:37:47.589244Z",
+      "generated_image": "generated/phrase_031.png"
+    },
+    {
+      "id": "phrase_032",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "week": 32,
+      "content": {
+        "text": "Traduction de 'C'est à 20 minutes' : C'est à 20 minutes si tu téléportes directement sur le quai du RER sans attendre, que tous les feux sont verts et que tu sprintes les 800 derniers mètres."
+      },
+      "caption": {
+        "main": "La géométrie parisienne, une science inexacte. Tague ton pote qui habite 'pas loin' de partout. 🏃‍♂️",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "retard",
+          "menteur",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-02-06T13:37:52.451615Z",
+      "generated_image": "generated/phrase_032.png"
+    },
+    {
+      "id": "phrase_033",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois3_redemption",
+      "week": 33,
+      "content": {
+        "text": "Le Middle : La fin du favoritisme géographique. Ici, on partage l'effort (et la pinte)."
+      },
+      "caption": {
+        "main": "Enfin un monde où personne n'a d'avantage territorial. L'égalité des chances version apéro. 🍻",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "equite",
+          "apero"
+        ]
+      },
+      "created_at": "2026-02-06T13:37:56.244216Z",
+      "generated_image": "generated/phrase_033.png"
     }
   ]
 }
