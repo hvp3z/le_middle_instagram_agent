@@ -720,7 +720,7 @@
     {
       "id": "phrase_002",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "week": 2,
       "rating": 3,
@@ -739,7 +739,10 @@
           "mensonge"
         ]
       },
-      "generated_image": "generated/phrase_002.png"
+      "generated_image": "generated/phrase_002.png",
+      "published_at": "2026-02-06T16:01:27.947335Z",
+      "instagram_media_id": "18000903692850790",
+      "publish_order": 4
     },
     {
       "id": "phrase_003",
