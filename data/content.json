@@ -29,7 +29,7 @@
     {
       "id": "chiffre_002",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps d'attente sur le quai.",
@@ -47,7 +47,10 @@
         ],
         "cta": "Retrouvez-vous simplement."
       },
-      "generated_image": "generated/old/chiffre_002.png"
+      "generated_image": "generated/old/chiffre_002.png",
+      "published_at": "2026-02-09T18:10:35.350635Z",
+      "instagram_media_id": "18122398123500892",
+      "publish_order": 5
     },
     {
       "id": "chiffre_003",
