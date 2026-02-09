@@ -1593,6 +1593,154 @@
       },
       "created_at": "2026-02-06T13:37:56.244216Z",
       "generated_image": "generated/phrase_033.png"
+    },
+    {
+      "id": "phrase_034",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'Je pars maintenant' : Je viens de réaliser qu'on avait rendez-vous dans 20 minutes et je suis encore en pyjama."
+      },
+      "caption": {
+        "main": "Le temps parisien, cette dimension parallèle où 5 minutes peuvent durer une éternité. 🕐 Avec Le Middle, au moins on partage tous l'effort !",
+        "hashtags": [
+          "lemiddle",
+          "jeparsmaintenant",
+          "tempspausien",
+          "retardparisien",
+          "amitié"
+        ]
+      },
+      "created_at": "2026-02-09T08:46:56.673473Z",
+      "generated_image": "generated/phrase_034.png"
+    },
+    {
+      "id": "phrase_035",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'J'habite juste à côté' : il y a 2 correspondances, un escalator en panne et potentiellement un colis suspect qui va paralyser la ligne."
+      },
+      "caption": {
+        "main": "Le vocabulaire parisien et ses mystères. 'À côté' = 47 minutes porte à porte. 🚇",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "paris",
+          "amitie",
+          "metro"
+        ]
+      },
+      "created_at": "2026-02-09T08:47:00.489586Z",
+      "generated_image": "generated/phrase_035.png"
+    },
+    {
+      "id": "chiffre_033",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu dis \"on se retrouve au milieu\" sans savoir où c'est.",
+        "number": "23",
+        "unit_text": "fois par mois. Le faux compromis parisien."
+      },
+      "caption": {
+        "main": "23 fois par mois où tu dis \"on se retrouve au milieu\" sans avoir la moindre idée de ce que ça veut dire géographiquement. Spoiler : Châtelet n'est le milieu de rien du tout.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "transports",
+          "galere"
+        ],
+        "cta": "Trouvez le VRAI milieu avec Le Middle."
+      },
+      "created_at": "2026-02-09T08:47:05.275038Z",
+      "generated_image": "generated/chiffre_033.png"
+    },
+    {
+      "id": "chiffre_034",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages \"J'arrive\" avant d'arriver vraiment.",
+        "number": "07",
+        "unit_text": "mensonges sociopathes. L'art du délai parisien."
+      },
+      "caption": {
+        "main": "7 messages \"J'arrive\" avant d'arriver vraiment. L'art du délai parisien. Entre le premier \"J'arrive\" depuis ton canapé et ton arrivée effective, il s'écoule en moyenne 47 minutes et 3 excuses créatives sur les transports.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "transports",
+          "amitie"
+        ],
+        "cta": "Avec Le Middle, on arrive tous en même temps. Enfin presque."
+      },
+      "created_at": "2026-02-09T08:47:10.967934Z",
+      "generated_image": "generated/chiffre_034.png"
+    },
+    {
+      "id": "ambiance_004",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "m5HRhemeFBw",
+        "unsplash_user": "Rohan Gangopadhyay (@rohan_gangopadhyay)",
+        "unsplash_query_used": "cafe_terrace",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Après 20 minutes de débat sur le lieu et 3 'j'arrive dans 5 min' 🙄 Enfin réunis autour d'un café qui vaut le détour. C'est ça, le vrai temps de qualité ☕️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "entreamis",
+          "cafeterrace",
+          "tempsdequal"
+        ]
+      },
+      "created_at": "2026-02-09T08:47:14.991866Z",
+      "generated_image": "generated/ambiance_004.png"
+    },
+    {
+      "id": "ambiance_005",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "acD94YcSdO8",
+        "unsplash_user": "Ekaterina Bogdan (@kbokati)",
+        "unsplash_query_used": "cafe_terrace",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure pour une fois et que personne n'a à faire 1h30 de trajet 🚴‍♀️ Le miracle parisien existe, on vous le prouve !",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "terrassetime",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-02-09T08:47:18.697740Z",
+      "generated_image": "generated/ambiance_005.png"
     }
   ]
 }
