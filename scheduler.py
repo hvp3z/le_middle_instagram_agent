@@ -11,6 +11,7 @@ Commandes:
     python scheduler.py regenerate-images                  # Régénérer les images des drafts
 """
 import json
+import random
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -28,7 +29,7 @@ from services.claude_service import ClaudeService, check_claude_availability
 from services.unsplash_service import UnsplashService, check_unsplash_availability
 
 
-# Ordre strict de publication : Phrase -> Chiffre -> Photo (cyclique)
+# Types de posts (ordre utilisé pour affichage des stats)
 PUBLISH_ORDER = ["phrase", "chiffre", "photo"]
 
 
@@ -87,28 +88,40 @@ def get_posted_count() -> int:
     return count_posts_by_status("posted")
 
 
-def get_next_post_type() -> str:
-    """Détermine le type du prochain post à publier selon l'ordre strict."""
-    posted_count = get_posted_count()
-    return PUBLISH_ORDER[posted_count % 3]
+def get_next_post_type(data: Optional[dict] = None) -> Optional[str]:
+    """
+    Détermine le type du prochain post à publier (aléatoire parmi les types disponibles).
+    
+    Returns:
+        Un type ayant au moins un post "ready", ou None si aucun
+    """
+    if data is None:
+        data = load_content()
+    ready_by_type = {}
+    for post in data.get("posts", []):
+        if post.get("status") == "ready":
+            t = post.get("type")
+            ready_by_type[t] = ready_by_type.get(t, 0) + 1
+    available = [t for t in ready_by_type if ready_by_type[t] > 0]
+    return random.choice(available) if available else None
 
 
 def get_next_post_to_publish() -> Optional[dict]:
     """
-    Récupère le prochain post à publier selon l'ordre strict.
+    Récupère le prochain post à publier (type et post choisis aléatoirement).
     
     Returns:
         Le post à publier ou None si aucun n'est disponible
     """
     data = load_content()
-    next_type = get_next_post_type()
-    
-    # Chercher le premier post "ready" du bon type
-    for post in data.get("posts", []):
-        if post.get("type") == next_type and post.get("status") == "ready":
-            return post
-    
-    return None
+    next_type = get_next_post_type(data)
+    if not next_type:
+        return None
+    ready_posts = [
+        p for p in data.get("posts", [])
+        if p.get("type") == next_type and p.get("status") == "ready"
+    ]
+    return random.choice(ready_posts) if ready_posts else None
 
 
 def format_caption(post: dict) -> str:
@@ -426,7 +439,7 @@ def generate_phrases(from_num: int, to_num: int, dry_run: bool):
 @click.option("--force-type", type=click.Choice(["phrase", "chiffre", "photo"]), 
               help="Forcer un type spécifique (ignore l'ordre)")
 def publish_next(dry_run: bool, force_type: Optional[str]):
-    """Publie le prochain post selon l'ordre strict (Phrase → Chiffre → Photo)."""
+    """Publie le prochain post (sélection aléatoire parmi les posts ready)."""
     
     # Vérifier la configuration Instagram
     ig_status = check_instagram_availability()
@@ -436,29 +449,32 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
     
     data = load_content()
     
-    # Déterminer le type à publier
-    if force_type:
-        next_type = force_type
-        click.echo(f"Type forcé: {next_type}")
-    else:
-        next_type = get_next_post_type()
-    
-    click.echo(f"\n=== Publication du prochain post ===")
-    click.echo(f"Type attendu: {next_type}")
-    click.echo(f"Posts déjà publiés: {get_posted_count()}")
-    
-    # Trouver le post à publier
+    # Sélectionner le post à publier (aléatoire)
     post_to_publish = None
     post_index = None
     
-    for i, post in enumerate(data.get("posts", [])):
-        if post.get("type") == next_type and post.get("status") == "ready":
-            post_to_publish = post
-            post_index = i
-            break
+    if force_type:
+        click.echo(f"Type forcé: {force_type}")
+        ready_posts = [
+            (i, p) for i, p in enumerate(data.get("posts", []))
+            if p.get("type") == force_type and p.get("status") == "ready"
+        ]
+        if ready_posts:
+            post_index, post_to_publish = random.choice(ready_posts)
+    else:
+        post_to_publish = get_next_post_to_publish()
+        if post_to_publish:
+            post_index = next(
+                i for i, p in enumerate(data.get("posts", []))
+                if p.get("id") == post_to_publish["id"]
+            )
+    
+    click.echo(f"\n=== Publication du prochain post ===")
+    click.echo(f"Posts déjà publiés: {get_posted_count()}")
     
     if not post_to_publish:
-        click.echo(f"\nAucun post '{next_type}' avec status 'ready' trouvé.", err=True)
+        msg = f"\nAucun post '{force_type}' avec status 'ready' trouvé." if force_type else "\nAucun post ready disponible."
+        click.echo(msg, err=True)
         click.echo("Générez du contenu avec: python scheduler.py generate-content")
         return
     
@@ -525,35 +541,23 @@ def grid_preview(rows: int):
     click.echo("           GRILLE INSTAGRAM - LE MIDDLE")
     click.echo("=" * 60)
     
-    # Calculer le prochain type
-    next_type = get_next_post_type()
     posted_count = get_posted_count()
     
-    click.echo(f"\nProchain type à publier: {next_type.upper()}")
-    click.echo(f"Position dans le cycle: {(posted_count % 3) + 1}/3 (P-C-Ph)")
+    click.echo(f"\nMode: aléatoire")
     click.echo(f"Total publiés: {posted_count}")
     
-    # Afficher la file d'attente
-    click.echo("\n--- File d'attente (prochains posts) ---")
+    # Afficher la file d'attente (ordre aléatoire simulé)
+    click.echo("\n--- File d'attente (ordre aléatoire simulé) ---")
     click.echo(f"{'Col 1':<20} {'Col 2':<20} {'Col 3':<20}")
     click.echo("-" * 60)
     
-    # Construire la grille des prochains posts selon l'ordre
-    queue = []
-    type_queues = {
-        "phrase": [p for p in ready if p.get("type") == "phrase"],
-        "chiffre": [p for p in ready if p.get("type") == "chiffre"],
-        "photo": [p for p in ready if p.get("type") == "photo"]
-    }
-    
-    # Simuler les prochains posts
-    for i in range(rows * 3):
-        type_needed = PUBLISH_ORDER[(posted_count + i) % 3]
-        if type_queues[type_needed]:
-            post = type_queues[type_needed].pop(0)
-            queue.append(post)
-        else:
-            queue.append({"id": f"[MANQUANT:{type_needed}]", "status": "missing", "type": type_needed})
+    # Mélanger les posts ready et prendre les N premiers
+    queue = list(ready)
+    random.shuffle(queue)
+    queue = queue[: rows * 3]
+    # Compléter avec des placeholders si nécessaire
+    while len(queue) < rows * 3:
+        queue.append({"id": "[MANQUANT]", "status": "missing", "type": "?"})
     
     # Afficher en lignes de 3
     for row in range(rows):
@@ -627,27 +631,26 @@ def queue_status():
             click.echo(f"{post_type:<12} {s['ready']:<8} {s['draft']:<8} {s['posted']:<8}")
     
     # Prochains posts
-    click.echo(f"\n--- Ordre de publication ---")
-    next_type = get_next_post_type()
+    click.echo(f"\n--- Mode de publication ---")
     posted_count = get_posted_count()
     
     click.echo(f"Posts publiés: {posted_count}")
-    click.echo(f"Prochain type: {next_type}")
-    click.echo(f"Cycle actuel: {PUBLISH_ORDER}")
+    click.echo(f"Mode: aléatoire (type et post choisis au hasard)")
     
-    # Liste des prochains posts
-    click.echo(f"\n--- Prochains posts à publier ---")
+    # Liste des prochains posts par type (exemple de sélection)
+    click.echo(f"\n--- Posts ready par type ---")
     
-    for i, post_type in enumerate(PUBLISH_ORDER):
+    for post_type in PUBLISH_ORDER:
         ready_posts = [p for p in posts if p.get("type") == post_type and p.get("status") == "ready"]
         
         if ready_posts:
-            next_post = ready_posts[0]
-            indicator = ">" if post_type == next_type else " "
-            click.echo(f"{indicator} {post_type.upper()}: {next_post['id']}")
+            sample = random.sample(ready_posts, min(3, len(ready_posts)))
+            ids = ", ".join(p["id"] for p in sample)
+            if len(ready_posts) > 3:
+                ids += f" (+{len(ready_posts) - 3} autres)"
+            click.echo(f"  {post_type.upper()}: {ids}")
         else:
-            indicator = ">" if post_type == next_type else " "
-            click.echo(f"{indicator} {post_type.upper()}: [AUCUN POST READY]")
+            click.echo(f"  {post_type.upper()}: [AUCUN POST READY]")
     
     # Services status
     click.echo(f"\n--- État des services ---")

@@ -20,19 +20,34 @@ class UnsplashService:
         "cafe_terrace": "cafe terrace people",
         "coffee_shop": "coffee shop friends",
         "bistro_paris": "bistro paris terrace",
+        # Terrasses urbaines (Paris, grandes villes)
+        "terrace_paris": "paris cafe terrace people",
+        "terrace_city": "city terrace outdoor dining",
+        "terrace_toast": "friends toast glasses terrace paris",
         # Bars
         "wine_bar": "wine bar friends",
         "rooftop_bar": "rooftop bar",
         "bar_night": "bar people night",
-        "happy_hour": "happy hour drinks friends",
+        "happy_hour": "happy hour terrace paris",
         # Restaurants
         "restaurant_friends": "restaurant friends dinner",
+        "restaurant_table": "restaurant table food people smiling",
+        "restaurant_dining": "restaurant dinner friends happy",
         "outdoor_dining": "outdoor dining people",
         "brunch": "brunch friends",
-        # Ambiance générale
+        # Ambiance générale (urbain)
         "friends_drinking": "friends drinks",
-        "aperitif": "aperitif outdoor",
+        "aperitif": "paris terrace aperitif",
     }
+
+    # Presets réservés aux posts ambiance (terrasses + restaurants uniquement)
+    AMBIANCE_PRESETS = [
+        "terrace_paris",
+        "terrace_city",
+        "terrace_toast",
+        "restaurant_table",
+        "restaurant_dining",
+    ]
 
     def __init__(self):
         """Initialise le service Unsplash."""
@@ -46,14 +61,21 @@ class UnsplashService:
             "Accept-Version": "v1",
         }
 
-    def get_random_preset(self) -> tuple[str, str]:
+    def get_random_preset(self, ambiance_only: bool = False) -> tuple[str, str]:
         """
         Retourne un preset aléatoire (clé, query).
+        
+        Args:
+            ambiance_only: Si True, ne retourne que les presets urbains (AMBIANCE_PRESETS).
         
         Returns:
             Tuple (preset_key, search_query)
         """
-        key = random.choice(list(self.PRESET_QUERIES.keys()))
+        if ambiance_only:
+            keys = [k for k in self.AMBIANCE_PRESETS if k in self.PRESET_QUERIES]
+        else:
+            keys = list(self.PRESET_QUERIES.keys())
+        key = random.choice(keys)
         return key, self.PRESET_QUERIES[key]
 
     def search_photos(

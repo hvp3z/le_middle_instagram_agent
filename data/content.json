@@ -1134,9 +1134,9 @@
       "status": "ready",
       "category": "ambiance",
       "content": {
-        "unsplash_photo_id": "qmlReYfZJww",
-        "unsplash_user": "Zero (@z3ro)",
-        "unsplash_query_used": "aperitif",
+        "unsplash_photo_id": "H6idd-pf0eI",
+        "unsplash_user": "mathieu gauzy (@gozstudio)",
+        "unsplash_query_used": "terrace_paris",
         "light_overlay": true,
         "light_overlay_intensity": 0.35,
         "overlay_logo": true,
@@ -1155,7 +1155,7 @@
         ]
       },
       "created_at": "2026-02-02T08:47:40.059595Z",
-      "generated_image": "generated/ambiance_003.png"
+      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations\\LeMiddleInstagram\\generated\\ambiance_003.png"
     },
     {
       "id": "phrase_015",

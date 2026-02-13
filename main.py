@@ -10,6 +10,7 @@ Commandes:
     python main.py status                      # Vérifier la configuration
 """
 import json
+import random
 import sys
 from pathlib import Path
 from typing import Optional
@@ -563,9 +564,10 @@ def auto_photo(post_id: str):
     try:
         service = UnsplashService()
         
-        # Obtenir un preset aléatoire
-        preset_key, preset_query = service.get_random_preset()
-        click.echo(f"\nPreset aléatoire: {preset_key}")
+        # Pour les posts ambiance, utiliser uniquement les presets urbains
+        ambiance_only = post.get("category") == "ambiance"
+        preset_key, preset_query = service.get_random_preset(ambiance_only=ambiance_only)
+        click.echo(f"\nPreset aléatoire: {preset_key}" + (" (urbain)" if ambiance_only else ""))
         click.echo(f"Recherche: '{preset_query}'")
         
         # Récupérer une photo aléatoire
@@ -627,7 +629,7 @@ def auto_photo(post_id: str):
         click.echo(f"\nErreur: {e}", err=True)
 
 
-# Ordre strict de publication : Phrase -> Chiffre -> Photo (cyclique)
+# Types de posts (ordre utilisé pour affichage des stats)
 PUBLISH_ORDER = ["phrase", "chiffre", "photo"]
 
 
@@ -651,35 +653,23 @@ def grid_preview(rows: int):
     click.echo("           GRILLE INSTAGRAM - LE MIDDLE")
     click.echo("=" * 60)
     
-    # Calculer le prochain type
     posted_count = len(posted)
-    next_type = PUBLISH_ORDER[posted_count % 3]
     
-    click.echo(f"\nProchain type à publier: {next_type.upper()}")
-    click.echo(f"Position dans le cycle: {(posted_count % 3) + 1}/3 (P-C-Ph)")
+    click.echo(f"\nMode: aléatoire")
     click.echo(f"Total publiés: {posted_count}")
     
-    # Afficher la file d'attente
-    click.echo("\n--- File d'attente (prochains posts) ---")
+    # Afficher la file d'attente (ordre aléatoire simulé)
+    click.echo("\n--- File d'attente (ordre aléatoire simulé) ---")
     click.echo(f"{'Col 1':<20} {'Col 2':<20} {'Col 3':<20}")
     click.echo("-" * 60)
     
-    # Construire la grille des prochains posts selon l'ordre
-    queue = []
-    type_queues = {
-        "phrase": [p for p in ready if p.get("type") == "phrase"],
-        "chiffre": [p for p in ready if p.get("type") == "chiffre"],
-        "photo": [p for p in ready if p.get("type") == "photo"]
-    }
-    
-    # Simuler les prochains posts
-    for i in range(rows * 3):
-        type_needed = PUBLISH_ORDER[(posted_count + i) % 3]
-        if type_queues[type_needed]:
-            post = type_queues[type_needed].pop(0)
-            queue.append(post)
-        else:
-            queue.append({"id": f"[MANQUANT:{type_needed}]", "status": "missing", "type": type_needed})
+    # Mélanger les posts ready et prendre les N premiers
+    queue = list(ready)
+    random.shuffle(queue)
+    queue = queue[: rows * 3]
+    # Compléter avec des placeholders si nécessaire
+    while len(queue) < rows * 3:
+        queue.append({"id": "[MANQUANT]", "status": "missing", "type": "?"})
     
     # Afficher en lignes de 3
     for row in range(rows):
