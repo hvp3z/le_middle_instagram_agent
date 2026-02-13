@@ -82,11 +82,11 @@
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps passé à marcher dans les couloirs de Châtelet.",
-        "number": "08",
-        "unit_text": "minutes. L'équivalent d'un trail."
+        "number": "20",
+        "unit_text": "minutes. L'équivalent d'une petite session de cardio."
       },
       "caption": {
-        "main": "08 minutes à marcher dans les couloirs de Châtelet. L'équivalent d'un trail.\n\nLe cardio version RATP.",
+        "main": "20 minutes à marcher dans les couloirs de Châtelet.\n\nLe cardio version RATP.",
         "hashtags": [
           "lemiddle",
           "chatelet",
