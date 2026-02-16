@@ -1750,6 +1750,154 @@
       },
       "created_at": "2026-02-09T08:47:18.697740Z",
       "generated_image": "generated/ambiance_005.png"
+    },
+    {
+      "id": "phrase_036",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'J'habite dans Paris' : J'ai un studio de 12m² en zone 2 mais techniquement c'est encore l'Île-de-France."
+      },
+      "caption": {
+        "main": "On connaît tous ce pote qui vit à Créteil mais qui dit habiter 'Paris'. Le Middle règle le débat géographique une bonne fois pour toutes. 🗺️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "banlieue",
+          "transport",
+          "amitie"
+        ]
+      },
+      "created_at": "2026-02-16T08:42:43.893208Z",
+      "generated_image": "generated/phrase_036.png"
+    },
+    {
+      "id": "phrase_037",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est super accessible' : il faut juste prendre la 4, changer à Châtelet, attendre la 7 qui ne passe jamais, et marcher 15 minutes dans un quartier que Google Maps ne connaît pas."
+      },
+      "caption": {
+        "main": "Le vocabulaire parisien, c'est tout un art. 🎭 Heureusement, Le Middle traduit 'accessible' par 'vraiment accessible'.",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "accessible",
+          "traduction",
+          "parisien"
+        ]
+      },
+      "created_at": "2026-02-16T08:42:48.035711Z",
+      "generated_image": "generated/phrase_037.png"
+    },
+    {
+      "id": "chiffre_035",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu dis \"j'arrive\" alors que tu n'as même pas quitté ton lit.",
+        "number": "07",
+        "unit_text": "fois. L'art du mensonge par omission."
+      },
+      "caption": {
+        "main": "07 fois où tu dis \"j'arrive\" alors que tu n'as même pas quitté ton lit. Entre le réveil qui sonne, la douche rapide et les 45 minutes de trajet, on connaît tous cette gymnastique mentale. Tes amis aussi d'ailleurs.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "mensonge",
+          "transports",
+          "paris"
+        ],
+        "cta": "Trouvez-vous au milieu, arrivez vraiment."
+      },
+      "created_at": "2026-02-16T08:42:53.321446Z",
+      "generated_image": "generated/chiffre_035.png"
+    },
+    {
+      "id": "chiffre_036",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le nombre de stations comptées mentalement pour évaluer si ça vaut le coup.",
+        "number": "23",
+        "unit_text": "stations. Soit le seuil de \"non merci\"."
+      },
+      "caption": {
+        "main": "23 stations entre toi et tes potes. À ce stade, on se demande si c'est encore de l'amitié ou de l'acharnement thérapeutique. Passé République, c'est déjà suspect. Passé Nation, c'est de l'amour.",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "parislife",
+          "transports",
+          "amitie"
+        ],
+        "cta": "Coupez la poire en deux avec Le Middle."
+      },
+      "created_at": "2026-02-16T08:42:58.769753Z",
+      "generated_image": "generated/chiffre_036.png"
+    },
+    {
+      "id": "ambiance_006",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "R0stzcaun5w",
+        "unsplash_user": "Danny Alvarado-Gómez (@dalvago)",
+        "unsplash_query_used": "terrace_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le groupe arrive enfin au même endroit, au même moment ✨ Cette terrasse vous a coûté 2h de négociations WhatsApp, mais maintenant vous pouvez enfin décompresser ensemble.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "terrasseparisienne",
+          "amisparis",
+          "aperoparisien"
+        ]
+      },
+      "created_at": "2026-02-16T08:43:02.348455Z",
+      "generated_image": "generated/ambiance_006.png"
+    },
+    {
+      "id": "ambiance_007",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "akw0O4Efy0Q",
+        "unsplash_user": "Roman (@rm_reins)",
+        "unsplash_query_used": "coffee_shop",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand enfin personne n'a fait 1h30 de trajet pour boire UN café ☕\nCe moment où tout le groupe arrive à peu près en même temps... magique non ?",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "coffeetime",
+          "amisparis",
+          "rendezvous"
+        ]
+      },
+      "created_at": "2026-02-16T08:43:06.688152Z",
+      "generated_image": "generated/ambiance_007.png"
     }
   ]
 }
