@@ -308,7 +308,7 @@
     {
       "id": "chiffre_014",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "cout_eloignement",
       "content": {
         "context_text": "Le prix du VTC parce que le dernier métro était parti.",
@@ -326,7 +326,10 @@
         ],
         "cta": "Retrouvez-vous simplement."
       },
-      "generated_image": "generated/old/chiffre_014.png"
+      "generated_image": "generated/old/chiffre_014.png",
+      "published_at": "2026-02-18T11:39:11.291608Z",
+      "instagram_media_id": "18094949248789945",
+      "publish_order": 9
     },
     {
       "id": "chiffre_015",
