@@ -1007,7 +1007,7 @@
           "cafe"
         ]
       },
-      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations\\LeMiddleInstagram\\generated\\ambiance_001.png",
+      "generated_image": "generated/ambiance_001.png",
       "published_at": "2026-02-04T12:08:25.236489Z",
       "instagram_media_id": "18087825572165632",
       "publish_order": 3
@@ -1167,7 +1167,7 @@
         ]
       },
       "created_at": "2026-02-02T08:47:40.059595Z",
-      "generated_image": "C:\\Users\\matdi\\Documents\\myApps\\Automatisations\\LeMiddleInstagram\\generated\\ambiance_003.png"
+      "generated_image": "generated/ambiance_003.png"
     },
     {
       "id": "phrase_015",

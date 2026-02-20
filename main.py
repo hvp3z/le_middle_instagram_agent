@@ -161,9 +161,9 @@ def generate(post_id: Optional[str], status: Optional[str], post_type: Optional[
             
             click.echo(f"  Sauvegardé: {output_path}")
             
-            # Mettre à jour le statut
+            # Mettre à jour le statut (chemin relatif pour cross-platform)
             post["status"] = "ready"
-            post["generated_image"] = str(output_path)
+            post["generated_image"] = f"generated/{filename}"
             
         except Exception as e:
             click.echo(f"  Erreur: {e}", err=True)
@@ -612,12 +612,12 @@ def auto_photo(post_id: str):
         filename = f"{post_id}.png"
         output_path = generator.save(image, filename)
         
-        # Mettre à jour le statut du post
+        # Mettre à jour le statut du post (chemin relatif pour cross-platform)
         data = load_content()
         for p in data["posts"]:
             if p["id"] == post_id:
                 p["status"] = "ready"
-                p["generated_image"] = str(output_path)
+                p["generated_image"] = f"generated/{filename}"
                 break
         save_content(data)
         
