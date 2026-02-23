@@ -753,7 +753,7 @@
     {
       "id": "phrase_003",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "week": 3,
       "rating": 3,
@@ -772,7 +772,10 @@
           "verre"
         ]
       },
-      "generated_image": "generated/phrase_003.png"
+      "generated_image": "generated/phrase_003.png",
+      "published_at": "2026-02-23T18:34:55.484768Z",
+      "instagram_media_id": "18005444894704567",
+      "publish_order": 10
     },
     {
       "id": "phrase_004",
