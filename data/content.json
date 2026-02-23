@@ -1904,6 +1904,125 @@
       },
       "created_at": "2026-02-16T08:43:06.688152Z",
       "generated_image": "generated/ambiance_007.png"
+    },
+    {
+      "id": "phrase_038",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est au centre de Paris' : c'est à République, donc accessible depuis nulle part sans faire le tour de la capitale."
+      },
+      "caption": {
+        "main": "Le centre de Paris, ce mystérieux concept géographique. Partage ça à ton ami qui confond « central » et « accessible ». 🗺️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-02-23T08:44:48.728916Z",
+      "generated_image": "generated/phrase_038.png"
+    },
+    {
+      "id": "phrase_039",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduire 'C'est pas loin' quand on habite pas le même arrondissement : c'est juste pas loin... pour celui qui l'a proposé."
+      },
+      "caption": {
+        "main": "L'art subtil de redéfinir la géographie selon ses propres intérêts. Tag ce pote qui habite République et trouve que Montparnasse c'est 'juste à côté'. 🗺️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "metro",
+          "amitie",
+          "geography"
+        ]
+      },
+      "created_at": "2026-02-23T08:44:53.637254Z",
+      "generated_image": "generated/phrase_039.png"
+    },
+    {
+      "id": "chiffre_037",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de correspondances pour voir tes potes qui habitent dans le 92.",
+        "number": "04",
+        "unit_text": "correspondances. Autant partir en vacances."
+      },
+      "caption": {
+        "main": "04 correspondances pour voir tes potes qui habitent dans le 92. À ce rythme-là, tu auras le temps de faire connaissance avec tous les musiciens du métro. Et de développer une relation toxique avec l'annonce 'correspondance avec la ligne 14'.",
+        "hashtags": [
+          "lemiddle",
+          "correspondances",
+          "banlieue",
+          "transports",
+          "amitie"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-02-23T08:44:58.752852Z",
+      "generated_image": "generated/chiffre_037.png"
+    },
+    {
+      "id": "chiffre_038",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages WhatsApp avant de choisir un lieu.",
+        "number": "73",
+        "unit_text": "messages. Pour dire qu'on ira finalement au même endroit."
+      },
+      "caption": {
+        "main": "73 messages WhatsApp pour choisir un lieu. Entre les \"Où on se retrouve ?\", les \"Ça me va\", les \"En fait non\" et les GPS partagés, on aurait eu le temps de faire 3 allers-retours. Et au final, on finit toujours au même bar.",
+        "hashtags": [
+          "lemiddle",
+          "whatsapp",
+          "paris",
+          "amis",
+          "galere"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-02-23T08:45:04.096119Z",
+      "generated_image": "generated/chiffre_038.png"
+    },
+    {
+      "id": "ambiance_008",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "TaGBtRWOnIo",
+        "unsplash_user": "Dustin Bowdige (@dustinbowdige)",
+        "unsplash_query_used": "aperitif",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde est arrivé en même temps et que personne n'a eu 45min de métro... C'est ça, la vraie magie parisienne ✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "apero",
+          "amis",
+          "transportspublics"
+        ]
+      },
+      "created_at": "2026-02-23T08:45:07.617753Z",
+      "generated_image": "generated/ambiance_008.png"
     }
   ]
 }
