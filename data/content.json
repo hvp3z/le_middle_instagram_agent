@@ -1270,7 +1270,7 @@
     {
       "id": "phrase_019",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "week": 19,
       "rating": 1,
@@ -1288,7 +1288,10 @@
         ]
       },
       "created_at": "2026-02-06T11:45:52.277263Z",
-      "generated_image": "generated/phrase_019.png"
+      "generated_image": "generated/phrase_019.png",
+      "published_at": "2026-02-27T15:57:01.433969Z",
+      "instagram_media_id": "18030989363597639",
+      "publish_order": 12
     },
     {
       "id": "phrase_020",
