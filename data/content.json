@@ -2007,7 +2007,7 @@
     {
       "id": "ambiance_008",
       "type": "photo",
-      "status": "ready",
+      "status": "posted",
       "category": "ambiance",
       "content": {
         "unsplash_photo_id": "TaGBtRWOnIo",
@@ -2031,7 +2031,10 @@
         ]
       },
       "created_at": "2026-02-23T08:45:07.617753Z",
-      "generated_image": "generated/ambiance_008.png"
+      "generated_image": "generated/ambiance_008.png",
+      "published_at": "2026-03-02T18:04:08.099070Z",
+      "instagram_media_id": "18134886016508008",
+      "publish_order": 13
     },
     {
       "id": "phrase_040",
