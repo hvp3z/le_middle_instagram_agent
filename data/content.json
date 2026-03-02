@@ -2032,6 +2032,125 @@
       },
       "created_at": "2026-02-23T08:45:07.617753Z",
       "generated_image": "generated/ambiance_008.png"
+    },
+    {
+      "id": "phrase_040",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est pas loin' : Il faut juste traverser la moitié de Paris, changer 3 fois, et prier pour que la ligne 14 ne tombe pas en panne."
+      },
+      "caption": {
+        "main": "Le vocabulaire parisien version réaliste. Heureusement, Le Middle traduit automatiquement 'pas loin' en 'vraiment au milieu'. 🗺️",
+        "hashtags": [
+          "lemiddle",
+          "pasloin",
+          "traduction",
+          "transportsparisiens",
+          "realite"
+        ]
+      },
+      "created_at": "2026-03-02T08:40:21.626127Z",
+      "generated_image": "generated/phrase_040.png"
+    },
+    {
+      "id": "phrase_041",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est plus simple chez moi' : J'ai décidé que votre temps valait moins que le mien et que mes 10 minutes d'économie justifient vos 45 minutes de Châtelet-RER."
+      },
+      "caption": {
+        "main": "Le dictionnaire français-parisien qu'on attendait tous. Identifie le pote qui a besoin d'une mise à jour logicielle. 🔄",
+        "hashtags": [
+          "lemiddle",
+          "traduction",
+          "parisien",
+          "chatelet",
+          "amitie"
+        ]
+      },
+      "created_at": "2026-03-02T08:40:26.260285Z",
+      "generated_image": "generated/phrase_041.png"
+    },
+    {
+      "id": "chiffre_039",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages dans le groupe pour fixer un lieu de rendez-vous.",
+        "number": "73",
+        "unit_text": "messages. Et toujours pas de décision."
+      },
+      "caption": {
+        "main": "73 messages dans le groupe WhatsApp et vous n'avez toujours pas choisi où vous retrouver. Entre celui qui propose République, celle qui veut rester dans le 16ème et l'autre qui dit \"comme vous voulez\" sans jamais donner d'avis...",
+        "hashtags": [
+          "lemiddle",
+          "whatsapp",
+          "galere",
+          "amis",
+          "parislife"
+        ],
+        "cta": "Coupez court au débat. Utilisez Le Middle."
+      },
+      "created_at": "2026-03-02T08:40:32.202757Z",
+      "generated_image": "generated/chiffre_039.png"
+    },
+    {
+      "id": "chiffre_040",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre d'excuses inventées pour ne pas traverser Paris.",
+        "number": "47",
+        "unit_text": "excuses créatives. L'imagination au service de la flemme."
+      },
+      "caption": {
+        "main": "47 excuses inventées pour ne pas traverser Paris. Entre \"j'ai un truc de famille\" et \"mon chat est malade\", on a entendu les meilleures. Mention spéciale à \"je pense que j'ai chopé un truc\" - jamais prouvé, toujours efficace.",
+        "hashtags": [
+          "lemiddle",
+          "traverserparis",
+          "excuses",
+          "flemme",
+          "parislife"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-03-02T08:40:37.389901Z",
+      "generated_image": "generated/chiffre_040.png"
+    },
+    {
+      "id": "ambiance_009",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "51GNAvdWcA4",
+        "unsplash_user": "lonely blue (@lonelyblue)",
+        "unsplash_query_used": "brunch",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Ce moment magique où personne ne regarde l'heure parce que pour une fois, tout le monde est arrivé en même temps ✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "brunchparis",
+          "amisparis",
+          "tempspour"
+        ]
+      },
+      "created_at": "2026-03-02T08:40:42.990030Z",
+      "generated_image": "generated/ambiance_009.png"
     }
   ]
 }
