@@ -2042,7 +2042,7 @@
     {
       "id": "phrase_040",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "content": {
         "text": "Traduction de 'C'est pas loin' : Il faut juste traverser la moitié de Paris, changer 3 fois, et prier pour que la ligne 14 ne tombe pas en panne."
@@ -2058,7 +2058,10 @@
         ]
       },
       "created_at": "2026-03-02T08:40:21.626127Z",
-      "generated_image": "generated/phrase_040.png"
+      "generated_image": "generated/phrase_040.png",
+      "published_at": "2026-03-06T15:58:23.272785Z",
+      "instagram_media_id": "17897856654406156",
+      "publish_order": 15
     },
     {
       "id": "phrase_041",
