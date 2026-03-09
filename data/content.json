@@ -2160,6 +2160,125 @@
       },
       "created_at": "2026-03-02T08:40:42.990030Z",
       "generated_image": "generated/ambiance_009.png"
+    },
+    {
+      "id": "phrase_042",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est sur ma ligne' : Il y a juste 8 stations, 20 minutes et la probabilité d'être collé à un type qui mange un sandwich au thon."
+      },
+      "caption": {
+        "main": "Le langage codé parisien déchiffré pour vous. Tague ce pote qui minimise TOUJOURS la distance. 🐟",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "metro",
+          "amitie",
+          "paris"
+        ]
+      },
+      "created_at": "2026-03-09T08:40:29.356449Z",
+      "generated_image": "generated/phrase_042.png"
+    },
+    {
+      "id": "phrase_043",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est sur mon chemin' : c'est à 6 stations dans la direction opposée, mais techniquement sur la même ligne."
+      },
+      "caption": {
+        "main": "Le niveau de mauvaise foi atteint des sommets. 🎭 Partage ça à ton ami champion du détour stratégique.",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "amitieaparis",
+          "cestvraimentnous",
+          "mauvaisefoi"
+        ]
+      },
+      "created_at": "2026-03-09T08:40:33.476071Z",
+      "generated_image": "generated/phrase_043.png"
+    },
+    {
+      "id": "chiffre_041",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de correspondances pour voir tes potes qui habitent en banlieue.",
+        "number": "04",
+        "unit_text": "changements. Autant prendre l'avion."
+      },
+      "caption": {
+        "main": "4 correspondances pour voir tes potes en banlieue. À ce niveau-là, autant réserver un vol. Métro, RER A, RER B, puis le bus... On finit par se demander si l'amitié vaut vraiment ce parcours du combattant dans les souterrains parisiens.",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "banlieue",
+          "correspondances",
+          "amitie"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-03-09T08:40:38.056330Z",
+      "generated_image": "generated/chiffre_041.png"
+    },
+    {
+      "id": "chiffre_042",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu changes d'avis sur le lieu avant de te décider.",
+        "number": "12",
+        "unit_text": "hésitations. Le ping-pong de l'indécision parisienne."
+      },
+      "caption": {
+        "main": "12 changements d'avis avant de choisir un lieu de rdv. Entre \"finalement pas Châtelet, c'est l'enfer\" et \"ah non République c'est trop loin pour Manon\", on navigue dans un labyrinthe d'indécision collective. Le groupe WhatsApp explose, les nerfs craquent.",
+        "hashtags": [
+          "lemiddle",
+          "indecision",
+          "groupewhatsapp",
+          "paris",
+          "galere"
+        ],
+        "cta": "Coupez court aux débats infinis."
+      },
+      "created_at": "2026-03-09T08:40:44.107322Z",
+      "generated_image": "generated/chiffre_042.png"
+    },
+    {
+      "id": "ambiance_010",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "o4eZayD_AmQ",
+        "unsplash_user": "Vladyslav Tobolenko (@tobolenkoph)",
+        "unsplash_query_used": "bar_night",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive enfin au même endroit au même moment... C'est beau la technologie 🍻\nMoins de temps de trajet, plus de temps ensemble.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "soiree",
+          "apero"
+        ]
+      },
+      "created_at": "2026-03-09T08:40:47.637711Z",
+      "generated_image": "generated/ambiance_010.png"
     }
   ]
 }
