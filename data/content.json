@@ -1941,7 +1941,7 @@
     {
       "id": "phrase_039",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "content": {
         "text": "Traduire 'C'est pas loin' quand on habite pas le même arrondissement : c'est juste pas loin... pour celui qui l'a proposé."
@@ -1957,7 +1957,10 @@
         ]
       },
       "created_at": "2026-02-23T08:44:53.637254Z",
-      "generated_image": "generated/phrase_039.png"
+      "generated_image": "generated/phrase_039.png",
+      "published_at": "2026-03-09T18:06:48.433114Z",
+      "instagram_media_id": "18347969419228702",
+      "publish_order": 16
     },
     {
       "id": "chiffre_037",
