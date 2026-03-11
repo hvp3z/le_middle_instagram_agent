@@ -1621,7 +1621,7 @@
     {
       "id": "phrase_034",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "content": {
         "text": "Traduction de 'Je pars maintenant' : Je viens de réaliser qu'on avait rendez-vous dans 20 minutes et je suis encore en pyjama."
@@ -1637,7 +1637,10 @@
         ]
       },
       "created_at": "2026-02-09T08:46:56.673473Z",
-      "generated_image": "generated/phrase_034.png"
+      "generated_image": "generated/phrase_034.png",
+      "published_at": "2026-03-11T11:34:14.175320Z",
+      "instagram_media_id": "17922954933253737",
+      "publish_order": 17
     },
     {
       "id": "phrase_035",
