@@ -170,7 +170,7 @@
     {
       "id": "chiffre_008",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "metro_rer",
       "content": {
         "context_text": "Comme la ligne qu'on évite à tout prix à 18h30.",
@@ -188,7 +188,10 @@
         ],
         "cta": "Retrouvez-vous simplement."
       },
-      "generated_image": "generated/old/chiffre_008.png"
+      "generated_image": "generated/old/chiffre_008.png",
+      "published_at": "2026-03-16T18:31:36.692870Z",
+      "instagram_media_id": "18098659651766871",
+      "publish_order": 19
     },
     {
       "id": "chiffre_009",
