@@ -2288,6 +2288,125 @@
       },
       "created_at": "2026-03-09T08:40:47.637711Z",
       "generated_image": "generated/ambiance_010.png"
+    },
+    {
+      "id": "phrase_044",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Dire 'On se retrouve au milieu' et proposer un endroit à 3 minutes de chez soi : l'art de redéfinir la géographie parisienne."
+      },
+      "caption": {
+        "main": "La créativité cartographique de certains amis n'a pas de limites. 🗺️ On connaît tous ce génie.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-03-16T08:53:04.837874Z",
+      "generated_image": "generated/phrase_044.png"
+    },
+    {
+      "id": "phrase_045",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est super bien desservi' : il y a un métro à 800 mètres, fermé le dimanche, et qui s'arrête à 21h."
+      },
+      "caption": {
+        "main": "L'art de vendre son quartier comme Manhattan alors qu'on habite dans un désert de transport. Tague ton pote agent immobilier amateur. 🚇",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "biendesservi",
+          "retard",
+          "metro"
+        ]
+      },
+      "created_at": "2026-03-16T08:53:09.196402Z",
+      "generated_image": "generated/phrase_045.png"
+    },
+    {
+      "id": "chiffre_043",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu changes d'avis sur le lieu de rdv dans le même groupe WhatsApp.",
+        "number": "12",
+        "unit_text": "changements. L'indécision collective à son paroxysme."
+      },
+      "caption": {
+        "main": "12 changements d'avis sur le lieu de rdv dans le même groupe WhatsApp. Entre celui qui propose République puis se rétracte pour Bastille, celle qui dit \"en fait Châtelet c'est mieux\" puis \"non finalement trop loin\", on perd le fil. Et le temps.",
+        "hashtags": [
+          "lemiddle",
+          "groupewhatsapp",
+          "indecision",
+          "parislife",
+          "rdvgalere"
+        ],
+        "cta": "Coupez la poire en deux avec Le Middle."
+      },
+      "created_at": "2026-03-16T08:53:14.740860Z",
+      "generated_image": "generated/chiffre_043.png"
+    },
+    {
+      "id": "chiffre_044",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le nombre de minutes de trajet en plus à cause de \"l'ami qui habite loin\".",
+        "number": "34",
+        "unit_text": "minutes de RER. Pour celui qui vit \"juste à côté de Paris\"."
+      },
+      "caption": {
+        "main": "34 minutes de RER en plus à cause de l'ami qui habite \"juste à côté de Paris\". Entre Cergy, Meaux et Melun, on a tous ce pote qui minimise sa distance géographique. \"C'est direct !\" qu'il dit, en oubliant les 20 minutes d'attente et la correspondance obligatoire.",
+        "hashtags": [
+          "lemiddle",
+          "banlieue",
+          "rer",
+          "amitie",
+          "trajet"
+        ],
+        "cta": "Trouvez le vrai milieu avec Le Middle."
+      },
+      "created_at": "2026-03-16T08:53:20.753338Z",
+      "generated_image": "generated/chiffre_044.png"
+    },
+    {
+      "id": "ambiance_011",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "jOdc9uwGIQY",
+        "unsplash_user": "Brooke Cagle (@brookecagle)",
+        "unsplash_query_used": "coffee_shop",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive en même temps au même endroit... C'est beau la technologie 🤝 Plus de 'j'suis dans le métro' pour justifier 45min de retard.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "coffeetime",
+          "amisparis",
+          "transportspublics"
+        ]
+      },
+      "created_at": "2026-03-16T08:53:25.657522Z",
+      "generated_image": "generated/ambiance_011.png"
     }
   ]
 }
