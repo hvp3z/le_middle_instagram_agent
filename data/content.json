@@ -242,7 +242,7 @@
     {
       "id": "chiffre_011",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "metro_rer",
       "content": {
         "context_text": "Ton signe pour rester chez toi ou utiliser Le Middle.",
@@ -260,7 +260,10 @@
         ],
         "cta": "On se capte au Middle."
       },
-      "generated_image": "generated/old/chiffre_011.png"
+      "generated_image": "generated/old/chiffre_011.png",
+      "published_at": "2026-03-18T11:47:03.014692Z",
+      "instagram_media_id": "18082086404601771",
+      "publish_order": 20
     },
     {
       "id": "chiffre_012",
