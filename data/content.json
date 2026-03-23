@@ -2416,6 +2416,154 @@
       },
       "created_at": "2026-03-16T08:53:25.657522Z",
       "generated_image": "generated/ambiance_011.png"
+    },
+    {
+      "id": "phrase_046",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduire 'C'est à deux pas' par 'C'est à deux pas + un changement à Châtelet + 15 minutes de marche depuis la sortie 12 que tu ne trouveras jamais'."
+      },
+      "caption": {
+        "main": "Le grand classique de la géographie parisienne approximative. Tague ton ami qui minimise toujours les distances. 🚶‍♂️",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "paris",
+          "transports",
+          "amitie"
+        ]
+      },
+      "created_at": "2026-03-23T08:51:19.526141Z",
+      "generated_image": "generated/phrase_046.png"
+    },
+    {
+      "id": "phrase_047",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est juste à côté' : Il faut changer 3 fois, marcher 800 mètres sous la pluie et avoir la condition physique d'un sherpa pour gravir les escaliers de Pigalle."
+      },
+      "caption": {
+        "main": "Le dictionnaire français-parisien qu'on attendait tous. Tague ce pote qui maîtrise l'art de la géographie créative. 🗺️",
+        "hashtags": [
+          "lemiddle",
+          "metroparisien",
+          "transport",
+          "amitie",
+          "paris"
+        ]
+      },
+      "created_at": "2026-03-23T08:51:23.643048Z",
+      "generated_image": "generated/phrase_047.png"
+    },
+    {
+      "id": "chiffre_045",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de minutes d'attente sur un quai de RER B un dimanche soir.",
+        "number": "17",
+        "unit_text": "minutes. Le temps de questionner ses choix de vie."
+      },
+      "caption": {
+        "main": "17 minutes sur un quai de RER B un dimanche soir. Assez pour regretter d'avoir dit oui à ce dîner en banlieue. Entre les annonces incompréhensibles et l'écran qui affiche \"train supprimé\", on comprend pourquoi certains amis disparaissent mystérieusement.",
+        "hashtags": [
+          "lemiddle",
+          "rerb",
+          "dimanchesoir",
+          "galere",
+          "transports"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-03-23T08:51:28.614024Z",
+      "generated_image": "generated/chiffre_045.png"
+    },
+    {
+      "id": "chiffre_046",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où quelqu'un dit \"j'ai une idée de bar\" mais attend que les autres devinent.",
+        "number": "07",
+        "unit_text": "tentatives. L'art de la communication indirecte."
+      },
+      "caption": {
+        "main": "7 fois où quelqu'un dit \"j'ai une idée de bar\" mais attend que les autres devinent. Entre les \"c'est où déjà ce truc sympa ?\" et les \"vous savez, le bar avec les trucs rouges\", on joue aux devinettes pendant 20 minutes.",
+        "hashtags": [
+          "lemiddle",
+          "barparisien",
+          "entreamisparisiens",
+          "choixdifficile",
+          "viesociale"
+        ],
+        "cta": "Arrêtez les devinettes, trouvez votre Middle."
+      },
+      "created_at": "2026-03-23T08:51:34.470789Z",
+      "generated_image": "generated/chiffre_046.png"
+    },
+    {
+      "id": "ambiance_012",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "D38Y6eFP7_M",
+        "unsplash_user": "Alana Harris (@alanaharris)",
+        "unsplash_query_used": "brunch",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Résultat : 45 minutes de trajet pour arriver ici. Récompense : ce moment parfait ensemble. 🥐 Parfois la vraie destination, c'est juste de se poser à la même table.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "brunchparis",
+          "amisparis",
+          "tempspoureux"
+        ]
+      },
+      "created_at": "2026-03-23T08:51:38.112055Z",
+      "generated_image": "generated/ambiance_012.png"
+    },
+    {
+      "id": "ambiance_013",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "cwB-KjHsm_U",
+        "unsplash_user": "Patrick Langwallner (@patresinger)",
+        "unsplash_query_used": "aperitif",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand enfin tout le monde arrive à l'heure parce que personne n'a eu 1h30 de trajet 🥂\nLe moment où on se dit que ça valait le coup de calculer.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "apero",
+          "amis",
+          "terrasse"
+        ]
+      },
+      "created_at": "2026-03-23T08:51:41.826806Z",
+      "generated_image": "generated/ambiance_013.png"
     }
   ]
 }
