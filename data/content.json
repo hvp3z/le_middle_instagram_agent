@@ -2542,7 +2542,7 @@
     {
       "id": "ambiance_013",
       "type": "photo",
-      "status": "ready",
+      "status": "posted",
       "category": "ambiance",
       "content": {
         "unsplash_photo_id": "cwB-KjHsm_U",
@@ -2566,7 +2566,10 @@
         ]
       },
       "created_at": "2026-03-23T08:51:41.826806Z",
-      "generated_image": "generated/ambiance_013.png"
+      "generated_image": "generated/ambiance_013.png",
+      "published_at": "2026-03-25T11:42:25.774852Z",
+      "instagram_media_id": "17942036817170323",
+      "publish_order": 23
     }
   ]
 }
