@@ -832,7 +832,7 @@
     {
       "id": "phrase_006",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "week": 6,
       "rating": 3,
@@ -849,7 +849,10 @@
           "correspondance"
         ]
       },
-      "generated_image": "generated/phrase_006.png"
+      "generated_image": "generated/phrase_006.png",
+      "published_at": "2026-03-27T16:11:21.739702Z",
+      "instagram_media_id": "17919477465322342",
+      "publish_order": 24
     },
     {
       "id": "phrase_007",
