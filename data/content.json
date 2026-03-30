@@ -2573,6 +2573,154 @@
       "published_at": "2026-03-25T11:42:25.774852Z",
       "instagram_media_id": "17942036817170323",
       "publish_order": 23
+    },
+    {
+      "id": "phrase_048",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est pas si loin' : il faut juste traverser deux arrondissements, faire une correspondance à Châtelet aux heures de pointe et marcher 12 minutes depuis la station."
+      },
+      "caption": {
+        "main": "Le dictionnaire parisien des distances approximatives. Chapitre 1 : l'art de minimiser les trajets infernaux. 🚇",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "transporten",
+          "galere",
+          "chatelet"
+        ]
+      },
+      "created_at": "2026-03-30T09:08:25.938134Z",
+      "generated_image": "generated/phrase_048.png"
+    },
+    {
+      "id": "phrase_049",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est juste à côté' : C'est dans Paris intramuros, donc techniquement accessible avant la fermeture du métro."
+      },
+      "caption": {
+        "main": "Le génie de la relativité parisienne frappe encore. Distance réelle : 1h20 porte à porte. 🤡",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "metro",
+          "amis",
+          "justacote"
+        ]
+      },
+      "created_at": "2026-03-30T09:08:30.231175Z",
+      "generated_image": "generated/phrase_049.png"
+    },
+    {
+      "id": "chiffre_047",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages dans le groupe pour décider d'un lieu.",
+        "number": "47",
+        "unit_text": "messages. Pour un simple apéro."
+      },
+      "caption": {
+        "main": "47 messages pour choisir un bar. Entre celui qui propose Bastille, celle qui refuse République et l'autre qui dit 'peu importe' mais qui finit par poser 15 conditions. Le groupe WhatsApp devient un terrain de guerre diplomatique où chacun défend son quartier comme son territoire.",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "groupechat",
+          "galere",
+          "amitie"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-03-30T09:08:35.723490Z",
+      "generated_image": "generated/chiffre_047.png"
+    },
+    {
+      "id": "chiffre_048",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages dans le groupe pour décider d'un lieu.",
+        "number": "73",
+        "unit_text": "messages. Pour au final dire \"bon, on fait comme d'hab\"."
+      },
+      "caption": {
+        "main": "73 messages dans le groupe WhatsApp pour décider où se retrouver. Entre les \"moi ça me va\", les \"ou alors on peut faire ça\" et les \"j'ai dit que ça me va aussi\", on a écrit un roman. Pour au final retourner au même bar que la dernière fois.",
+        "hashtags": [
+          "lemiddle",
+          "whatsapp",
+          "groupedamis",
+          "paris",
+          "galere"
+        ],
+        "cta": "Coupez court aux débats infinis. Retrouvez-vous au Middle."
+      },
+      "created_at": "2026-03-30T09:08:42.385301Z",
+      "generated_image": "generated/chiffre_048.png"
+    },
+    {
+      "id": "ambiance_014",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "ZqIsmB7LNI8",
+        "unsplash_user": "Stephanie Klepacki (@sklepacki)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le groupe arrive enfin au même moment au même endroit sans que personne ait fait 1h30 de trajet... C'est ça, la magie parisienne ✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amitieparis",
+          "transportsparis",
+          "bistrosparis"
+        ]
+      },
+      "created_at": "2026-03-30T09:08:47.875848Z",
+      "generated_image": "generated/ambiance_014.png"
+    },
+    {
+      "id": "ambiance_015",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "bCLOuVw0sTY",
+        "unsplash_user": "David Gardiner (@bkkdavidg)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure pour une fois et que la terrasse est parfaite ☀️ Montmartre, tu nous gâtes ! (Bon, on avoue, c'est Le Middle qui a trouvé le spot équidistant...)",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "montmartre",
+          "terrassetime",
+          "amisparisiens"
+        ]
+      },
+      "created_at": "2026-03-30T09:08:51.922865Z",
+      "generated_image": "generated/ambiance_015.png"
     }
   ]
 }
