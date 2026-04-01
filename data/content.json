@@ -291,7 +291,7 @@
     {
       "id": "chiffre_013",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "metro_rer",
       "content": {
         "context_text": "Une seule station de métro de différence.",
@@ -309,7 +309,10 @@
         ],
         "cta": "On se capte au Middle."
       },
-      "generated_image": "generated/old/chiffre_013.png"
+      "generated_image": "generated/old/chiffre_013.png",
+      "published_at": "2026-04-01T11:53:51.225638Z",
+      "instagram_media_id": "18099720091947100",
+      "publish_order": 26
     },
     {
       "id": "chiffre_014",
