@@ -2727,6 +2727,154 @@
       },
       "created_at": "2026-03-30T09:08:51.922865Z",
       "generated_image": "generated/ambiance_015.png"
+    },
+    {
+      "id": "phrase_050",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "L'ami qui dit 'J'arrive' depuis sa douche alors que vous avez rendez-vous dans 20 minutes à l'autre bout de Paris."
+      },
+      "caption": {
+        "main": "Le niveau de confiance en soi qu'il faut pour croire qu'on peut défier l'espace-temps. 🚿➡️🚇",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "paris",
+          "transports"
+        ]
+      },
+      "created_at": "2026-04-06T09:05:30.659466Z",
+      "generated_image": "generated/phrase_050.png"
+    },
+    {
+      "id": "phrase_051",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'J'habite pas loin' : J'ai un abonnement Navigo zones 1-5 et une collection de chaussures de marche."
+      },
+      "caption": {
+        "main": "Le 'pas loin' parisien a ses propres règles de géométrie. Tag ton ami qui habite 'juste à côté' de Disneyland. 👟",
+        "hashtags": [
+          "lemiddle",
+          "pasloin",
+          "navigo",
+          "transportsparisiens",
+          "amitie"
+        ]
+      },
+      "created_at": "2026-04-06T09:05:34.896074Z",
+      "generated_image": "generated/phrase_051.png"
+    },
+    {
+      "id": "chiffre_049",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le temps passé à expliquer où c'est quand tu proposes un lieu.",
+        "number": "12",
+        "unit_text": "minutes d'explication. Plus long que le trajet lui-même."
+      },
+      "caption": {
+        "main": "12 minutes à expliquer où c'est, quelle sortie prendre, quel côté de la rue... À ce moment-là, on aurait déjà pu être arrivés. Et bien sûr, il y en a toujours un qui se perd quand même.",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "rdvgalere",
+          "transportsparis",
+          "amisparis"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-04-06T09:05:40.429187Z",
+      "generated_image": "generated/chiffre_049.png"
+    },
+    {
+      "id": "chiffre_050",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu dis \"on se voit bientôt\" sans fixer de date.",
+        "number": "23",
+        "unit_text": "promesses dans le vide. L'art de l'esquive sociale."
+      },
+      "caption": {
+        "main": "23 fois où tu dis \"on se voit bientôt\" sans jamais fixer de date. Entre les \"faut qu'on se fasse un truc\" et les \"on s'appelle\", on maîtrise l'art de repousser à l'infini. Mais au fond, c'est juste qu'organiser c'est relou.",
+        "hashtags": [
+          "lemiddle",
+          "amitie",
+          "paris",
+          "organisation",
+          "sociale"
+        ],
+        "cta": "On se capte au Middle."
+      },
+      "created_at": "2026-04-06T09:05:45.460257Z",
+      "generated_image": "generated/chiffre_050.png"
+    },
+    {
+      "id": "ambiance_016",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "i3NB-2_dATU",
+        "unsplash_user": "Yuliya Bylinskaya (@_bilinskaya_)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "15h30 un mercredi, la terrasse parfaite trouvée en 30 secondes ⏰\nParce que le temps c'est précieux, surtout quand on le passe ensemble.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "terrasseparisienne",
+          "amisparis",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-04-06T09:05:49.394880Z",
+      "generated_image": "generated/ambiance_016.png"
+    },
+    {
+      "id": "ambiance_017",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "UPO7F8y7Z9I",
+        "unsplash_user": "Robert | Visual Diary (@robert_lens)",
+        "unsplash_query_used": "terrace_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive enfin au même endroit, au même moment... C'est beau comme du Mozart 🎼 (Bon ok, Arthur a quand même fait 20 min de retard mais on va pas chipoter)",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "terrasseparisienne",
+          "amisparis",
+          "rdvreussi"
+        ]
+      },
+      "created_at": "2026-04-06T09:05:53.539678Z",
+      "generated_image": "generated/ambiance_017.png"
     }
   ]
 }
