@@ -2875,6 +2875,154 @@
       },
       "created_at": "2026-04-06T09:05:53.539678Z",
       "generated_image": "generated/ambiance_017.png"
+    },
+    {
+      "id": "phrase_052",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'On se retrouve au milieu' : je choisis le café en bas de chez moi et j'appelle ça un compromis."
+      },
+      "caption": {
+        "main": "L'art subtil de redéfinir 'équitable' selon sa géolocalisation. 🎭 Heureusement, Le Middle fait ses propres calculs.",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "transports",
+          "amitie",
+          "compromis"
+        ]
+      },
+      "created_at": "2026-04-13T09:52:13.015909Z",
+      "generated_image": "generated/phrase_052.png"
+    },
+    {
+      "id": "phrase_053",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est sur ma ligne' : Je vais te faire traverser tout Paris pour qu'on se retrouve dans le café le plus moche de mon quartier."
+      },
+      "caption": {
+        "main": "L'audace de présenter un trajet de 50 minutes comme 'pratique' parce que techniquement, c'est direct. 🚇 Tague ton ami géographiquement égoïste.",
+        "hashtags": [
+          "lemiddle",
+          "metrparisien",
+          "amitie",
+          "transports",
+          "paris"
+        ]
+      },
+      "created_at": "2026-04-13T09:52:17.781141Z",
+      "generated_image": "generated/phrase_053.png"
+    },
+    {
+      "id": "chiffre_051",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où quelqu'un propose \"le bar en bas de chez moi\".",
+        "number": "23",
+        "unit_text": "fois par mois. Coïncidence ? On ne pense pas."
+      },
+      "caption": {
+        "main": "23 fois par mois où quelqu'un propose \"le bar en bas de chez moi\". Étrangement, c'est toujours la même personne et elle habite en zone 5. Entre l'innocence feinte et l'égoïsme assumé, on connaît tous ce profil dans notre groupe d'amis.",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "amitie",
+          "paris",
+          "galere"
+        ],
+        "cta": "Coupez la poire en deux, pas l'amitié."
+      },
+      "created_at": "2026-04-13T09:52:28.561641Z",
+      "generated_image": "generated/chiffre_051.png"
+    },
+    {
+      "id": "chiffre_052",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu dis 'j'arrive' alors que tu n'as même pas quitté ton lit.",
+        "number": "23",
+        "unit_text": "mensonges par mois. Champion de la mauvaise foi."
+      },
+      "caption": {
+        "main": "23 mensonges par mois. Le fameux 'j'arrive' envoyé depuis ton canapé, en pyjama, avec Netflix encore ouvert. Tes potes connaissent ta technique, mais ils font pareil.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "mensonges",
+          "pyjama",
+          "retard"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-04-13T09:52:34.823729Z",
+      "generated_image": "generated/chiffre_052.png"
+    },
+    {
+      "id": "ambiance_018",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "AiFgBExpc-o",
+        "unsplash_user": "S O C I A L . C U T (@socialcut)",
+        "unsplash_query_used": "rooftop_bar",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure parce que personne n'avait 1h30 de trajet à se taper 🥂\nC'est ça, l'équité géographique.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "rooftop",
+          "amis",
+          "equilibre"
+        ]
+      },
+      "created_at": "2026-04-13T09:52:38.901246Z",
+      "generated_image": "generated/ambiance_018.png"
+    },
+    {
+      "id": "ambiance_019",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "fO3-OMkc0mY",
+        "unsplash_user": "OurWhisky Foundation (@ourwhiskyfoundation)",
+        "unsplash_query_used": "restaurant_dining",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Finalement, on a trouvé. Et regardez-nous maintenant : pas de 'Désolé je suis en retard à cause de la 13', pas de 'C'est pas pratique pour moi'. Juste nous, nos verres, et cette satisfaction d'avoir enfin coupé la poire en deux. 🥃",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amitieparis",
+          "soireeentreetamis",
+          "pasdegalere"
+        ]
+      },
+      "created_at": "2026-04-13T09:52:44.530884Z",
+      "generated_image": "generated/ambiance_019.png"
     }
   ]
 }
