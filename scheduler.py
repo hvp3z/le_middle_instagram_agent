@@ -441,6 +441,17 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
         raise click.ClickException(
             "Instagram non configuré. Voir docs/INSTAGRAM_SETUP.md"
         )
+
+    # Vérifier dès le début que le token est encore valide pour éviter
+    # un upload Cloudinary inutile avant l'échec API Instagram.
+    if not dry_run:
+        try:
+            InstagramService().get_account_info()
+        except Exception as e:
+            raise click.ClickException(
+                "Token Instagram/Facebook invalide ou expiré. "
+                "Mettez à jour FACEBOOK_PAGE_ACCESS_TOKEN dans les secrets GitHub."
+            ) from e
     
     data = load_content()
     
