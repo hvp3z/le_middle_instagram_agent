@@ -114,19 +114,9 @@ class InstagramService:
             "caption": caption,
             "access_token": self.access_token,
         }
-        
-        # #region agent log
-        import json as _json
-        _log_path = r"c:\Users\matdi\Documents\myApps\Automatisations\LeMiddleInstagram\.cursor\debug.log"
-        with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "A,B,E", "location": "instagram_service.py:create_media_container:entry", "message": "API call params", "data": {"url": url, "image_url": image_url, "caption_length": len(caption), "caption_preview": caption[:100], "has_special_chars": any(ord(c) > 127 for c in caption), "token_prefix": self.access_token[:20] + "..." if self.access_token else "EMPTY", "account_id": self.account_id}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
-        # #endregion
-        
+
         response = requests.post(url, data=payload)
-        
-        # #region agent log
-        with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "A,B,C,D,E", "location": "instagram_service.py:create_media_container:response", "message": "API response", "data": {"status_code": response.status_code, "response_text": response.text[:500] if response.text else "EMPTY", "response_headers": dict(response.headers)}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
-        # #endregion
-        
+
         if not response.ok:
             _err_msg = response.reason
             try:
@@ -250,17 +240,7 @@ class InstagramService:
         image_url = self.upload_to_cloudinary(image_path)
         result["image_url"] = image_url
         print(f"Image uploaded: {image_url}")
-        
-        # #region agent log
-        import json as _json
-        _log_path = r"c:\Users\matdi\Documents\myApps\Automatisations\LeMiddleInstagram\.cursor\debug.log"
-        try:
-            _head_resp = requests.head(image_url, timeout=10)
-            with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "C,D", "location": "instagram_service.py:publish_image:image_check", "message": "Image URL accessibility check", "data": {"image_url": image_url, "head_status": _head_resp.status_code, "content_type": _head_resp.headers.get("Content-Type", "UNKNOWN"), "content_length": _head_resp.headers.get("Content-Length", "UNKNOWN")}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
-        except Exception as _e:
-            with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "C,D", "location": "instagram_service.py:publish_image:image_check", "message": "Image URL check FAILED", "data": {"image_url": image_url, "error": str(_e)}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
-        # #endregion
-        
+
         # Étape 2: Créer le container média
         print("Creating media container...")
         container_id = self.create_media_container(image_url, caption)

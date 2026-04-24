@@ -146,13 +146,7 @@ def format_caption(post: dict) -> str:
         parts.append(" ".join([f"#{tag}" for tag in hashtags]))
     
     result = "\n".join(parts)
-    
-    # #region agent log
-    import json as _json
-    _log_path = r"c:\Users\matdi\Documents\myApps\Automatisations\LeMiddleInstagram\.cursor\debug.log"
-    with open(_log_path, "a", encoding="utf-8") as _f: _f.write(_json.dumps({"hypothesisId": "A", "location": "scheduler.py:format_caption", "message": "Caption formatted", "data": {"caption_length": len(result), "caption_full": result, "caption_bytes": result.encode('utf-8').hex()[:200], "has_special_chars": any(ord(c) > 127 for c in result)}, "timestamp": __import__("time").time()}, ensure_ascii=False) + "\n")
-    # #endregion
-    
+
     return result
 
 
@@ -444,8 +438,9 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
     # Vérifier la configuration Instagram
     ig_status = check_instagram_availability()
     if not ig_status["ready"] and not dry_run:
-        click.echo("Instagram non configuré. Voir docs/INSTAGRAM_SETUP.md", err=True)
-        return
+        raise click.ClickException(
+            "Instagram non configuré. Voir docs/INSTAGRAM_SETUP.md"
+        )
     
     data = load_content()
     
@@ -474,9 +469,9 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
     
     if not post_to_publish:
         msg = f"\nAucun post '{force_type}' avec status 'ready' trouvé." if force_type else "\nAucun post ready disponible."
-        click.echo(msg, err=True)
-        click.echo("Générez du contenu avec: python scheduler.py generate-content")
-        return
+        raise click.ClickException(
+            f"{msg}\nGénérez du contenu avec: python scheduler.py generate-content"
+        )
     
     click.echo(f"\nPost sélectionné: {post_to_publish['id']}")
     click.echo(f"Image: {post_to_publish.get('generated_image', 'N/A')}")
@@ -484,8 +479,7 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
     # Vérifier que l'image existe
     image_path = post_to_publish.get("generated_image")
     if not image_path or not Path(image_path).exists():
-        click.echo(f"Image non trouvée: {image_path}", err=True)
-        return
+        raise click.ClickException(f"Image non trouvée: {image_path}")
     
     # Formater la caption
     caption = format_caption(post_to_publish)
@@ -515,10 +509,10 @@ def publish_next(dry_run: bool, force_type: Optional[str]):
             save_content(data)
             click.echo("Statut mis à jour dans content.json")
         else:
-            click.echo(f"\nÉchec de publication: {result['status']}", err=True)
+            raise click.ClickException(f"Échec de publication: {result['status']}")
             
     except Exception as e:
-        click.echo(f"\nErreur de publication: {e}", err=True)
+        raise click.ClickException(f"Erreur de publication: {e}") from e
 
 
 @cli.command()
