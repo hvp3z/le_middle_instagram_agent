@@ -3142,6 +3142,154 @@
       },
       "created_at": "2026-04-20T09:56:28.173726Z",
       "generated_image": "generated/ambiance_020.png"
+    },
+    {
+      "id": "phrase_056",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'On se fait un verre rapidement' : rendez-vous dans 2h, dont 90 minutes dans les transports pour boire une pinte en 30 minutes."
+      },
+      "caption": {
+        "main": "Le lexique parisien de l'amitié mérite une mise à jour. Avec Le Middle, 'rapidement' redevient enfin crédible. ⏱️",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "amitie",
+          "parislife",
+          "metro"
+        ]
+      },
+      "created_at": "2026-04-27T10:11:51.420605Z",
+      "generated_image": "generated/phrase_056.png"
+    },
+    {
+      "id": "phrase_057",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est pas si loin' : Tu vas découvrir des quartiers de Paris que même ton Citymapper connaît pas."
+      },
+      "caption": {
+        "main": "Ah oui, 'pas si loin'... avec seulement 3 correspondances et une marche de 12 minutes. 🚶‍♀️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-04-27T10:11:55.540172Z",
+      "generated_image": "generated/phrase_057.png"
+    },
+    {
+      "id": "chiffre_055",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "cout_eloignement",
+      "content": {
+        "context_text": "Le nombre de fois où ton pote dit \"j'habite juste à côté\" mais c'est zone 4.",
+        "number": "12",
+        "unit_text": "mensonges géographiques. La relativité parisienne."
+      },
+      "caption": {
+        "main": "12 fois où ton pote dit \"j'habite juste à côté\" mais c'est zone 4. Entre Créteil \"c'est proche\", Cergy \"c'est direct\" et Marne-la-Vallée \"c'est sur la ligne\", on a redéfini les notions de distance. Spoiler : 1h15 de RER, ce n'est pas \"juste à côté\".",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "zone4",
+          "amis",
+          "paris"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-04-27T10:12:01.014308Z",
+      "generated_image": "generated/chiffre_055.png"
+    },
+    {
+      "id": "chiffre_056",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le temps d'attente moyen à Châtelet pour une correspondance.",
+        "number": "08",
+        "unit_text": "minutes. Soit l'éternité en version métro."
+      },
+      "caption": {
+        "main": "8 minutes d'attente moyenne à Châtelet pour une correspondance. Soit assez de temps pour questionner tous tes choix de vie, regarder 3 TikToks et te demander pourquoi tu n'as pas pris le vélo. Bonus : c'est toujours pile au moment où tu es en retard.",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "correspondance",
+          "retard",
+          "transports"
+        ],
+        "cta": "Évitez les galères, retrouvez-vous au Middle."
+      },
+      "created_at": "2026-04-27T10:12:05.985510Z",
+      "generated_image": "generated/chiffre_056.png"
+    },
+    {
+      "id": "ambiance_021",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "LENXVIT-gcE",
+        "unsplash_user": "Estera (@esteranicoi)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Après 45 minutes de débat sur 'où on se voit', vous y êtes enfin. Et c'était à 20 minutes de chez tout le monde 🤝 Parfois, la solution la plus simple était juste sous vos yeux.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "terrasse",
+          "enfin"
+        ]
+      },
+      "created_at": "2026-04-27T10:12:10.002870Z",
+      "generated_image": "generated/ambiance_021.png"
+    },
+    {
+      "id": "ambiance_022",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "1cXB1KBLcFo",
+        "unsplash_user": "detait (@detait)",
+        "unsplash_query_used": "terrace_toast",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure et que personne n'a galéré 45 min dans les transports... C'est ça, le vrai bonheur parisien. 🥂",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amisparis",
+          "terrasseparisienne",
+          "vieentreamis"
+        ]
+      },
+      "created_at": "2026-04-27T10:12:13.634946Z",
+      "generated_image": "generated/ambiance_022.png"
     }
   ]
 }
