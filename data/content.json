@@ -3290,6 +3290,154 @@
       },
       "created_at": "2026-04-27T10:12:13.634946Z",
       "generated_image": "generated/ambiance_022.png"
+    },
+    {
+      "id": "phrase_058",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'On se retrouve au milieu' : 'Venez tous chez moi, j'habite République et c'est super central.' (Spoiler : personne d'autre n'habite dans le 3ème.)"
+      },
+      "caption": {
+        "main": "L'art de présenter sa flemme comme un service public. 🎭 Partage ça à ton ami qui confond 'central' avec 'pratique pour lui'.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "metro",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-04T10:10:41.898194Z",
+      "generated_image": "generated/phrase_058.png"
+    },
+    {
+      "id": "phrase_059",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'On se retrouve au milieu' : chacun fait semblant que son quartier est le centre de Paris depuis 2019."
+      },
+      "caption": {
+        "main": "Le fameux 'milieu' qui coïncide toujours avec la station de métro la plus proche de celui qui propose. Quelle coïncidence ! 🎯",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "transports",
+          "amitie",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-04T10:10:46.173111Z",
+      "generated_image": "generated/phrase_059.png"
+    },
+    {
+      "id": "chiffre_057",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de correspondances pour rejoindre l'ami qui habite \"pas si loin\".",
+        "number": "04",
+        "unit_text": "changements. L'Odyssée du dimanche après-midi."
+      },
+      "caption": {
+        "main": "4 correspondances pour rejoindre l'ami qui habite \"pas si loin\". Entre République, Châtelet, Montparnasse et cette station mystérieuse de banlieue, tu as eu le temps de finir ton podcast et de remettre en question cette amitié. Au final, 1h20 de trajet pour un café de 30 minutes.",
+        "hashtags": [
+          "lemiddle",
+          "correspondances",
+          "transportsparisiens",
+          "chatelet",
+          "amitieepreuve"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-05-04T10:10:51.781372Z",
+      "generated_image": "generated/chiffre_057.png"
+    },
+    {
+      "id": "chiffre_058",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Les excuses inventées pour éviter de traverser Paris.",
+        "number": "17",
+        "unit_text": "excuses créatives. Record battu."
+      },
+      "caption": {
+        "main": "17 excuses créatives pour éviter de traverser Paris. De \"j'ai mal aux pieds\" à \"ma zone Navigo s'arrête là\". On a tous ce pote qui préfère annuler que prendre deux RER.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "excuses",
+          "amis"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-05-04T10:10:56.259980Z",
+      "generated_image": "generated/chiffre_058.png"
+    },
+    {
+      "id": "ambiance_023",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "ZqIsmB7LNI8",
+        "unsplash_user": "Stephanie Klepacki (@sklepacki)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure parce que personne n'a eu 1h30 de trajet 🥂\nLa vraie définition du bonheur parisien.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amitie",
+          "apero",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-05-04T10:10:59.764966Z",
+      "generated_image": "generated/ambiance_023.png"
+    },
+    {
+      "id": "ambiance_024",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "wQ15rYD3GYg",
+        "unsplash_user": "Thimotius Timmy (@thedeadvertising)",
+        "unsplash_query_used": "restaurant_friends",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive enfin en même temps et que personne ne dit \"Désolé j'ai eu un problème avec le RER\" 🍕 C'est ça, le vrai bonheur parisien.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amisparis",
+          "pizza",
+          "retrouvailles"
+        ]
+      },
+      "created_at": "2026-05-04T10:11:03.525549Z",
+      "generated_image": "generated/ambiance_024.png"
     }
   ]
 }
