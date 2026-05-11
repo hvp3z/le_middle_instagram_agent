@@ -3438,6 +3438,154 @@
       },
       "created_at": "2026-05-04T10:11:03.525549Z",
       "generated_image": "generated/ambiance_024.png"
+    },
+    {
+      "id": "phrase_060",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est tout près' : c'est dans la même ville que moi."
+      },
+      "caption": {
+        "main": "La géographie parisienne selon ton pote qui habite dans le centre. 🗺️ Spoiler : Vincennes et Boulogne, c'est pas la même définition de 'près'.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "metro",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-11T10:58:15.487874Z",
+      "generated_image": "generated/phrase_060.png"
+    },
+    {
+      "id": "phrase_061",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est super bien desservi' : Il y a un bus toutes les 47 minutes qui s'arrête à 800 mètres de l'endroit."
+      },
+      "caption": {
+        "main": "Le vocabulaire immobilier parisien en action. Tague ce pote qui vit dans un 'quartier dynamique' accessible uniquement par hélicoptère. 🚁",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "paris",
+          "galere",
+          "amis"
+        ]
+      },
+      "created_at": "2026-05-11T10:58:19.523859Z",
+      "generated_image": "generated/phrase_061.png"
+    },
+    {
+      "id": "chiffre_059",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "temps_trajet",
+      "content": {
+        "context_text": "Le nombre d'arrêts supplémentaires parcourus à cause de celui qui propose toujours République.",
+        "number": "08",
+        "unit_text": "stations. Le détour de la flemme assumée."
+      },
+      "caption": {
+        "main": "8 arrêts de plus à cause de celui qui propose systématiquement République. On a tous cet ami qui transforme chaque sortie en pèlerinage vers SA zone de confort. Résultat : 20 minutes de métro en plus pour tout le groupe, mais lui il sort direct.",
+        "hashtags": [
+          "lemiddle",
+          "republique",
+          "metroparisien",
+          "amisparis",
+          "transports"
+        ],
+        "cta": "Le Middle calcule le vrai point central. Fini les détours."
+      },
+      "created_at": "2026-05-11T10:58:25.343696Z",
+      "generated_image": "generated/chiffre_059.png"
+    },
+    {
+      "id": "chiffre_060",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "metro_rer",
+      "content": {
+        "context_text": "Le nombre de correspondances pour voir ton pote qui habite \"juste de l'autre côté de Paris\".",
+        "number": "04",
+        "unit_text": "correspondances. Un parcours du combattant urbain."
+      },
+      "caption": {
+        "main": "04 correspondances pour voir ton pote qui habite \"juste de l'autre côté de Paris\". Entre République, Châtelet et la ligne 14, tu as le temps de finir un podcast entier. Et lui qui dit \"c'est direct en fait\".",
+        "hashtags": [
+          "lemiddle",
+          "metro",
+          "correspondances",
+          "chatelet",
+          "parislife"
+        ],
+        "cta": "Coupez la poire en deux, pas l'amitié."
+      },
+      "created_at": "2026-05-11T10:58:30.309764Z",
+      "generated_image": "generated/chiffre_060.png"
+    },
+    {
+      "id": "ambiance_025",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "a4ZVdd0sMrg",
+        "unsplash_user": "Laura Chouette (@laurachouette)",
+        "unsplash_query_used": "bistro_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Ce moment magique où tout le monde arrive en même temps parce qu'on a enfin trouvé LE bon spot 🥂 Plus de 'je suis dans le métro' à 20h45 pour un rendez-vous à 19h.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "rendezvous",
+          "terrasse"
+        ]
+      },
+      "created_at": "2026-05-11T10:58:34.203483Z",
+      "generated_image": "generated/ambiance_025.png"
+    },
+    {
+      "id": "ambiance_026",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "0xUpbVltTWo",
+        "unsplash_user": "The Now Time (@thenowtime)",
+        "unsplash_query_used": "aperitif",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure au Bon Pêcheur près de Châtelet, c'est que l'équidistance fait des miracles ✨ Plus de 'J'suis dans le métro' à 19h45 pour un rdv à 19h30.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "aperitif",
+          "chatelet",
+          "amis"
+        ]
+      },
+      "created_at": "2026-05-11T10:58:37.996221Z",
+      "generated_image": "generated/ambiance_026.png"
     }
   ]
 }
