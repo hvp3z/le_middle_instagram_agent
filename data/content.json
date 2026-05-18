@@ -3586,6 +3586,154 @@
       },
       "created_at": "2026-05-11T10:58:37.996221Z",
       "generated_image": "generated/ambiance_026.png"
+    },
+    {
+      "id": "phrase_062",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de « C'est pile entre nous deux » : c'est pile entre ton bureau et son appart, toi tu n'existes pas dans l'équation."
+      },
+      "caption": {
+        "main": "Le mathématicien de l'amitié qui calcule uniquement avec ses propres coordonnées. 🧮 On connaît tous ce génie de la géométrie appliquée.",
+        "hashtags": [
+          "lemiddle",
+          "amitie",
+          "paris",
+          "transports",
+          "geographie"
+        ]
+      },
+      "created_at": "2026-05-18T11:41:42.586250Z",
+      "generated_image": "generated/phrase_062.png"
+    },
+    {
+      "id": "phrase_063",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'On se retrouve au milieu' : 'Venez tous chez moi, j'ai la flemme de bouger.'"
+      },
+      "caption": {
+        "main": "Le faux compromis dans toute sa splendeur. Tague ton pote qui propose toujours 'le milieu' pile en bas de chez lui. 🎭",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amitie",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-18T11:41:46.453762Z",
+      "generated_image": "generated/phrase_063.png"
+    },
+    {
+      "id": "chiffre_061",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où on dit 'OK pour ce bar' alors qu'il nous faut 1h15 de trajet.",
+        "number": "12",
+        "unit_text": "fois par mois. Par pure politesse parisienne."
+      },
+      "caption": {
+        "main": "12 fois par mois où on accepte un bar qui nous prend 1h15 de trajet. Entre la politesse de ne pas faire chier le groupe et l'envie secrète de proposer le Flunch de Roissy, on finit par dire oui. Résultat : on passe plus de temps dans le RER que devant sa pinte.",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "amitie",
+          "parislife",
+          "galere"
+        ],
+        "cta": "Coupez la poire en deux, pas l'amitié."
+      },
+      "created_at": "2026-05-18T11:41:52.240681Z",
+      "generated_image": "generated/chiffre_061.png"
+    },
+    {
+      "id": "chiffre_062",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le temps moyen perdu à attendre ton pote qui dit \"j'arrive\".",
+        "number": "18",
+        "unit_text": "minutes. Il était encore chez lui."
+      },
+      "caption": {
+        "main": "18 minutes à poireauter devant le bar pendant qu'il envoie ses \"j'arrive\" depuis son canapé. Entre le temps qu'il trouve ses clés, qu'il descende et qu'il réalise qu'il a oublié son pass Navigo, tu aurais pu faire un aller-retour à Vincennes.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "paris",
+          "transports"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-05-18T11:41:57.715590Z",
+      "generated_image": "generated/chiffre_062.png"
+    },
+    {
+      "id": "ambiance_027",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "OG_fvZHurYw",
+        "unsplash_user": "Alena Torgonskaya (@torgonskayaa)",
+        "unsplash_query_used": "happy_hour",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Finalement, après 3 groupes WhatsApp et 47 messages, on s'est retrouvés. Et c'était à 15 minutes de chez tout le monde. 🍻",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "happyhour",
+          "amisparis",
+          "apero"
+        ]
+      },
+      "created_at": "2026-05-18T11:42:01.436485Z",
+      "generated_image": "generated/ambiance_027.png"
+    },
+    {
+      "id": "ambiance_028",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "KQHoyZzA6yY",
+        "unsplash_user": "Martin Woortman (@martfoto1)",
+        "unsplash_query_used": "cafe_terrace",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure pour une fois et qu'on peut enfin profiter ✨ Voilà ce qui arrive quand on arrête de négocier pendant 2h le lieu de rdv.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "terrasseparisienne",
+          "momentpartage"
+        ]
+      },
+      "created_at": "2026-05-18T11:42:05.799907Z",
+      "generated_image": "generated/ambiance_028.png"
     }
   ]
 }
