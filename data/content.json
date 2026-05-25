@@ -3734,6 +3734,154 @@
       },
       "created_at": "2026-05-18T11:42:05.799907Z",
       "generated_image": "generated/ambiance_028.png"
+    },
+    {
+      "id": "phrase_064",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est pas si loin' : Il y a 4 correspondances mais j'ai la flemme de calculer ton trajet depuis ton arrondissement paumé."
+      },
+      "caption": {
+        "main": "Ah, la géographie créative de nos amis... 🗺️ Heureusement, Le Middle calcule pour tout le monde.",
+        "hashtags": [
+          "lemiddle",
+          "transportsparisiens",
+          "amitie",
+          "paris",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-25T11:50:45.193811Z",
+      "generated_image": "generated/phrase_064.png"
+    },
+    {
+      "id": "phrase_065",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est juste à côté' : c'est effectivement juste à côté, mais de chez lui, pas de chez toi."
+      },
+      "caption": {
+        "main": "La géographie parisienne selon ton pote qui habite dans le centre. 🗺️ Heureusement, Le Middle rétablit l'équité territoriale.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amitie",
+          "galere"
+        ]
+      },
+      "created_at": "2026-05-25T11:50:48.613106Z",
+      "generated_image": "generated/phrase_065.png"
+    },
+    {
+      "id": "chiffre_063",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où quelqu'un propose son quartier dans le groupe.",
+        "number": "07",
+        "unit_text": "fois. Coïncidence ? On ne croit pas."
+      },
+      "caption": {
+        "main": "7 fois que Kevin propose République dans le groupe WhatsApp. Soit exactement le nombre de bars qu'il a dans un rayon de 200 mètres autour de chez lui. Entre 'C'est central pour tout le monde' et 'Y'a plein de choix là-bas', on a compris Kevin.",
+        "hashtags": [
+          "lemiddle",
+          "republique",
+          "amitie",
+          "parislife",
+          "whatsapp"
+        ],
+        "cta": "Coupez la poire en deux, pas l'amitié."
+      },
+      "created_at": "2026-05-25T11:50:54.045131Z",
+      "generated_image": "generated/chiffre_063.png"
+    },
+    {
+      "id": "chiffre_064",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de \"Oui mais c'est loin pour moi\" dans un groupe de 5 personnes.",
+        "number": "05",
+        "unit_text": "personnes. Tout le monde habite loin de partout."
+      },
+      "caption": {
+        "main": "5 personnes dans le groupe, 5 \"Oui mais c'est loin pour moi\". Mathématiquement, il n'existe aucun lieu sur Terre qui convienne à tout le monde. Paris, capitale de l'égoïsme géographique assumé.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ],
+        "cta": "On se capte au Middle."
+      },
+      "created_at": "2026-05-25T11:50:58.729809Z",
+      "generated_image": "generated/chiffre_064.png"
+    },
+    {
+      "id": "ambiance_029",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "jOdc9uwGIQY",
+        "unsplash_user": "Brooke Cagle (@brookecagle)",
+        "unsplash_query_used": "coffee_shop",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tu réalises que vous avez passé plus de temps à boire votre café qu'à venir jusqu'ici. Mission accomplie ! ☕️",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "coffeetime",
+          "amisparis",
+          "rendezvousperfait"
+        ]
+      },
+      "created_at": "2026-05-25T11:51:01.912887Z",
+      "generated_image": "generated/ambiance_029.png"
+    },
+    {
+      "id": "ambiance_030",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "VhVzQwEHy04",
+        "unsplash_user": "Nuno Alves (@nunoviegasalves)",
+        "unsplash_query_used": "happy_hour",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive vraiment en même temps et que personne n'a menti sur son heure d'arrivée 🥂 La magie opère enfin.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "happyhour",
+          "amitie",
+          "parislife"
+        ]
+      },
+      "created_at": "2026-05-25T11:51:05.321476Z",
+      "generated_image": "generated/ambiance_030.png"
     }
   ]
 }
