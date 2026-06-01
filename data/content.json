@@ -3882,6 +3882,154 @@
       },
       "created_at": "2026-05-25T11:51:05.321476Z",
       "generated_image": "generated/ambiance_030.png"
+    },
+    {
+      "id": "phrase_066",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est à mi-chemin' : c'est exactement là où j'avais envie d'aller depuis le début, quelle coïncidence."
+      },
+      "caption": {
+        "main": "Certaines personnes ont une définition très personnelle de l'équidistance. 🤔 Heureusement, Le Middle fait les calculs objectivement.",
+        "hashtags": [
+          "lemiddle",
+          "michemin",
+          "transports",
+          "amitie",
+          "paris"
+        ]
+      },
+      "created_at": "2026-06-01T13:33:24.249458Z",
+      "generated_image": "generated/phrase_066.png"
+    },
+    {
+      "id": "phrase_067",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'Je connais un endroit parfait' : il y a un McDo en bas de mon immeuble et je refuse de marcher plus de 200 mètres."
+      },
+      "caption": {
+        "main": "Le dictionnaire français-parisien dont personne n'a besoin mais qu'on utilise tous. 📍",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amitie",
+          "transports",
+          "galere"
+        ]
+      },
+      "created_at": "2026-06-01T13:33:29.394157Z",
+      "generated_image": "generated/phrase_067.png"
+    },
+    {
+      "id": "chiffre_065",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de minutes perdues à expliquer pourquoi Châtelet c'est l'enfer.",
+        "number": "12",
+        "unit_text": "minutes. Le temps qu'il faut pour convaincre."
+      },
+      "caption": {
+        "main": "12 minutes perdues à expliquer pourquoi Châtelet c'est l'enfer. Entre les couloirs sans fin, les correspondances labyrinthiques et la foule permanente, on passe plus de temps à justifier notre refus qu'à chercher une alternative. Résultat : on finit quand même par y aller.",
+        "hashtags": [
+          "lemiddle",
+          "chatelet",
+          "metro",
+          "parislife",
+          "transports"
+        ],
+        "cta": "Trouvez mieux que Châtelet."
+      },
+      "created_at": "2026-06-01T13:33:34.619589Z",
+      "generated_image": "generated/chiffre_065.png"
+    },
+    {
+      "id": "chiffre_066",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de messages dans le groupe avant de se décider sur l'heure.",
+        "number": "47",
+        "unit_text": "messages. L'art du consensus parisien."
+      },
+      "caption": {
+        "main": "47 messages pour se mettre d'accord sur l'heure du rdv. Entre celui qui peut qu'après 19h, celle qui doit partir avant 22h pour le dernier RER, et l'indécis chronique qui demande 'ça vous va 18h30 ?' puis 'ou alors 19h ?', le groupe WhatsApp devient un champ de bataille temporel.",
+        "hashtags": [
+          "lemiddle",
+          "groupewhatsapp",
+          "rdvparis",
+          "transportsparisiens",
+          "galere"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-06-01T13:33:40.293694Z",
+      "generated_image": "generated/chiffre_066.png"
+    },
+    {
+      "id": "ambiance_031",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "dCBGMFARncQ",
+        "unsplash_user": "Alkistis Calich (@alkistich)",
+        "unsplash_query_used": "restaurant_table",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Plot twist : quand tout le monde arrive à l'heure ET au même endroit, on peut enfin se concentrer sur l'essentiel. 🍽️ Spoiler alert : ça vaut tous les calculs de trajets du monde.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "rendezvous",
+          "reussi"
+        ]
+      },
+      "created_at": "2026-06-01T13:33:44.160574Z",
+      "generated_image": "generated/ambiance_031.png"
+    },
+    {
+      "id": "ambiance_032",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "qtZnIleRvLA",
+        "unsplash_user": "Priscilla Du Preez 🇨🇦 (@priscilladupreez)",
+        "unsplash_query_used": "brunch",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure et que personne n'a eu à faire République-Châtelet-Les Halles en 45 minutes 🥐 \nCa c'est du brunch réussi.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "brunchparis",
+          "amis",
+          "transportsparisiens"
+        ]
+      },
+      "created_at": "2026-06-01T13:33:48.108525Z",
+      "generated_image": "generated/ambiance_032.png"
     }
   ]
 }
