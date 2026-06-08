@@ -4030,6 +4030,154 @@
       },
       "created_at": "2026-06-01T13:33:48.108525Z",
       "generated_image": "generated/ambiance_032.png"
+    },
+    {
+      "id": "phrase_068",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est super bien desservi' : il y a un bus toutes les 20 minutes et une piste cyclable qui s'arrête pile devant le périph."
+      },
+      "caption": {
+        "main": "Le vocabulaire immobilier parisien décodé. Partage ça à ton ami agent immobilier. 🏠",
+        "hashtags": [
+          "lemiddle",
+          "transports",
+          "paris",
+          "immobilier",
+          "galere"
+        ]
+      },
+      "created_at": "2026-06-08T12:25:23.570805Z",
+      "generated_image": "generated/phrase_068.png"
+    },
+    {
+      "id": "phrase_069",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'J'habite République' : Je suis à 3 stations + 2 correspondances + 12 minutes de marche depuis République, mais psychologiquement, j'y suis."
+      },
+      "caption": {
+        "main": "La géographie parisienne version optimiste. On connaît tous ce type de GPS émotionnel. 🗺️✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amitie",
+          "republique"
+        ]
+      },
+      "created_at": "2026-06-08T12:25:27.704728Z",
+      "generated_image": "generated/phrase_069.png"
+    },
+    {
+      "id": "chiffre_067",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où on dit \"j'arrive\" en étant encore en pyjama.",
+        "number": "03",
+        "unit_text": "mensonges par soirée. Et on assume."
+      },
+      "caption": {
+        "main": "3 \"j'arrive\" en étant encore en pyjama. Le premier quand tu reçois le message du groupe, le deuxième sous la douche, le troisième en sortant de chez toi. Tes amis ont appris à rajouter 45 minutes à ton ETA.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "parislife",
+          "amitie"
+        ],
+        "cta": "Avec Le Middle, au moins le lieu sera équitable."
+      },
+      "created_at": "2026-06-08T12:25:33.077313Z",
+      "generated_image": "generated/chiffre_067.png"
+    },
+    {
+      "id": "chiffre_068",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Les messages \"J'arrive\" envoyés alors que tu n'as même pas quitté ton appart.",
+        "number": "07",
+        "unit_text": "messages. Le mensonge social le mieux accepté."
+      },
+      "caption": {
+        "main": "7 messages \"J'arrive\" envoyés alors que tu n'as même pas quitté ton appart. On connaît tous ce petit mensonge social qui permet de gagner du temps... sur le dos des autres.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retard",
+          "transports",
+          "paris"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-06-08T12:25:37.143988Z",
+      "generated_image": "generated/chiffre_068.png"
+    },
+    {
+      "id": "ambiance_033",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "S16wIj4Wy2w",
+        "unsplash_user": "Anna Bratiychuk (@skysay)",
+        "unsplash_query_used": "restaurant_dining",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive à l'heure ET que le resto est à équidistance... C'est ça, les miracles parisiens. 🍷✨",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amis",
+          "bonnesadresses",
+          "equilibre"
+        ]
+      },
+      "created_at": "2026-06-08T12:25:40.608862Z",
+      "generated_image": "generated/ambiance_033.png"
+    },
+    {
+      "id": "ambiance_034",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "H8GX7hSJJTQ",
+        "unsplash_user": "Bruno van der Kraan (@brunovdkraan)",
+        "unsplash_query_used": "terrace_paris",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand enfin tout le monde est arrivé et que tu peux poser ta canne... 🥂\nCe moment où le trajet galère devient juste un souvenir et où l'apéro peut commencer.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "aperoparisien",
+          "enfinarrives",
+          "momentpartage"
+        ]
+      },
+      "created_at": "2026-06-08T12:25:45.282854Z",
+      "generated_image": "generated/ambiance_034.png"
     }
   ]
 }
