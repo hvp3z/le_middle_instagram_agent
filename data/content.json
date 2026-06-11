@@ -3212,7 +3212,7 @@
     {
       "id": "chiffre_056",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps d'attente moyen à Châtelet pour une correspondance.",
@@ -3231,7 +3231,10 @@
         "cta": "Évitez les galères, retrouvez-vous au Middle."
       },
       "created_at": "2026-04-27T10:12:05.985510Z",
-      "generated_image": "generated/chiffre_056.png"
+      "generated_image": "generated/chiffre_056.png",
+      "published_at": "2026-06-11T23:08:14.358760Z",
+      "instagram_media_id": "18095531636228649",
+      "publish_order": 27
     },
     {
       "id": "ambiance_021",
