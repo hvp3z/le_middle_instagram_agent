@@ -3093,7 +3093,7 @@
     {
       "id": "chiffre_054",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre de fois où tu regardes ta montre dans le métro pour calculer ton retard.",
@@ -3112,7 +3112,10 @@
         "cta": "Retrouvez-vous simplement."
       },
       "created_at": "2026-04-20T09:56:24.284363Z",
-      "generated_image": "generated/chiffre_054.png"
+      "generated_image": "generated/chiffre_054.png",
+      "published_at": "2026-06-15T20:36:43.277033Z",
+      "instagram_media_id": "18073784726334958",
+      "publish_order": 29
     },
     {
       "id": "ambiance_020",
