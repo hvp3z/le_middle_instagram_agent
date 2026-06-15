@@ -4184,6 +4184,154 @@
       },
       "created_at": "2026-06-08T12:25:45.282854Z",
       "generated_image": "generated/ambiance_034.png"
+    },
+    {
+      "id": "phrase_070",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois2_mythes",
+      "content": {
+        "text": "Traduction de 'C'est sur ma ligne' : Tu vas quand même devoir marcher 20 minutes sous la pluie mais techniquement, on prend le même métro."
+      },
+      "caption": {
+        "main": "La géographie parisienne selon ton pote flemmard. Tague celui qui abuse du concept de 'proximité'. 🚇",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "metro",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-06-15T13:51:43.455634Z",
+      "generated_image": "generated/phrase_070.png"
+    },
+    {
+      "id": "phrase_071",
+      "type": "phrase",
+      "status": "ready",
+      "category": "mois1_injustices",
+      "content": {
+        "text": "Traduction de 'C'est juste à côté' : 45 minutes de trajet, 2 correspondances et une marche de 15 minutes sous la pluie."
+      },
+      "caption": {
+        "main": "Le langage parisien et ses subtilités géographiques. 🗺️ Tague ton pote qui maîtrise cette langue morte.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "transports",
+          "amis",
+          "galere"
+        ]
+      },
+      "created_at": "2026-06-15T13:51:46.968850Z",
+      "generated_image": "generated/phrase_071.png"
+    },
+    {
+      "id": "chiffre_069",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de fois où tu dis \"C'est bon, j'ai trouvé une place\" en parlant d'un resto complet.",
+        "number": "07",
+        "unit_text": "fois par soirée. Spoiler : il n'y en a jamais."
+      },
+      "caption": {
+        "main": "07 fois par soirée, tu annonces avoir trouvé LE bon plan resto. 07 fois, c'est complet ou fermé pour travaux. Le karma parisien frappe encore.",
+        "hashtags": [
+          "lemiddle",
+          "parislife",
+          "restoparis",
+          "galere",
+          "amitie"
+        ],
+        "cta": "Retrouvez-vous simplement."
+      },
+      "created_at": "2026-06-15T13:51:52.309493Z",
+      "generated_image": "generated/chiffre_069.png"
+    },
+    {
+      "id": "chiffre_070",
+      "type": "chiffre",
+      "status": "ready",
+      "category": "interactions_sociales",
+      "content": {
+        "context_text": "Le nombre de personnes qui disent 'J'arrive' alors qu'elles sont encore chez elles.",
+        "number": "73",
+        "unit_text": "% du groupe. Et elles prennent encore une douche."
+      },
+      "caption": {
+        "main": "73% du groupe qui dit 'J'arrive' alors qu'ils sont encore chez eux. Entre celui qui prend encore sa douche et celle qui cherche ses clés, le 'J'arrive' parisien mérite un Oscar de la fiction. Au final, tout le monde arrive avec 45 minutes de retard.",
+        "hashtags": [
+          "lemiddle",
+          "jarrive",
+          "retardparisien",
+          "amitie",
+          "transports"
+        ],
+        "cta": "Rendez-vous à l'heure, rendez-vous au Middle."
+      },
+      "created_at": "2026-06-15T13:51:59.021971Z",
+      "generated_image": "generated/chiffre_070.png"
+    },
+    {
+      "id": "ambiance_035",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "MtP-GgPzoJY",
+        "unsplash_user": "Johan Mouchet (@johanmouchet)",
+        "unsplash_query_used": "happy_hour",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand tout le monde arrive pile à l'heure parce que personne n'a eu à traverser tout Paris 🧸\nLe vrai bonheur, c'est un apéro où on se retrouve vraiment.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "entreamis",
+          "apero",
+          "bonheur"
+        ]
+      },
+      "created_at": "2026-06-15T13:52:03.210677Z",
+      "generated_image": "generated/ambiance_035.png"
+    },
+    {
+      "id": "ambiance_036",
+      "type": "photo",
+      "status": "ready",
+      "category": "ambiance",
+      "content": {
+        "unsplash_photo_id": "VVPxQQlPSeA",
+        "unsplash_user": "The Storyteller Agency.co (@thestorytelleragencyco)",
+        "unsplash_query_used": "restaurant_dining",
+        "light_overlay": true,
+        "light_overlay_intensity": 0.35,
+        "overlay_logo": true,
+        "logo_color": "black",
+        "apply_filter": false,
+        "trademark_verified": false
+      },
+      "caption": {
+        "main": "Quand enfin tout le monde est arrivé à l'heure ET que le resto était à la hauteur des 47 messages pour le choisir 👌 C'est ça le vrai bonheur parisien.",
+        "hashtags": [
+          "lemiddle",
+          "paris",
+          "amitie",
+          "restaurant",
+          "bonheurparisien"
+        ]
+      },
+      "created_at": "2026-06-15T13:52:06.846007Z",
+      "generated_image": "generated/ambiance_036.png"
     }
   ]
 }
