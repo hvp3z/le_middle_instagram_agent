@@ -1814,7 +1814,7 @@
     {
       "id": "phrase_037",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "content": {
         "text": "Traduction de 'C'est super accessible' : il faut juste prendre la 4, changer à Châtelet, attendre la 7 qui ne passe jamais, et marcher 15 minutes dans un quartier que Google Maps ne connaît pas."
@@ -1830,7 +1830,10 @@
         ]
       },
       "created_at": "2026-02-16T08:42:48.035711Z",
-      "generated_image": "generated/phrase_037.png"
+      "generated_image": "generated/phrase_037.png",
+      "published_at": "2026-06-17T14:25:53.433190Z",
+      "instagram_media_id": "18079392740389750",
+      "publish_order": 30
     },
     {
       "id": "chiffre_035",
