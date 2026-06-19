@@ -1793,7 +1793,7 @@
     {
       "id": "phrase_036",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "content": {
         "text": "Traduction de 'J'habite dans Paris' : J'ai un studio de 12m² en zone 2 mais techniquement c'est encore l'Île-de-France."
@@ -1809,7 +1809,10 @@
         ]
       },
       "created_at": "2026-02-16T08:42:43.893208Z",
-      "generated_image": "generated/phrase_036.png"
+      "generated_image": "generated/phrase_036.png",
+      "published_at": "2026-06-19T17:28:57.073826Z",
+      "instagram_media_id": "17950836930185826",
+      "publish_order": 31
     },
     {
       "id": "phrase_037",
