@@ -2951,7 +2951,7 @@
     {
       "id": "chiffre_052",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre de fois où tu dis 'j'arrive' alors que tu n'as même pas quitté ton lit.",
@@ -2970,7 +2970,10 @@
         "cta": "Retrouvez-vous simplement."
       },
       "created_at": "2026-04-13T09:52:34.823729Z",
-      "generated_image": "generated/chiffre_052.png"
+      "generated_image": "generated/chiffre_052.png",
+      "published_at": "2026-06-22T20:19:43.855388Z",
+      "instagram_media_id": "17874853809677556",
+      "publish_order": 32
     },
     {
       "id": "ambiance_018",
