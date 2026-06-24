@@ -2652,7 +2652,7 @@
     {
       "id": "chiffre_048",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre de messages dans le groupe pour décider d'un lieu.",
@@ -2671,7 +2671,10 @@
         "cta": "Coupez court aux débats infinis. Retrouvez-vous au Middle."
       },
       "created_at": "2026-03-30T09:08:42.385301Z",
-      "generated_image": "generated/chiffre_048.png"
+      "generated_image": "generated/chiffre_048.png",
+      "published_at": "2026-06-24T13:22:36.530376Z",
+      "instagram_media_id": "18154165951469266",
+      "publish_order": 33
     },
     {
       "id": "ambiance_014",
