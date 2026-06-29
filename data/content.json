@@ -2586,7 +2586,7 @@
     {
       "id": "phrase_048",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "content": {
         "text": "Traduction de 'C'est pas si loin' : il faut juste traverser deux arrondissements, faire une correspondance à Châtelet aux heures de pointe et marcher 12 minutes depuis la station."
@@ -2602,7 +2602,10 @@
         ]
       },
       "created_at": "2026-03-30T09:08:25.938134Z",
-      "generated_image": "generated/phrase_048.png"
+      "generated_image": "generated/phrase_048.png",
+      "published_at": "2026-06-29T19:20:32.328088Z",
+      "instagram_media_id": "18605316382025106",
+      "publish_order": 35
     },
     {
       "id": "phrase_049",
