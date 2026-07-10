@@ -813,7 +813,7 @@
     {
       "id": "phrase_005",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "week": 5,
       "rating": 3,
@@ -830,7 +830,10 @@
           "mensonge"
         ]
       },
-      "generated_image": "generated/phrase_005.png"
+      "generated_image": "generated/phrase_005.png",
+      "published_at": "2026-07-10T17:15:15.468537Z",
+      "instagram_media_id": "17968419737931551",
+      "publish_order": 40
     },
     {
       "id": "phrase_006",
