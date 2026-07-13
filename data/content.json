@@ -3940,7 +3940,7 @@
     {
       "id": "phrase_067",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois2_mythes",
       "content": {
         "text": "Traduction de 'Je connais un endroit parfait' : il y a un McDo en bas de mon immeuble et je refuse de marcher plus de 200 mètres."
@@ -3956,7 +3956,10 @@
         ]
       },
       "created_at": "2026-06-01T13:33:29.394157Z",
-      "generated_image": "generated/phrase_067.png"
+      "generated_image": "generated/phrase_067.png",
+      "published_at": "2026-07-13T18:55:20.563345Z",
+      "instagram_media_id": "18105217141859995",
+      "publish_order": 41
     },
     {
       "id": "chiffre_065",
