@@ -2637,7 +2637,7 @@
     {
       "id": "chiffre_047",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre de messages dans le groupe pour décider d'un lieu.",
@@ -2656,7 +2656,10 @@
         "cta": "Retrouvez-vous simplement."
       },
       "created_at": "2026-03-30T09:08:35.723490Z",
-      "generated_image": "generated/chiffre_047.png"
+      "generated_image": "generated/chiffre_047.png",
+      "published_at": "2026-07-15T12:15:05.195250Z",
+      "instagram_media_id": "18336093241188852",
+      "publish_order": 42
     },
     {
       "id": "chiffre_048",
