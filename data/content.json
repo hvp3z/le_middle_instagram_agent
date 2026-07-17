@@ -4349,7 +4349,7 @@
     {
       "id": "ambiance_036",
       "type": "photo",
-      "status": "ready",
+      "status": "posted",
       "category": "ambiance",
       "content": {
         "unsplash_photo_id": "VVPxQQlPSeA",
@@ -4373,7 +4373,10 @@
         ]
       },
       "created_at": "2026-06-15T13:52:06.846007Z",
-      "generated_image": "generated/ambiance_036.png"
+      "generated_image": "generated/ambiance_036.png",
+      "published_at": "2026-07-17T16:38:38.744418Z",
+      "instagram_media_id": "18062683829563441",
+      "publish_order": 43
     }
   ]
 }
