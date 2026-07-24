@@ -1033,7 +1033,7 @@
     {
       "id": "phrase_013",
       "type": "phrase",
-      "status": "ready",
+      "status": "posted",
       "category": "mois1_injustices",
       "rating": 3,
       "original_text": "Quand ton ami propose \"On se voit à Châtelet\" et que tu réalises qu'il habite Château Rouge.",
@@ -1052,7 +1052,10 @@
         ]
       },
       "created_at": "2026-01-30T10:49:24.087862Z",
-      "generated_image": "generated/phrase_013.png"
+      "generated_image": "generated/phrase_013.png",
+      "published_at": "2026-07-24T17:00:54.793019Z",
+      "instagram_media_id": "17895123903375737",
+      "publish_order": 45
     },
     {
       "id": "chiffre_031",
