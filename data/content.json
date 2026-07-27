@@ -3224,7 +3224,7 @@
     {
       "id": "chiffre_055",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "cout_eloignement",
       "content": {
         "context_text": "Le nombre de fois où ton pote dit \"j'habite juste à côté\" mais c'est zone 4.",
@@ -3243,7 +3243,10 @@
         "cta": "Retrouvez-vous simplement."
       },
       "created_at": "2026-04-27T10:12:01.014308Z",
-      "generated_image": "generated/chiffre_055.png"
+      "generated_image": "generated/chiffre_055.png",
+      "published_at": "2026-07-27T18:55:47.948721Z",
+      "instagram_media_id": "18436647424134421",
+      "publish_order": 46
     },
     {
       "id": "chiffre_056",
