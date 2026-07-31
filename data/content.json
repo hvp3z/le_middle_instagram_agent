@@ -2174,7 +2174,7 @@
     {
       "id": "ambiance_009",
       "type": "photo",
-      "status": "ready",
+      "status": "posted",
       "category": "ambiance",
       "content": {
         "unsplash_photo_id": "51GNAvdWcA4",
@@ -2198,7 +2198,10 @@
         ]
       },
       "created_at": "2026-03-02T08:40:42.990030Z",
-      "generated_image": "generated/ambiance_009.png"
+      "generated_image": "generated/ambiance_009.png",
+      "published_at": "2026-07-31T17:00:28.231192Z",
+      "instagram_media_id": "18097102304018557",
+      "publish_order": 48
     },
     {
       "id": "phrase_042",
