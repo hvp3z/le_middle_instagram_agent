@@ -55,7 +55,7 @@
     {
       "id": "chiffre_003",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "temps_trajet",
       "content": {
         "context_text": "Le temps de transport pour voir tes potes.",
@@ -73,7 +73,10 @@
         ],
         "cta": "On se capte au Middle."
       },
-      "generated_image": "generated/old/chiffre_003.png"
+      "generated_image": "generated/old/chiffre_003.png",
+      "published_at": "2026-08-03T19:05:41.648601Z",
+      "instagram_media_id": "18547043395073209",
+      "publish_order": 49
     },
     {
       "id": "chiffre_004",
