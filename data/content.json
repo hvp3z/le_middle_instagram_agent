@@ -2153,7 +2153,7 @@
     {
       "id": "chiffre_040",
       "type": "chiffre",
-      "status": "ready",
+      "status": "posted",
       "category": "interactions_sociales",
       "content": {
         "context_text": "Le nombre d'excuses inventées pour ne pas traverser Paris.",
@@ -2172,7 +2172,10 @@
         "cta": "Retrouvez-vous simplement."
       },
       "created_at": "2026-03-02T08:40:37.389901Z",
-      "generated_image": "generated/chiffre_040.png"
+      "generated_image": "generated/chiffre_040.png",
+      "published_at": "2026-08-10T18:12:55.304308Z",
+      "instagram_media_id": "18434775652133972",
+      "publish_order": 52
     },
     {
       "id": "ambiance_009",
